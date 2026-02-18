@@ -1,0 +1,11 @@
+Coloque as fotos nesta pasta (images/) com estes nomes exatos:
+
+1. 01-aulao-sondagem.jpg       → Aulão de Sondagem
+2. 02-praticas-coordenacao.jpg → Práticas na Coordenação
+3. 03-planejamento-aula.jpg    → Planejamento de Aula
+4. 04-lideranca-feminina.jpg   → Liderança Feminina
+5. 05-seminario-relatorios.jpg → Seminário de Relatórios
+6. 06-aula-nova.jpg            → E todos os Meses uma Aula Nova!
+
+Formato: .jpg ou .png (se usar .png, avise para ajustarmos o HTML).
+Proporção sugerida: horizontal (ex.: 560x360 px) para os cards.

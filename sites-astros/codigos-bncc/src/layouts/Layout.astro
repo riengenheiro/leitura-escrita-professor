@@ -1,0 +1,98 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = 'Doutora Escola | Guia Completo dos Códigos Alfanuméricos da BNCC - R$ 19,90', description = 'Aprenda de uma vez por todas como usar os Códigos da BNCC de forma simples, prática e sem enrolação! Este guia completo explica cada detalhe dos códigos alfanuméricos, com exemplos reais. De R$ 59,00 por apenas R$ 19,90!' } = Astro.props;
+
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Guia Completo dos Códigos Alfanuméricos da BNCC',
+  description: 'Aprenda de uma vez por todas como usar os Códigos da BNCC de forma simples, prática e sem enrolação! Este guia completo explica cada detalhe dos códigos alfanuméricos, com exemplos reais.',
+  image: 'https://codigos.doutoraescola.com.br/images/doutora-escola/01-hero.png',
+  brand: { '@type': 'Organization', name: 'Doutora Escola', description: 'G&R Instituto Educacional - Especialistas em Educação' },
+  offers: {
+    '@type': 'Offer',
+    url: 'https://codigos.doutoraescola.com.br/',
+    priceCurrency: 'BRL',
+    price: '19.90',
+    priceValidUntil: '2026-12-31',
+    availability: 'https://schema.org/InStock',
+    seller: { '@type': 'Organization', name: 'Doutora Escola' },
+  },
+  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '2000' },
+};
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Doutora Escola - Guia Completo dos Códigos Alfanuméricos da BNCC',
+  description: 'Guia completo e prático para entender e usar os códigos alfanuméricos da BNCC',
+  url: 'https://codigos.doutoraescola.com.br/',
+  author: { '@type': 'Person', name: 'Dra. Guaciara Fornaciari', jobTitle: 'Fonoaudióloga e Especialista em Educação' },
+};
+---
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favico.png" />
+    <link rel="apple-touch-icon" href="/favico.png" />
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="BNCC, códigos alfanuméricos, códigos BNCC, educação infantil, ensino fundamental, planejamento escolar, documentação pedagógica, Dra. Guaciara Fornaciari, Doutora Escola" />
+    <meta name="author" content="Dra. Guaciara Fornaciari - Doutora Escola" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Portuguese" />
+    <meta name="revisit-after" content="7 days" />
+    <link rel="canonical" href="https://codigos.doutoraescola.com.br/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://codigos.doutoraescola.com.br/" />
+    <meta property="og:title" content="Guia Completo dos Códigos Alfanuméricos da BNCC - R$ 19,90" />
+    <meta property="og:description" content="Aprenda de uma vez por todas como usar os Códigos da BNCC de forma simples, prática e sem enrolação! Este guia completo explica cada detalhe dos códigos alfanuméricos, com exemplos reais." />
+    <meta property="og:image" content="https://codigos.doutoraescola.com.br/images/doutora-escola/01-hero.png" />
+    <meta property="og:image:secure_url" content="https://codigos.doutoraescola.com.br/images/doutora-escola/01-hero.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Guia Completo dos Códigos Alfanuméricos da BNCC - Doutora Escola" />
+    <meta property="og:site_name" content="Doutora Escola" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://codigos.doutoraescola.com.br/" />
+    <meta name="twitter:title" content="Guia Completo dos Códigos Alfanuméricos da BNCC - R$ 19,90" />
+    <meta name="twitter:description" content="Aprenda de uma vez por todas como usar os Códigos da BNCC de forma simples, prática e sem enrolação! Este guia completo explica cada detalhe dos códigos alfanuméricos." />
+    <meta name="twitter:image" content="https://codigos.doutoraescola.com.br/images/doutora-escola/01-hero.png" />
+    <meta name="twitter:image:alt" content="Guia Completo dos Códigos Alfanuméricos da BNCC - Doutora Escola" />
+    <meta name="theme-color" content="#10b981" />
+    <meta name="msapplication-TileColor" content="#10b981" />
+    <meta name="format-detection" content="telephone=no" />
+    <script is:inline>
+      (function(f,b,e,v,n,t,s){
+        if(f.fbq)return;
+        n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+      })(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
+    <link rel="dns-prefetch" href="https://www.facebook.com" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" />
+    </noscript>
+    <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

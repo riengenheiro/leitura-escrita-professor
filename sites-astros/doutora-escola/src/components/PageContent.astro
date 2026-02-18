@@ -1,0 +1,45 @@
+---
+/**
+ * Conteúdo único da landing. Recebe preço opcional para páginas de teste (/v1, /v2, etc).
+ * Sem price = R$ 10 (página principal).
+ */
+import { FacebookPixelLazy } from './FacebookPixelLazy';
+import { DEHero } from './DEHero';
+import { DEUrgencyBar } from './DEUrgencyBar';
+import { DEExitIntent } from './DEExitIntent';
+import DEProblema from './de/DEProblema.astro';
+import DEDiferente from './de/DEDiferente.astro';
+import { DETestimonials } from './DETestimonials';
+import { DEPricing } from './DEPricing';
+import DEGuarantee from './de/DEGuarantee.astro';
+import { DEFAQ } from './DEFAQ';
+import DEAbout from './de/DEAbout.astro';
+import DEFinalCTA from './de/DEFinalCTA.astro';
+import DEFooter from './de/DEFooter.astro';
+import DEWhatsAppButton from './de/DEWhatsAppButton.astro';
+import { FACEBOOK_PIXEL_CONFIG } from '../config/facebookPixel';
+
+interface Props {
+  /** Preço desta página. Omitir = R$ 10 (principal). */
+  price?: number;
+}
+
+const { price } = Astro.props;
+---
+
+<main class="min-h-screen w-full bg-white text-black font-sans antialiased">
+  <FacebookPixelLazy client:idle pixelId={FACEBOOK_PIXEL_CONFIG.pixelId} autoPageView={FACEBOOK_PIXEL_CONFIG.autoPageView} delay={2000} />
+  <DEUrgencyBar client:load price={price} />
+  <DEExitIntent client:load price={price} />
+  <DEWhatsAppButton />
+  <DEHero client:load price={price} />
+  <DEProblema price={price} />
+  <DEDiferente />
+  <DETestimonials client:visible />
+  <DEPricing client:visible price={price} />
+  <DEGuarantee />
+  <DEFAQ client:visible />
+  <DEAbout />
+  <DEFinalCTA price={price} />
+  <DEFooter />
+</main>

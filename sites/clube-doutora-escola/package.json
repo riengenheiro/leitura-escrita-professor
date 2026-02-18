@@ -1,0 +1,8 @@
+{
+  "name": "clube-doutora-escola",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node -e \"const fs=require('fs'); const path=require('path'); fs.mkdirSync('dist',{recursive:true}); fs.copyFileSync('index.html','dist/index.html'); const img='images'; if(fs.existsSync(img)){ const dest=path.join('dist',img); fs.mkdirSync(dest,{recursive:true}); fs.readdirSync(img).forEach(f=>fs.copyFileSync(path.join(img,f),path.join(dest,f))); }\""
+  }
+}

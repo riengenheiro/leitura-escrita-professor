@@ -1,0 +1,35 @@
+---
+import Check from '../icons/Check.astro';
+import FileText from '../icons/FileText.astro';
+---
+<section class="bg-white text-black py-12 md:py-16">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-center mb-8 leading-tight">Você se identifica com isso?</h2>
+    <div class="grid md:grid-cols-3 gap-4 mb-10">
+      <div class="bg-red-50 border-2 border-red-200 rounded-xl p-5 text-center">
+        <span class="text-3xl mb-2 block">😰</span>
+        <p class="text-lg font-medium text-gray-800">Insegurança ao usar os códigos da BNCC</p>
+      </div>
+      <div class="bg-red-50 border-2 border-red-200 rounded-xl p-5 text-center">
+        <span class="text-3xl mb-2 block">⏰</span>
+        <p class="text-lg font-medium text-gray-800">Tempo perdido tentando entender cada código</p>
+      </div>
+      <div class="bg-red-50 border-2 border-red-200 rounded-xl p-5 text-center">
+        <span class="text-3xl mb-2 block">😓</span>
+        <p class="text-lg font-medium text-gray-800">Medo de errar na documentação pedagógica</p>
+      </div>
+    </div>
+    <div class="bg-green-50 border-2 border-green-300 rounded-2xl p-6 md:p-8 mb-8">
+      <h3 class="text-xl md:text-2xl font-extrabold mb-4 text-green-800 text-center">Com este guia você vai:</h3>
+      <ul class="space-y-3">
+        <li class="flex items-start gap-3"><Check class="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" /><span class="text-lg">Entender a lógica por trás de TODOS os códigos alfanuméricos</span></li>
+        <li class="flex items-start gap-3"><Check class="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" /><span class="text-lg">Preencher relatórios e avaliações com confiança total</span></li>
+        <li class="flex items-start gap-3"><Check class="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" /><span class="text-lg">Dominar os códigos da Educação Infantil E do Ensino Fundamental</span></li>
+        <li class="flex items-start gap-3"><Check class="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" /><span class="text-lg">Nunca mais perder tempo pesquisando — tudo em um só lugar</span></li>
+      </ul>
+    </div>
+    <div class="text-center">
+      <a href="#opcoes" class="inline-flex items-center gap-3 px-10 py-5 bg-green-500 hover:bg-green-600 text-white text-xl md:text-2xl font-bold rounded-xl transition-all transform hover:scale-105 shadow-lg"><FileText class="w-7 h-7" />Quero dominar os códigos agora!</a>
+    </div>
+  </div>
+</section>

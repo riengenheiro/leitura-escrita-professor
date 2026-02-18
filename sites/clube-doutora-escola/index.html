@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/favico.png" />
+  <link rel="apple-touch-icon" href="/favico.png" />
+  <title>Clube de Assinatura Doutora Escola | R$ 9,00/mês</title>
+  <meta name="description" content="Torne-se MEMBRO do Clube Doutora Escola por apenas R$ 9,00/mês. Acesso a acervo de Vídeos + Materiais para usar todos os dias nas suas aulas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #1e3a5f;
+      --accent: #10b981;
+      --text: #1f2937;
+      --text-muted: #6b7280;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Poppins', sans-serif; color: var(--text); line-height: 1.6; }
+    .container { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* Timer */
+    .timer-wrap {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      color: #fff;
+      padding: 1rem 1.5rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .timer-wrap p { font-size: 0.9rem; margin-bottom: 0.5rem; opacity: 0.9; }
+    .timer-digits { font-size: 1.75rem; font-weight: 800; letter-spacing: 0.05em; }
+    .timer-digits span { display: inline-block; min-width: 2ch; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(180deg, #f0fdf4 0%, #fff 50%);
+      padding: 3rem 0 2.5rem;
+      text-align: center;
+    }
+    .hero h1 { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; }
+    .hero .sub { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 600; color: var(--text); margin-bottom: 1.5rem; }
+    .hero .price-old { text-decoration: line-through; color: var(--text-muted); font-size: 1rem; }
+    .hero .price-new { font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 800; color: var(--accent); }
+    .hero .cta-desc { font-size: 0.95rem; color: var(--text-muted); margin: 1rem 0 0.5rem; }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .btn:hover { background: #0d9668; transform: translateY(-1px); }
+    .hero .cancel { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem; }
+
+    /* Seção Acesso */
+    .section { padding: 3rem 0; }
+    .section:nth-child(even) { background: #f9fafb; }
+    .section h2 { font-size: clamp(1.35rem, 3vw, 1.75rem); color: var(--primary); margin-bottom: 0.75rem; text-align: center; }
+    .section .lead { text-align: center; color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+    /* Cursos grid - cada curso com foto */
+    .cursos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+    .curso-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .curso-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.12); transform: translateY(-2px); }
+    .curso-card .thumb {
+      aspect-ratio: 729 / 980;
+      background-size: cover;
+      background-position: center;
+    }
+    .curso-card .body { padding: 1.25rem; }
+    .curso-card h3 { font-size: 1.1rem; color: var(--primary); margin-bottom: 0.5rem; }
+    .curso-card p { font-size: 0.9rem; color: var(--text-muted); }
+
+    /* CTA repetido */
+    .cta-block { text-align: center; padding: 2rem 0; }
+    .cta-block .price-old { text-decoration: line-through; color: var(--text-muted); }
+    .cta-block .price-new { font-size: 1.75rem; font-weight: 800; color: var(--accent); display: block; margin: 0.25rem 0; }
+
+    /* Por que / Cancelar / Para quem */
+    .text-block { max-width: 640px; margin: 0 auto; }
+    .text-block h2 { text-align: left; margin-bottom: 1rem; }
+    .text-block p { margin-bottom: 1rem; color: var(--text); }
+    .text-block ul { margin: 1rem 0 1rem 1.25rem; }
+    .text-block li { margin-bottom: 0.5rem; }
+
+    /* Footer */
+    footer {
+      background: var(--primary);
+      color: #fff;
+      padding: 2.5rem 0;
+      margin-top: 2rem;
+    }
+    footer .container { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem; }
+    footer .brand { font-weight: 700; font-size: 1.1rem; }
+    footer .cnpj { font-size: 0.9rem; opacity: 0.9; margin-top: 0.25rem; }
+    footer .links { display: flex; flex-wrap: wrap; gap: 1rem; }
+    footer .links a { color: rgba(255,255,255,0.9); text-decoration: none; font-size: 0.95rem; }
+    footer .links a:hover { color: #fff; text-decoration: underline; }
+    footer .disclaimer { font-size: 0.8rem; opacity: 0.75; margin-top: 1.5rem; width: 100%; }
+    footer .copy { font-size: 0.85rem; opacity: 0.85; margin-top: 0.5rem; }
+  </style>
+</head>
+<body>
+  <!-- Timer 15 minutos -->
+  <div class="timer-wrap">
+    <p>Oferta por tempo limitado — complete sua inscrição em:</p>
+    <div class="timer-digits" id="timer">15:00</div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>A Sua Chance de Ter acesso ao nosso Acervo que vai facilitar o seu dia a dia</h1>
+      <p class="sub">Torne-se MEMBRO do Clube Doutora Escola por apenas R$ 9,00 / mês...</p>
+      <p><span class="price-old">De R$ 97</span> por apenas <span class="price-new">R$ 9,00 por mês</span></p>
+      <p class="cta-desc">Tenha acesso IMEDIATO a um acervo de conteúdos em Vídeos + Materiais para usar todos os dias nas suas aulas.</p>
+      <p class="price-new">R$ 9,00 POR MÊS</p>
+      <a href="https://pay.voompcreators.com.br/2058/offer/yVJpSM/?b_id_1=8006&b_offer_1=Ozc3n5&ch_id=240" class="btn" target="_blank" rel="noopener noreferrer">Quero me inscrever no Clube</a>
+      <p class="cta-desc">Clicando neste botão você irá adicionar o portal de membros na sua compra.</p>
+      <p class="cancel">Cancele quando quiser.</p>
+    </div>
+  </section>
+
+  <!-- A que você terá acesso -->
+  <section class="section">
+    <div class="container">
+      <h2>A que você terá acesso imediato?</h2>
+      <p class="lead">Um conjunto de Aulas e Materiais, já testados, para facilitar o seu dia!</p>
+      <div class="cursos-grid">
+        <div class="curso-card">
+          <div class="thumb" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=560&h=360&fit=crop');"></div>
+          <div class="body">
+            <h3>Aulão de Sondagem</h3>
+            <p>AVALIAÇÃO INICIAL, RASTREIO ESCOLAR, SONDAGEM E TRIAGEM.</p>
+          </div>
+        </div>
+        <div class="curso-card">
+          <div class="thumb" style="background-image: url('images/02-praticas-coordenacao.jpg');"></div>
+          <div class="body">
+            <h3>Práticas na Coordenação</h3>
+            <p>Conteúdo objetivo e prático para dar clareza às Coordenadoras e Orientadoras.</p>
+          </div>
+        </div>
+        <div class="curso-card">
+          <div class="thumb" style="background-image: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=560&h=360&fit=crop');"></div>
+          <div class="body">
+            <h3>Planejamento de Aula</h3>
+            <p>Descubra como adaptar, corrigir e validar o seu planejamento de aula.</p>
+          </div>
+        </div>
+        <div class="curso-card">
+          <div class="thumb" style="background-image: url('images/04-lideranca-feminina.jpg');"></div>
+          <div class="body">
+            <h3>Liderança Feminina</h3>
+            <p>Como liderar sua sala, sua equipe e a sua própria vida.</p>
+          </div>
+        </div>
+        <div class="curso-card">
+          <div class="thumb" style="background-image: url('images/05-seminario-relatorios.jpg');"></div>
+          <div class="body">
+            <h3>Seminário de Relatórios</h3>
+            <p>Assistido por mais de 2000 professoras, que usam diariamente este conteúdo.</p>
+          </div>
+        </div>
+        <div class="curso-card">
+          <div class="thumb" style="background-image: url('images/06-aula-nova.jpg');"></div>
+          <div class="body">
+            <h3>E todos os Meses uma Aula Nova!</h3>
+            <p>Conteúdos novos todo mês para você continuar evoluindo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="cta-block" id="inscreva">
+        <p><span class="price-old">De R$ 97</span> por apenas <span class="price-new">R$ 9,00 mês</span></p>
+        <p class="cta-desc">Tenha acesso IMEDIATO a um acervo de conteúdos em Vídeos + Materiais para usar todos os dias nas suas aulas.</p>
+        <p class="price-new">R$ 9,00 POR MÊS</p>
+        <a href="https://pay.voompcreators.com.br/2058/offer/yVJpSM/?b_id_1=8006&b_offer_1=Ozc3n5&ch_id=240" class="btn" target="_blank" rel="noopener noreferrer">Quero me inscrever no Clube</a>
+        <p class="cta-desc">Clicando neste botão você irá adicionar o portal de membros na sua compra.</p>
+        <p class="cancel">Cancele quando quiser.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Por que apenas R$ 9,00? -->
+  <section class="section">
+    <div class="container">
+      <div class="text-block">
+        <h2>Por que apenas R$ 9,00?</h2>
+        <p>É simples. Porque essa é a nossa oportunidade de FILTRAR as pessoas curiosas das que realmente estão interessadas em conhecer o nosso Método. Além disso, essa é a estratégia que utilizamos para conversar diretamente com as nossas professoras mais seletas e exclusivas.</p>
+        <p>Neste Clube Doutora Escola entregamos ferramentas para facilitar o seu dia e o seu planejamento, além de conhecimentos para elevar cada vez mais a qualidade da sua aula.</p>
+        <p>É natural que você queira avançar em novos programas e em um grupo mais seleto de pessoas. Faz sentido?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- E se eu quiser cancelar? -->
+  <section class="section">
+    <div class="container">
+      <div class="text-block">
+        <h2>E se eu quiser cancelar?</h2>
+        <p>Você terá controle absoluto. No momento que R$ 9,00 se tornar um investimento muito alto OU você simplesmente decidir sair do Clube, com 2 cliques você cancela a sua assinatura e perde o acesso ao portal, aos encontros, ao acervo.</p>
+        <h2 style="margin-top: 2rem;">E para quem é o Clube?</h2>
+        <p>O clube foi criado com a meta de apresentar ferramentas facilitadoras para o professor;</p>
+        <ul>
+          <li>Para quem precisa de ideias atualizadas sobre as dificuldades dos alunos;</li>
+          <li>Para quem não saber por onde começar, ou tem muitos desafios em sala de aula;</li>
+          <li>Para quem já esgotou todas as estratégias e sente que precisa de algo diferente.</li>
+        </ul>
+        <p>Então imagine ter atualizações contínuas, com ideias práticas e já testadas, que sempre vão facilitar o seu dia?</p>
+        <p>Essa é a meta do Clube Doutora Escola.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer - mesmos links do rodapé -->
+  <footer>
+    <div class="container">
+      <div>
+        <div class="brand">DOUTORA ESCOLA</div>
+        <div class="cnpj">CNPJ - 39.969.764/0001-25</div>
+      </div>
+      <div class="links">
+        <a href="https://doutoraescola.com.br/privacidade/privacidade.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>
+        <a href="https://doutoraescola.com.br/privacidade/termo.html" target="_blank" rel="noopener noreferrer">Termo de Uso</a>
+        <a href="https://api.whatsapp.com/send?phone=5519989863544" target="_blank" rel="noopener noreferrer">Contato</a>
+      </div>
+      <p class="disclaimer">Este site não faz parte do site do Facebook ou Facebook Inc. Além disso, este site NÃO é endossado pelo Facebook de forma alguma. FACEBOOK é uma marca comercial da FACEBOOK, Inc.</p>
+      <p class="copy">TODOS OS DIREITOS RESERVADOS – DOUTORA ESCOLA © 2023</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var end = Date.now() + 15 * 60 * 1000;
+      function pad(n) { return (n < 10 ? '0' : '') + n; }
+      function tick() {
+        var now = Date.now();
+        var left = Math.max(0, Math.floor((end - now) / 1000));
+        var m = Math.floor(left / 60);
+        var s = left % 60;
+        document.getElementById('timer').textContent = pad(m) + ':' + pad(s);
+        if (left > 0) setTimeout(tick, 1000);
+        else document.getElementById('timer').textContent = '00:00';
+      }
+      tick();
+    })();
+  </script>
+</body>
+</html>

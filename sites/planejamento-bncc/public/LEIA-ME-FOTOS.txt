@@ -1,0 +1,35 @@
+========================================
+  ONDE COLOCAR AS FOTOS - PLANEJAMENTO BNCC
+========================================
+
+PASTA:
+  /var/www/projetos/sites/planejamento-bncc/public/
+
+  (ou simplesmente: a pasta "public" deste projeto)
+
+
+NOMES DOS ARQUIVOS:
+-------------------
+
+1) FOTO DO HERO (topo da página - produto/material do curso)
+   Nome do arquivo: hero.jpg
+   Ou use: hero.png
+   Formato sugerido: vertical (3:4), ex: 600x800 px
+
+   Se usar .png, avise para ajustarmos o código (ou renomeie para hero.jpg)
+
+
+2) FOTO DA DRA. GUACIARA (seção "Quem Sou Eu?")
+   Nome do arquivo: guaciara.jpg
+   Ou use: guaciara.png
+   Formato sugerido: quadrado (1:1), ex: 800x800 px
+
+   Se usar .png, renomeie para guaciara.jpg ou peça para ajustar o código.
+
+
+DEPOIS DE COLOCAR AS FOTOS:
+  Rode o build para atualizar o site:
+    cd /var/www/projetos/nginx-multisite
+    ./build-site.sh planejamento-bncc
+
+========================================

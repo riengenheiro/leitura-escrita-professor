@@ -1,0 +1,24 @@
+IMAGENS DO SITE - CÓDIGOS BNCC
+==============================
+
+Pasta: public/images/codigos-bncc/
+
+Coloque as fotos NESTA pasta com estes nomes exatos:
+
+1) 01-hero.png
+   → Foto do PRODUTO (capa do guia / livro)
+   → Onde aparece: Hero (topo do site, ao lado do texto)
+
+2) 02-resumindo.png
+   → Foto do PRODUTO (pode ser a mesma do hero ou outra)
+   → Onde aparece: Seção "Resumindo..."
+
+3) 03-especialista.png
+   → Foto da ESPECIALISTA (Dra. Guaciara Fornaciari)
+   → Onde aparece: Seção "Quem sou eu?"
+
+Formato sugerido: PNG ou JPG, boa resolução (ex.: 600–800px de largura).
+
+Depois de colocar as imagens, rode o build:
+  cd /var/www/projetos/nginx-multisite
+  ./build-site.sh codigos-bncc

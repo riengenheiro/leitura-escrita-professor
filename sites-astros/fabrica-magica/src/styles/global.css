@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 18px; }
+@media (max-width: 768px) { html { font-size: 16px; } }
+body {
+  font-family: 'Poppins', system-ui, sans-serif;
+  background-color: #fff;
+  color: #1a1a1a;
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+:root {
+  --color-primary: #1D8FF2;
+  --color-btn-primary: #1C8C4D;
+  --color-btn-secondary: #F28705;
+  --color-accent: #F2C849;
+  --color-surface: #F2F2F2;
+}
+@keyframes countdown-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+.animate-countdown { animation: countdown-pulse 1s ease-in-out infinite; }
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

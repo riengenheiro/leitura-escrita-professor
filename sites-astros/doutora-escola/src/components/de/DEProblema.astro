@@ -1,0 +1,29 @@
+---
+import Check from '../icons/Check.astro';
+import { PRICE_BASIC, PRICE_ANCHOR, formatPrice } from '../../config/pricing';
+
+interface Props { price?: number }
+const { price } = Astro.props;
+const pagePrice = price ?? PRICE_BASIC;
+const showAnchor = pagePrice < PRICE_ANCHOR;
+const priceLabel = showAnchor
+  ? `De <span class="line-through text-gray-500">R$ ${formatPrice(PRICE_ANCHOR, true)}</span> por apenas <span class="font-bold text-2xl text-green-600">R$ ${formatPrice(pagePrice, true)}</span>`
+  : `Por apenas <span class="font-bold text-2xl text-green-600">R$ ${formatPrice(pagePrice, true)}</span>`;
+---
+<section class="text-black py-16 md:py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-6">
+    <span class="inline-block w-full text-center px-4 py-2 rounded-full text-sm font-bold mb-8 text-white bg-green-600">Para professoras de educação infantil</span>
+    <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10 text-gray-900">Está difícil ter ideias novas? Se sente sobrecarregada e sem reconhecimento?</h2>
+    <p class="text-lg md:text-xl text-gray-700 mb-6">Você não está sozinha. Milhares de professoras já sentiram esse peso e encontraram neste guia uma solução prática.</p>
+    <p class="text-lg md:text-xl text-gray-700 mb-10">Aqui você recebe atividades prontas para todos os Campos de Experiência da BNCC:</p>
+    <ul class="space-y-5 mb-10">
+      <li class="flex items-start gap-4"><span class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1 text-white bg-green-600"><Check class="w-5 h-5" /></span><span class="text-lg text-gray-800">Estratégias fáceis de aplicar, testadas e elogiadas por coordenadoras</span></li>
+      <li class="flex items-start gap-4"><span class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1 text-white bg-green-600"><Check class="w-5 h-5" /></span><span class="text-lg text-gray-800">Resultados visíveis já nas primeiras semanas</span></li>
+      <li class="flex items-start gap-4"><span class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1 text-white bg-green-600"><Check class="w-5 h-5" /></span><span class="text-lg text-gray-800">Planejamento rápido, mais tempo livre e alunos muito mais engajados</span></li>
+    </ul>
+    <div class="bg-white rounded-2xl p-6 border-2 border-yellow-400 shadow-md mb-6">
+      <p class="text-xl md:text-2xl text-center" set:html={`${priceLabel} — só para as 100 primeiras professoras.`} />
+    </div>
+    <p class="text-lg text-gray-700 text-center">Clique no botão abaixo e torne seu dia a dia mais leve e criativo!</p>
+  </div>
+</section>

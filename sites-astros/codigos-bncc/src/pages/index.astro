@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { FacebookPixelLazy } from '../components/FacebookPixelLazy';
+import { CBHero } from '../components/CBHero';
+import CBProblema from '../components/cb/CBProblema.astro';
+import CBPricing from '../components/cb/CBPricing.astro';
+import CBGuarantee from '../components/cb/CBGuarantee.astro';
+import CBFAQ from '../components/cb/CBFAQ.astro';
+import CBAbout from '../components/cb/CBAbout.astro';
+import CBFinalCTA from '../components/cb/CBFinalCTA.astro';
+import CBFooter from '../components/cb/CBFooter.astro';
+import { FACEBOOK_PIXEL_CONFIG } from '../config/facebookPixel';
+---
+<Layout>
+  <main class="min-h-screen w-full bg-white text-black font-sans antialiased">
+    <FacebookPixelLazy
+      client:idle
+      pixelId={FACEBOOK_PIXEL_CONFIG.pixelId}
+      autoPageView={FACEBOOK_PIXEL_CONFIG.autoPageView}
+      delay={2000}
+    />
+    <CBHero client:load />
+    <CBProblema />
+    <CBPricing />
+    <CBGuarantee />
+    <CBFAQ />
+    <CBAbout />
+    <CBFinalCTA />
+    <CBFooter />
+  </main>
+</Layout>

@@ -1,0 +1,32 @@
+{
+  "landing-page-1": {
+    "pixelId": "123456789",
+    "accessToken": "seu_token_1",
+    "name": "Landing Page Principal",
+    "description": "Pixel para a landing page principal"
+  },
+  "landing-page-2": {
+    "pixelId": "987654321",
+    "accessToken": "seu_token_2",
+    "name": "Landing Page Secundária",
+    "description": "Pixel para landing page de campanha"
+  },
+  "product-1": {
+    "pixelId": "111111111",
+    "accessToken": "seu_token_produto_1",
+    "name": "Manual Básico",
+    "description": "Pixel para o produto Manual Básico"
+  },
+  "product-2": {
+    "pixelId": "222222222",
+    "accessToken": "seu_token_produto_2",
+    "name": "Manual Premium",
+    "description": "Pixel para o produto Manual Premium"
+  },
+  "black-friday": {
+    "pixelId": "333333333",
+    "accessToken": "seu_token_bf",
+    "name": "Black Friday",
+    "description": "Pixel para campanha Black Friday"
+  }
+}

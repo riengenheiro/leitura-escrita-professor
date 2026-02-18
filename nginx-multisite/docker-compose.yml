@@ -1,0 +1,69 @@
+services:
+  # Nginx servindo múltiplos sites
+  nginx-multisite:
+    image: nginx:alpine
+    container_name: nginx-multisite
+    ports:
+      - "8082:80"
+    volumes:
+      # Config do Nginx
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      
+      # Dist de cada site (READ-ONLY)
+      - /var/www/projetos/sites/protocolo/dist:/var/www/protocolo/dist:ro
+      - /var/www/projetos/sites-astros/doutora-escola/dist:/var/www/projetos/sites-astros/doutora-escola/dist:ro
+      - /var/www/projetos/sites-astros/codigos-bncc/dist:/var/www/projetos/sites-astros/codigos-bncc/dist:ro
+      - /var/www/projetos/sites/atividades-ludicas/dist:/var/www/projetos/sites/atividades-ludicas/dist:ro
+      - /var/www/projetos/sites/clube-doutora-escola/dist:/var/www/projetos/sites/clube-doutora-escola/dist:ro
+      - /var/www/projetos/sites/guia-pratico/dist:/var/www/projetos/sites/guia-pratico/dist:ro
+      - /var/www/projetos/sites/relatorios-construtivistas/dist:/var/www/projetos/sites/relatorios-construtivistas/dist:ro
+      - /var/www/projetos/sites/planejamento-bncc/dist:/var/www/planejamento-bncc/dist:ro
+      - /var/www/projetos/sites/roteiro-relatorios/dist:/var/www/projetos/sites/roteiro-relatorios/dist:ro
+      - /var/www/projetos/sites/link-bio/dist:/var/www/projetos/sites/link-bio/dist:ro
+      - /var/www/projetos/sites-astros/fabrica-magica/dist:/var/www/projetos/sites-astros/fabrica-magica/dist:ro
+      
+      # Adicione novos sites aqui:
+      # - /var/www/site5/dist:/var/www/site5/dist:ro
+      # - /var/www/site6/dist:/var/www/site6/dist:ro
+    restart: unless-stopped
+    networks:
+      - multisite-network
+      - sales-network
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # Backend do protocolo (se necessário)
+  manual-backend:
+    build:
+      context: /var/www/projetos/sites/protocolo/backend
+      dockerfile: Dockerfile
+    container_name: manual-backend
+    ports:
+      - "3001:3001"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+    env_file:
+      - /var/www/projetos/sites/protocolo/backend/.env
+    volumes:
+      - /var/www/projetos/sites/protocolo/backend/data:/app/data
+    networks:
+      - multisite-network
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3001/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+
+networks:
+  multisite-network:
+    driver: bridge
+  sales-network:
+    external: true
+    name: sales_page_sales-network

@@ -1,0 +1,67 @@
+---
+import '../styles/global.css';
+
+const title = 'Fábrica Mágica | De Horas para 3 Minutos - Documentos Escolares';
+const description = 'Faça em 3 minutos o que você levaria horas fazendo. PDI, PEI, Relatórios, Planejamentos. Mais de 3.300 professoras já usam. Ferramenta completa + Cursos com certificado.';
+const canonical = 'https://fabricamagica.doutoraescola.com.br/';
+const ogImage = 'https://fabricamagica.doutoraescola.com.br/images/fabrica-magica/og-image.webp';
+const FACEBOOK_PIXEL_ID = '1327489972419238';
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favico.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favico.png" />
+    <link rel="shortcut icon" href="/favico.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favico.png" />
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="PDI, PEI, planejamento escolar, relatório escolar, documentação escolar, professor, educação especial, inclusão, AEE, BNCC, Fábrica Mágica, Doutora Escola" />
+    <meta name="author" content="Dra. Guaciara Fornaciari - Doutora Escola" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content="Fábrica Mágica | De Horas para 3 Minutos" />
+    <meta property="og:description" content="Faça em 3 minutos o que você levaria horas fazendo. PDI, PEI, Relatórios, Planejamentos. Mais de 3.300 professoras já usam." />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fábrica Mágica | De Horas para 3 Minutos" />
+    <meta name="twitter:description" content="Faça em 3 minutos o que você levaria horas fazendo. PDI, PEI, Relatórios, Planejamentos." />
+    <meta name="theme-color" content="#7c3aed" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
+    <!-- LCP: preload da imagem hero para First Contentful Paint / LCP -->
+    <link rel="preload" href="/images/fabrica-magica/hero-fm.webp" as="image" />
+    <!-- Fonte não bloqueante; display=swap evita FOIT e reduz CLS -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" /></noscript>
+  </head>
+  <body>
+    <slot />
+    <script defer src="https://assets.mediadelivery.net/playerjs/playerjs-latest.min.js"></script>
+    <!-- Facebook Pixel (lazy: 2s ou primeira interação) -->
+    <script is:inline define:vars={{ FACEBOOK_PIXEL_ID }}>
+      (function() {
+        var loaded = false;
+        function loadPixel() {
+          if (loaded) return;
+          loaded = true;
+          !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', FACEBOOK_PIXEL_ID);
+          fbq('track', 'PageView');
+        }
+        ['scroll','click','touchstart','keydown','mousemove'].forEach(function(ev){ window.addEventListener(ev, loadPixel, { once: true, passive: true }); });
+        setTimeout(loadPixel, 2000);
+      })();
+    </script>
+    <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1327489972419238&amp;ev=PageView&amp;noscript=1" /></noscript>
+  </body>
+</html>
