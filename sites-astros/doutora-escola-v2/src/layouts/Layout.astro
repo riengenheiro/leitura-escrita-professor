@@ -1,0 +1,31 @@
+---
+import '../styles/global.css';
+import { PRICE_BASIC, PRICE_ANCHOR, formatPrice, SITE_URL } from '../config/pricing';
+
+const title = "Doutora Escola | Ideias para os Campos de Experiências V2.0 - R$ " + formatPrice(PRICE_BASIC, true);
+const description = "Versão 2.0 ampliada: 360 páginas (60 por bloco), 25+ atividades passo a passo, 3 projetos de 4 semanas e templates editáveis. De R$ " + PRICE_ANCHOR + " por apenas R$ " + PRICE_BASIC + "!";
+---
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="canonical" href={SITE_URL + '/'} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="BNCC, Campos de Experiências, educação infantil, Versão 2.0, Doutora Escola" />
+    <meta name="theme-color" content="#2C3E99" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={SITE_URL + '/'} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Doutora Escola - Coleção Campos de Experiências" />
+    <meta property="og:locale" content="pt_BR" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

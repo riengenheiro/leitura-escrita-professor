@@ -1,4 +1,4 @@
-import { Award, Users, FileText, GraduationCap, Quote } from 'lucide-react'
+import { Award, Users, FileText, GraduationCap, Quote, Sparkles } from 'lucide-react'
 import { OptimizedImage } from './OptimizedImage'
 
 export function FMSobre() {
@@ -124,6 +124,16 @@ export function FMSobre() {
             <p>
               Passei 9 anos nessa transformação. E hoje estou aqui... com mais de 20 anos de experiência... <strong className="text-white">para te ajudar a não passar pelo que eu passei.</strong>
             </p>
+          </div>
+          <div className="mt-10 flex justify-center">
+            <a
+              href="#oferta"
+              className="inline-flex items-center gap-2 px-8 py-4 text-white text-lg font-bold rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-xl border-2 border-[#F2C849] shadow-lg"
+              style={{ background: 'rgba(28, 140, 77, 0.9)', boxShadow: '0 4px 20px rgba(0,0,0,0.2)' }}
+            >
+              <Sparkles className="w-5 h-5" style={{ color: '#F2C849' }} />
+              Ver planos e preços
+            </a>
           </div>
         </div>
       </div>

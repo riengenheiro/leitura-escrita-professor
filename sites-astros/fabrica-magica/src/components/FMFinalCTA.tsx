@@ -91,7 +91,7 @@ export function FMFinalCTA() {
             className="inline-flex items-center gap-3 px-12 py-6 bg-btn-primary hover:opacity-90 text-white text-xl md:text-2xl font-extrabold rounded-2xl transition-all transform hover:scale-105 shadow-xl"
           >
             <Sparkles className="w-8 h-8" />
-            QUERO MINHA FÁBRICA MÁGICA!
+            Ver planos e preços
             <ArrowRight className="w-8 h-8" />
           </a>
           

@@ -23,15 +23,15 @@ const faqs = [
 
 export function GPFAQ() {
   return (
-    <section className="bg-white text-black py-16 md:py-20">
+    <section className="bg-white border-y-2 border-[var(--color-borda-livro)] py-14 md:py-16">
       <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-[var(--color-texte-livro)]">
           Perguntas frequentes
         </h2>
         <div className="space-y-4">
           {faqs.map((faq, i) => (
-            <div key={i} className="bg-gray-50 rounded-2xl shadow-md p-6 md:p-8 border-2 border-gray-200">
-              <p className="font-bold text-xl md:text-2xl text-red-700 mb-3">{faq.q}</p>
+            <div key={i} className="bg-[var(--color-papel)] rounded-xl p-5 md:p-6 border border-[var(--color-borda-livro)]">
+              <p className="font-bold text-lg text-[var(--color-destaque)] mb-2">{faq.q}</p>
               <p className="text-lg text-gray-700 leading-relaxed">{faq.a}</p>
             </div>
           ))}

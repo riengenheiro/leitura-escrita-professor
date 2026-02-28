@@ -18,7 +18,7 @@ const COMPRAS = [
   { nome: 'Úrsula Freitas', cidade: 'Macapá' }, { nome: 'Vera Andrade', cidade: 'Rio Branco' },
   { nome: 'Wanessa Campos', cidade: 'Porto Velho' }, { nome: 'Yasmin Batista', cidade: 'Santos' },
 ];
-const TEXTOS = ['acabou de comprar', 'comprou agora', 'acabou de assinar', 'comprou há pouco'];
+const TEXTOS = ['acabou de comprar', 'comprou agora', 'comprou há pouco', 'comprou há instantes'];
 const rnd = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
 function otherItem<T>(arr: T[], excludeIndex: number): { item: T; index: number } {
   const indices = arr.map((_, i) => i).filter(i => i !== excludeIndex);
@@ -38,10 +38,10 @@ export function FMSocialProof() {
       setItem({ ...next, index: idx, texto: TEXTOS[Math.floor(Math.random() * TEXTOS.length)] });
       ref.current = setTimeout(() => {
         setVisible(false);
-        ref.current = setTimeout(() => run(idx), rnd(1500, 3500));
-      }, rnd(2500, 4500));
+        ref.current = setTimeout(() => run(idx), rnd(4500, 8000));
+      }, rnd(5000, 9000));
     };
-    ref.current = setTimeout(() => { setVisible(false); ref.current = setTimeout(() => run(item.index), rnd(1500, 3500)); }, rnd(2500, 4500));
+    ref.current = setTimeout(() => { setVisible(false); ref.current = setTimeout(() => run(item.index), rnd(4500, 8000)); }, rnd(5000, 9000));
     return () => { if (ref.current) clearTimeout(ref.current); };
   }, []);
 

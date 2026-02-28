@@ -1,0 +1,26 @@
+---
+const faqs = [
+  { pergunta: 'Como vou receber o material?', resposta: 'Acesso imediato por email + área de membros.' },
+  { pergunta: 'Qual a diferença entre V1 e V2?', resposta: 'V2 tem 3x mais conteúdo, projetos completos, templates editáveis.' },
+  { pergunta: 'É alinhado à BNCC atualizada?', resposta: 'Sim! Todas as atividades citam objetivos da BNCC.' },
+  { pergunta: 'Posso usar no meu planejamento oficial?', resposta: 'Sim! Foi feito para isso.' },
+  { pergunta: 'Posso imprimir?', resposta: 'Sim, todo o conteúdo.' },
+  { pergunta: 'Quanto tempo tenho acesso?', resposta: 'VITALÍCIO + atualizações gratuitas.' },
+  { pergunta: 'Tem garantia?', resposta: '7 dias, devolução integral sem perguntas.' },
+  { pergunta: 'Funciona para iniciantes?', resposta: 'Sim! Explicações passo a passo.' },
+  { pergunta: 'Formas de pagamento?', resposta: 'PIX, cartão de crédito (até 12x), boleto.' },
+];
+---
+<section class="py-16 md:py-20 bg-surface px-6">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-extrabold text-center text-gray-900 mb-12">Tire suas dúvidas</h2>
+    <ul class="space-y-4">
+      {faqs.map((faq) => (
+        <li class="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
+          <p class="font-bold text-gray-900 mb-2">{faq.pergunta}</p>
+          <p class="text-gray-700">{faq.resposta}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

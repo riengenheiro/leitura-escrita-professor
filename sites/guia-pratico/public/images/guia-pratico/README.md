@@ -18,7 +18,15 @@ Adicione as seguintes imagens nesta pasta:
    - Imagem do Guia Prático simplificado
    - Seção "Inúmeras Pessoas"
 
-5. **07-quem-sou-eu.png** (637x856 px)
+5. **05-depoimento-1.png** (recomendado ~600x400 px ou proporção do print)
+   - Print de depoimento 1
+   - Seção "Quem já usa"
+
+6. **06-depoimento-2.png** (recomendado ~600x400 px ou proporção do print)
+   - Print de depoimento 2
+   - Seção "Quem já usa"
+
+7. **07-quem-sou-eu.png** (637x856 px)
    - Foto da Dra. Guaciara Fornaciari
    - Seção "Quem sou eu"
 

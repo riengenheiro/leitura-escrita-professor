@@ -127,7 +127,7 @@ export function FMSolucao() {
               style={{ background: 'linear-gradient(135deg, #1C8C4D 0%, #167d44 100%)', boxShadow: '0 4px 20px rgba(28, 140, 77, 0.4)' }}
             >
               <Sparkles className="w-7 h-7" />
-              Quero Experimentar Agora!
+              Ver planos e preços
             </a>
           </div>
         </div>

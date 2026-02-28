@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Ambiente "material didático" – papel e caneta */
+  --color-papel: #faf7f2;
+  --color-papel-escuro: #f0ebe3;
+  --color-borda-livro: #e2dcd2;
+  --color-texte-livro: #2c2825;
+  --color-destaque: #b91c1c;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,18 +29,26 @@ html {
 }
 
 body {
-  font-family: 'Poppins', system-ui, sans-serif;
-  background-color: #ffffff;
-  color: #1a1a1a;
+  font-family: 'Lora', Georgia, serif;
+  background-color: var(--color-papel);
+  color: var(--color-texte-livro);
   overflow-x: hidden;
   line-height: 1.7;
 }
 
+/* Títulos com cara de material didático */
 h1, h2, h3 {
-  line-height: 1.2;
+  font-family: 'Lora', Georgia, serif;
+  line-height: 1.25;
   font-weight: 700;
+  color: var(--color-texte-livro);
 }
 
 p {
   font-size: 1.125rem;
+}
+
+/* Botões e CTAs – sans para destaque e clareza */
+.font-ui {
+  font-family: 'Poppins', system-ui, sans-serif;
 }

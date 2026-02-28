@@ -240,12 +240,22 @@ Equipe do Manual Interativo
 
 // ==================== ROTAS ====================
 
-// Health check
+// Health check (localhost / Docker)
 app.get('/health', (req, res) => {
   res.json({ 
     status: 'ok', 
     timestamp: new Date().toISOString(),
     service: 'manual-backend'
+  });
+});
+
+// Health check via Nginx (GET /api/health no site)
+app.get('/api/health', (req, res) => {
+  res.json({ 
+    status: 'ok', 
+    timestamp: new Date().toISOString(),
+    service: 'manual-backend',
+    webhook: '/webhook/kiwify'
   });
 });
 

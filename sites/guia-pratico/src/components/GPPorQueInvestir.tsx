@@ -21,24 +21,25 @@ const beneficios = [
 
 export function GPPorQueInvestir() {
   return (
-    <section className="bg-gradient-to-b from-gray-100 to-white text-black py-16 md:py-20">
+    <section className="bg-white border-y-2 border-[var(--color-borda-livro)] py-14 md:py-16">
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-center mb-14">
-          MAS POR QUE INVESTIR NO GUIA PRÁTICO?
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-2 text-[var(--color-texte-livro)]">
+          Por que esse guia ajuda
         </h2>
+        <p className="text-center text-gray-600 mb-10">Feito para o seu dia a dia na sala de aula</p>
         
-        <div className="space-y-8">
+        <div className="space-y-6">
           {beneficios.map((item, i) => (
-            <div key={i} className="bg-white rounded-2xl p-8 shadow-lg">
+            <div key={i} className="bg-[var(--color-papel)] rounded-xl p-6 border border-[var(--color-borda-livro)]">
               <div className="flex items-start gap-4">
-                <span className="flex-shrink-0 w-10 h-10 rounded-full bg-red-600 flex items-center justify-center mt-1">
+                <span className="flex-shrink-0 w-10 h-10 rounded-full bg-[var(--color-destaque)] flex items-center justify-center mt-1">
                   <Check className="w-6 h-6 text-white" strokeWidth={3} />
                 </span>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold mb-3 text-red-700">
+                  <h3 className="text-lg md:text-xl font-bold mb-2 text-[var(--color-texte-livro)]">
                     {item.title}
                   </h3>
-                  <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed">
                     {item.description}
                   </p>
                 </div>

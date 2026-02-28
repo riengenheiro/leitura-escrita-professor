@@ -1,4 +1,4 @@
-import { Gift, BookOpen, FileText, Award, Check } from 'lucide-react'
+import { Gift, BookOpen, FileText, Award, Check, Sparkles } from 'lucide-react'
 
 export function FMBonus() {
   return (
@@ -114,6 +114,17 @@ export function FMBonus() {
           <p className="text-lg text-gray-800">
             Você recebe <strong>150 horas de certificados</strong> inclusos no seu acesso!
           </p>
+        </div>
+
+        <div className="mt-12 text-center">
+          <a
+            href="#oferta"
+            className="inline-flex items-center gap-2 px-8 py-4 text-white text-lg font-bold rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-xl shadow-lg"
+            style={{ background: 'linear-gradient(135deg, #1C8C4D 0%, #167d44 100%)', boxShadow: '0 4px 20px rgba(28, 140, 77, 0.4)' }}
+          >
+            <Sparkles className="w-5 h-5" style={{ color: '#F2C849' }} />
+            Ver planos e preços
+          </a>
         </div>
       </div>
     </section>

@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { PRICE_BASIC, PRICE_ANCHOR, formatPrice } from '../config/pricing';
+import { FACEBOOK_PIXEL_ID } from '../config/facebookPixel';
 
 interface Props {
   /** Preço da página (para testes /v1=17, /v2=27, etc). Omitir = R$ 10 (principal). */
@@ -46,6 +47,13 @@ const ogTitle = `Ideias para Trabalhar os Campos de Experiências da BNCC - R$ $
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
+    <!-- Meta Pixel (Facebook) - snippet oficial no head -->
+    <script is:inline define:vars={{ FACEBOOK_PIXEL_ID }}>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', FACEBOOK_PIXEL_ID);
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" alt="" src={"https://www.facebook.com/tr?id=" + FACEBOOK_PIXEL_ID + "&ev=PageView&noscript=1"} /></noscript>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/favico.png" />
@@ -80,9 +88,6 @@ const ogTitle = `Ideias para Trabalhar os Campos de Experiências da BNCC - R$ $
     <meta name="theme-color" content="#10b981" />
     <meta name="msapplication-TileColor" content="#10b981" />
     <meta name="format-detection" content="telephone=no" />
-    <script is:inline>
-      (function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];})(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://connect.facebook.net" crossorigin />

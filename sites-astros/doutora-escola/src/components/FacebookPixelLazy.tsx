@@ -94,61 +94,27 @@ export function FacebookPixelLazy({
 
   useEffect(() => {
     if (!shouldLoad || isLoaded) return;
-
-    // Verifica se já foi carregado
-    if (window.fbq) {
+    // Igual codigos-bncc: só considera "carregado" se for o pixel real (callMethod), não o stub do head
+    const isRealPixel = window.fbq && typeof (window.fbq as { callMethod?: unknown }).callMethod === 'function';
+    if (isRealPixel) {
       setIsLoaded(true);
-      if (autoPageView) {
-        window.fbq('track', 'PageView');
-      }
+      if (autoPageView) window.fbq!('track', 'PageView', getPageViewParams());
       return;
     }
-
-    // Inicializa o shim do Facebook Pixel se não existir
-    if (!window.fbq) {
-      const n = function (...args: any[]) {
-        // @ts-ignore
-        n.callMethod ? n.callMethod.apply(n, args) : n.queue.push(args);
-      } as any;
-
-      if (!(window as any)._fbq) (window as any)._fbq = n;
-      n.push = n;
-      n.loaded = true;
-      n.version = '2.0';
-      n.queue = [];
-      window.fbq = n;
-    }
-
-    // Carrega o script do Facebook Pixel
     const script = document.createElement('script');
-    script.src = `https://connect.facebook.net/en_US/fbevents.js`;
+    script.src = 'https://connect.facebook.net/en_US/fbevents.js';
     script.async = true;
     script.defer = true;
-
-
     script.onload = () => {
-      // Inicializa o pixel
       if (typeof window.fbq !== 'undefined' && window.fbq) {
         window.fbq('init', pixelId);
-        if (autoPageView) {
-          window.fbq('track', 'PageView', getPageViewParams());
-        }
+        if (autoPageView) window.fbq('track', 'PageView', getPageViewParams());
         setIsLoaded(true);
       }
     };
-
-    script.onerror = () => {
-      console.error('Erro ao carregar Facebook Pixel');
-    };
-
+    script.onerror = () => console.error('Erro ao carregar Facebook Pixel');
     document.head.appendChild(script);
-
-    // Cleanup
-    return () => {
-      if (script.parentNode) {
-        script.parentNode.removeChild(script);
-      }
-    };
+    return () => { if (script.parentNode) script.parentNode.removeChild(script); };
   }, [shouldLoad, pixelId, autoPageView, isLoaded]);
 
   // Tracking de mudanças de rota (se necessário)

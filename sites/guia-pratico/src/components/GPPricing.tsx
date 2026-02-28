@@ -1,108 +1,127 @@
-import { Check, BookOpen, Gift } from 'lucide-react'
+import { Check, BookOpen, Shield, Zap, Sparkles } from 'lucide-react'
+
+// Checkout Doutora Escola
+const LINK_PACOTE_BASICO = 'https://fm.doutoraescola.com.br/checkout/?s=gDtlW'      // R$ 19,70 à vista ou 2x R$ 9,85
+const LINK_PACOTE_COMPLETO = 'https://fm.doutoraescola.com.br/checkout/?s=916co'   // R$ 47,90 à vista ou 5x R$ 9,58
+
+const bonusBasico = [
+  'Guia Prático de Dificuldades Escolares (PDF)',
+  'Check List para Sondagem Escolar — Educação Infantil',
+  'Check List para Sondagem Escolar — Ensino Fundamental Inicial e Final',
+  'Aula de Sondagem em Vídeo',
+  'Ebook Sondagem — Imersão em Avaliação Diagnóstica',
+]
+
+const bonusPacoteEspecial = [
+  'Ebook Como Acabar com as Interrupções em Sala: 15 Técnicas Testadas',
+  'Planejamento de Aulas em 1 Hora — Método Step-by-Step',
+]
 
 export function GPPricing() {
   return (
-    <section id="opcoes" className="bg-gradient-to-b from-gray-100 to-white text-black py-16 md:py-20">
+    <section id="opcoes" className="bg-[var(--color-papel)] py-16 md:py-20">
       <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4">
-          QUANTO ISSO DEVERIA CUSTAR?
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-2 text-[var(--color-texte-livro)]">
+          Escolha seu pacote
         </h2>
+        <p className="text-center text-gray-600 mb-10">
+          Dois formatos: só o essencial ou tudo incluso.
+        </p>
         
-        {/* Tabela de Preços */}
-        <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg mb-10">
-          <div className="space-y-4 text-lg md:text-xl">
-            <div className="flex justify-between items-center pb-4 border-b border-gray-200">
-              <span className="font-semibold">Guia Prático de Dificuldades Escolares</span>
-              <span className="font-bold text-gray-700">R$ 127,00</span>
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+          {/* Pacote Básico — R$ 19,70 */}
+          <div className="rounded-2xl overflow-hidden border-2 border-[var(--color-borda-livro)] bg-white shadow-lg flex flex-col">
+            <div className="bg-[var(--color-texte-livro)] text-white py-4 px-4 text-center">
+              <p className="font-ui font-bold text-lg">Pacote Básico</p>
             </div>
-            <div className="flex justify-between items-center pb-4 border-b border-gray-200">
-              <span className="font-semibold">Ebook de Sondagem Escolar</span>
-              <span className="font-bold text-gray-700">R$ 97,00</span>
-            </div>
-            <div className="flex justify-between items-center pt-4">
-              <span className="text-2xl font-bold">Total</span>
-              <span className="text-3xl font-extrabold text-red-600">R$ 236,00</span>
-            </div>
-          </div>
-        </div>
-        
-        {/* Oferta Principal */}
-        <div className="text-center mb-10">
-          <p className="text-2xl md:text-3xl font-bold mb-6 text-gray-800">
-            Tudo isso deveria custar R$ 47,00 mas você não pagará esse valor!
-          </p>
-          <p className="text-xl md:text-2xl mb-8 text-gray-700">
-            Por tempo limitado, você irá adquirir o Guia Prático de Dificuldades Escolares + 01 bônus por apenas:
-          </p>
-        </div>
-        
-        {/* Card de Preço */}
-        <div className="rounded-3xl shadow-2xl overflow-hidden border-4 border-red-500 bg-white relative transform transition-all hover:scale-[1.02] max-w-2xl mx-auto">
-          <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-black px-8 py-2 rounded-full font-extrabold text-sm uppercase shadow-lg animate-pulse">
-            OFERTA POR TEMPO LIMITADO
-          </div>
-          
-          <div className="bg-gradient-to-r from-red-600 to-red-700 text-white py-8 px-6 pt-10">
-            <p className="font-extrabold text-3xl md:text-4xl text-center uppercase mb-2">
-              Guia Prático Completo
-            </p>
-            <p className="text-center text-lg opacity-90">+ 1 Bônus de Sondagem</p>
-          </div>
-          
-          <div className="p-8 md:p-10">
-            <div className="text-center mb-8">
-              <p className="text-gray-600 text-lg mb-2">De R$ 47,00 por apenas:</p>
-              <div className="flex items-center justify-center">
-                <div className="text-center">
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-red-600 text-5xl md:text-6xl font-black">R$ 19</span>
-                    <span className="text-2xl text-gray-500">,70</span>
-                  </div>
+            <div className="p-5 md:p-6 flex-1 flex flex-col">
+              <div className="text-center mb-4">
+                <div className="flex items-baseline justify-center gap-0.5">
+                  <span className="text-[var(--color-destaque)] text-3xl md:text-4xl font-bold font-ui">R$ 19</span>
+                  <span className="text-lg text-gray-500 font-ui">,70</span>
                 </div>
+                <p className="text-xs text-gray-500 mt-1">pagamento único</p>
               </div>
-            </div>
-            
-            <div className="bg-green-50 border-2 border-green-200 rounded-2xl p-6 mb-8">
-              <p className="font-bold text-center text-lg mb-4 text-green-700 uppercase flex items-center justify-center gap-2">
-                <Check className="w-6 h-6" />
-                Você recebe:
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <BookOpen className="w-6 h-6 text-red-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-lg font-medium">Guia Prático de Dificuldades Escolares (PDF)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Gift className="w-6 h-6 text-yellow-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-lg font-medium">BÔNUS: Ebook de Sondagem Escolar</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-lg font-medium">Atendimento exclusivo por e-mail durante 1 ano</span>
+              <ul className="space-y-2 mb-4 flex-1">
+                {bonusBasico.map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm">
+                    <Check className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+                <li className="flex items-start gap-2 text-sm text-gray-600">
+                  <Check className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
+                  <span>Atendimento por e-mail por 1 ano</span>
                 </li>
               </ul>
+              <a
+                href={LINK_PACOTE_BASICO}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-ui flex items-center justify-center gap-2 w-full py-4 bg-[var(--color-texte-livro)] hover:bg-gray-800 text-white text-base font-bold rounded-lg transition-all"
+              >
+                <BookOpen className="w-5 h-5" />
+                Quero o básico — R$ 19,70
+              </a>
             </div>
-            
-            <div className="mb-6 text-center">
-              <p className="text-sm text-gray-500 mb-2">⚡ Acesso liberado imediatamente após confirmação</p>
-              <p className="text-xs text-gray-400">🔒 Compra 100% segura e protegida</p>
+          </div>
+
+          {/* Pacote Especial — R$ 47,90 (tudo do básico + 2 ebooks) */}
+          <div className="rounded-2xl overflow-hidden border-2 border-[var(--color-destaque)] bg-white shadow-lg flex flex-col relative">
+            <div className="absolute top-0 right-0 bg-amber-400 text-black text-xs font-ui font-bold px-3 py-1 rounded-bl-lg">
+              Recomendado
             </div>
-            
-            <a
-              href="https://pay.voompcreators.com.br/redirect/11045"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 w-full py-6 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white text-2xl font-extrabold rounded-2xl transition-all transform hover:scale-105 shadow-2xl"
-            >
-              <BookOpen className="w-8 h-8" />
-              QUERO ADQUIRIR AGORA!
-            </a>
-            
-            <p className="text-center text-sm text-gray-500 mt-4">
-              ✅ Garantia incondicional de 7 dias
-            </p>
+            <div className="bg-[var(--color-destaque)] text-white py-4 px-4 text-center">
+              <p className="font-ui font-bold text-lg">Pacote Especial</p>
+              <p className="text-sm opacity-90 mt-0.5">Tudo do básico mais:</p>
+            </div>
+            <div className="p-5 md:p-6 flex-1 flex flex-col">
+              <div className="text-center mb-4">
+                <div className="flex items-baseline justify-center gap-0.5">
+                  <span className="text-[var(--color-destaque)] text-3xl md:text-4xl font-bold font-ui">R$ 47</span>
+                  <span className="text-lg text-gray-500 font-ui">,90</span>
+                </div>
+                <p className="text-xs text-gray-500 mt-1">pagamento único</p>
+              </div>
+              <ul className="space-y-1.5 mb-3 text-sm">
+                {bonusPacoteEspecial.map((item, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <Sparkles className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-xs text-gray-500 mb-4">+ todo o conteúdo do Pacote Básico</p>
+              <a
+                href={LINK_PACOTE_COMPLETO}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-ui flex items-center justify-center gap-2 w-full py-4 bg-[var(--color-destaque)] hover:bg-red-800 text-white text-base font-bold rounded-lg transition-all mt-auto"
+              >
+                <BookOpen className="w-5 h-5" />
+                Quero o pacote especial — R$ 47,90
+              </a>
+            </div>
           </div>
         </div>
+        
+        <div className="flex flex-wrap gap-3 justify-center mt-8 py-3 px-4 text-sm text-gray-600">
+          <span className="flex items-center gap-1.5">
+            <Zap className="w-4 h-4 text-amber-600" />
+            Acesso na hora
+          </span>
+          <span className="flex items-center gap-1.5">
+            <Shield className="w-4 h-4 text-green-600" />
+            Compra segura
+          </span>
+          <span className="flex items-center gap-1.5">
+            <Check className="w-4 h-4 text-green-600" />
+            7 dias de garantia
+          </span>
+        </div>
+        <p className="text-center text-xs text-gray-500 mt-2">
+          Não gostou? Devolvemos seu dinheiro em 7 dias. Sem burocracia.
+        </p>
       </div>
     </section>
   )

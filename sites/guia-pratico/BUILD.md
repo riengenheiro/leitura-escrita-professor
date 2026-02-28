@@ -42,8 +42,10 @@ Adicione as seguintes imagens em `public/images/guia-pratico/`:
 1. **01-hero.png** (637x856) - Capa do Guia Prático
 2. **02-amostras.png** (800x600) - Amostras dos materiais
 3. **03-antes.png** (400x300) - Materiais técnicos complicados
-4. **04-depois.png** (400x300) - Guia Prático simplificado  
-5. **07-quem-sou-eu.png** (637x856) - Foto da Dra. Guaciara
+4. **04-depois.png** (400x300) - Guia Prático simplificado
+5. **05-depoimento-1.png** - Print depoimento 1 (seção Quem já usa)
+6. **06-depoimento-2.png** - Print depoimento 2 (seção Quem já usa)
+7. **07-quem-sou-eu.png** (637x856) - Foto da Dra. Guaciara
 
 ## Link de Pagamento
 

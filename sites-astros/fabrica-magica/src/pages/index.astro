@@ -1,37 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import FMHero from '../components/FMHero.astro';
-import { FMCountdown } from '../components/FMCountdown';
-import { FMSocialProof } from '../components/FMSocialProof';
+import { FMDocumentos } from '../components/FMDocumentos';
+import { FMComoFunciona } from '../components/FMComoFunciona';
 import { FMVideo } from '../components/FMVideo';
-import { FMProblema } from '../components/FMProblema';
-import { FMSolucao } from '../components/FMSolucao';
-import { FMConteudo } from '../components/FMConteudo';
+import { FMQuemSouEu } from '../components/FMQuemSouEu';
 import { FMDepoimentos } from '../components/FMDepoimentos';
-import { FMSobre } from '../components/FMSobre';
 import { FMPricing } from '../components/FMPricing';
-import { FMBonus } from '../components/FMBonus';
-import { FMGarantia } from '../components/FMGarantia';
 import { FMFAQ } from '../components/FMFAQ';
-import { FMFinalCTA } from '../components/FMFinalCTA';
 import { FMFooter } from '../components/FMFooter';
 ---
 <Layout>
   <main>
-    <FMCountdown client:idle />
-    <FMSocialProof client:idle />
     <FMHero />
+    <FMDocumentos client:idle />
+    <FMComoFunciona client:idle />
     <FMVideo client:idle />
-    <FMProblema client:idle />
-    <FMSolucao client:idle />
-    <FMConteudo client:idle />
+    <FMQuemSouEu client:idle />
     <FMDepoimentos client:idle />
-    <FMSobre client:idle />
     <FMPricing client:idle />
-    <FMBonus client:idle />
-    <FMGarantia client:idle />
     <FMFAQ client:idle />
-    <FMFinalCTA client:idle />
     <FMFooter client:idle />
   </main>
 </Layout>

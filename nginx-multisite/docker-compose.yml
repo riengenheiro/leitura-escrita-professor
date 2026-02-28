@@ -21,6 +21,8 @@ services:
       - /var/www/projetos/sites/roteiro-relatorios/dist:/var/www/projetos/sites/roteiro-relatorios/dist:ro
       - /var/www/projetos/sites/link-bio/dist:/var/www/projetos/sites/link-bio/dist:ro
       - /var/www/projetos/sites-astros/fabrica-magica/dist:/var/www/projetos/sites-astros/fabrica-magica/dist:ro
+      - /var/www/projetos/sites-astros/doutora-escola-v2/dist:/var/www/projetos/sites-astros/doutora-escola-v2/dist:ro
+      - /var/www/projetos/sites-astros/protocolo/dist:/var/www/projetos/sites-astros/protocolo/dist:ro
       
       # Adicione novos sites aqui:
       # - /var/www/site5/dist:/var/www/site5/dist:ro

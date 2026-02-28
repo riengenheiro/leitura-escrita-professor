@@ -1,23 +1,26 @@
-import { BookOpen } from 'lucide-react'
+import { BookOpen, Shield, Zap, CheckCircle } from 'lucide-react'
 import { OptimizedImage } from './OptimizedImage'
 
 export function GPHero() {
   return (
     <>
-      {/* Hero principal – texto + capa do guia */}
-      <section className="bg-gradient-to-b from-red-600 to-red-700 text-white">
-        <div className="max-w-5xl mx-auto px-6 py-16 lg:py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      {/* Hero – ambiente familiar, feito para professora */}
+      <section className="bg-[var(--color-papel-escuro)] border-b-2 border-[var(--color-borda-livro)]">
+        <div className="max-w-5xl mx-auto px-6 py-14 lg:py-20">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
-                Guia Prático Para Identificar Dificuldades Escolares!
+              <p className="text-lg text-[var(--color-destaque)] font-semibold mb-2 font-ui">
+                Feito para você, professora
+              </p>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-5 text-[var(--color-texte-livro)]">
+                Guia Prático para Identificar Dificuldades Escolares
               </h1>
-              <p className="text-2xl md:text-3xl font-bold text-yellow-300 mb-6">
-                Chega de se sentir impotente diante das dificuldades de aprendizagem!
+              <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6">
+                O material que você usa no dia a dia com os livros didáticos — em formato de guia, direto e fácil de usar.
               </p>
             </div>
             <div className="flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-md aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative w-full max-w-md aspect-[3/4] rounded-lg overflow-hidden shadow-xl border-2 border-[var(--color-borda-livro)]">
                 <OptimizedImage
                   src="/images/guia-pratico/01-hero.png"
                   alt="Guia Prático Para Identificar Dificuldades Escolares - Doutora Escola"
@@ -32,23 +35,33 @@ export function GPHero() {
         </div>
       </section>
 
-      {/* Faixa CTA inicial */}
-      <section className="bg-gray-100 text-black py-12">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-2xl md:text-3xl font-bold mb-3">
-            Por apenas <span className="text-red-600 text-3xl md:text-4xl">R$ 19,70</span>
-          </p>
-          <p className="text-lg text-gray-600 mb-8">+ 1 Bônus Exclusivo de Sondagem</p>
+      {/* Faixa CTA – simples, segura, um clique */}
+      <section className="bg-white border-y-2 border-[var(--color-borda-livro)] py-10">
+        <div className="max-w-2xl mx-auto px-6 text-center">
+          <p className="text-xl text-gray-700 mb-1">A partir de</p>
+          <p className="text-4xl md:text-5xl font-bold text-[var(--color-destaque)] mb-1 font-ui">R$ 19,70</p>
+          <p className="text-base text-gray-600 mb-6">Básico ou Pacote Especial — escolha na página</p>
           <a
             href="#opcoes"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-red-600 hover:bg-red-700 text-white text-xl md:text-2xl font-bold rounded-xl transition-all transform hover:scale-105 shadow-lg"
+            className="font-ui inline-flex items-center justify-center gap-2 px-8 py-4 bg-[var(--color-destaque)] hover:bg-red-800 text-white text-lg font-bold rounded-lg transition-all shadow-md hover:shadow-lg"
           >
-            <BookOpen className="w-7 h-7" />
-            Quero Identificar as Dificuldades Agora!
+            <BookOpen className="w-5 h-5" />
+            Quero o meu guia
           </a>
-          <p className="text-sm text-gray-500 mt-3">
-            ⚡ Acesso imediato • 🔒 Compra 100% segura • ✅ Garantia de 7 dias
-          </p>
+          <div className="flex flex-wrap items-center justify-center gap-4 mt-5 text-sm text-gray-600">
+            <span className="flex items-center gap-1.5">
+              <Zap className="w-4 h-4 text-amber-600" />
+              Acesso na hora
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Shield className="w-4 h-4 text-green-600" />
+              Compra segura
+            </span>
+            <span className="flex items-center gap-1.5">
+              <CheckCircle className="w-4 h-4 text-green-600" />
+              7 dias de garantia
+            </span>
+          </div>
         </div>
       </section>
     </>

@@ -1,4 +1,4 @@
-import { Shield } from 'lucide-react'
+import { Shield, Sparkles } from 'lucide-react'
 
 export function FMGarantia() {
   return (
@@ -27,6 +27,16 @@ export function FMGarantia() {
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
               <strong>Sem perguntas. Sem burocracia.</strong> Eu tenho certeza que 7 dias são suficientes para você entender quão boa é essa oferta!
             </p>
+            <div className="mt-8 flex justify-center">
+              <a
+                href="#oferta"
+                className="inline-flex items-center gap-2 px-8 py-4 text-white text-lg font-bold rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-xl shadow-lg"
+                style={{ background: 'linear-gradient(135deg, #1C8C4D 0%, #167d44 100%)', boxShadow: '0 4px 20px rgba(28, 140, 77, 0.4)' }}
+              >
+                <Sparkles className="w-5 h-5" style={{ color: '#F2C849' }} />
+                Ver planos e preços
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,124 @@
+---
+/**
+ * Seção 4: O que você vai receber - APENAS 5 BLOCOS (Bloco 6 bônus removido).
+ */
+import { CHECKOUT_BASIC } from '../config/pricing';
+
+const blocos = [
+  {
+    titulo: 'CAMPO 1: O Eu, o Outro e o Nós',
+    emoji: '📚',
+    img: '/images/v2/bloco-1.webp',
+    itens: [
+      '5 atividades completas passo a passo',
+      'Álbum do Eu (projeto de 4 semanas)',
+      'Espelho, espelho meu',
+      'Jogo das Emoções',
+      'Árvore da Amizade',
+      'Caixinha de Gratidão',
+      'Checklist de observação pronto',
+      'Template de planejamento',
+    ],
+    bonus: 'Ideias relâmpago (5 minutos)',
+  },
+  {
+    titulo: 'CAMPO 2: Corpo, Gestos e Movimentos',
+    emoji: '🏃',
+    img: '/images/v2/bloco-2.webp',
+    itens: [
+      '6 atividades motoras completas',
+      'Circuito motor (com montagem ilustrada)',
+      'Estátua musical (variações)',
+      'Massinha caseira (receita + exploração)',
+      'Yoga para crianças',
+      'Pintura corporal',
+      'Pega-pega cooperativo',
+      'Materiais de baixo custo',
+    ],
+    bonus: 'Rotina motora diária',
+  },
+  {
+    titulo: 'CAMPO 3: Traços, Sons, Cores e Formas',
+    emoji: '🎨',
+    img: '/images/v2/bloco-3.webp',
+    itens: [
+      '6 atividades artísticas detalhadas',
+      'Pintura com tintas naturais (receitas)',
+      'Banda de sucata (construção de instrumentos)',
+      'Mistura de cores (3 versões)',
+      'Caixa de fantasias e teatro',
+      'Arte com elementos naturais',
+      'Show de talentos (projeto 2 semanas)',
+      'Playlist para cada momento',
+    ],
+    bonus: 'Como montar seu atelier',
+  },
+  {
+    titulo: 'CAMPO 4: Escuta, Fala, Pensamento e Imaginação',
+    emoji: '📖',
+    img: '/images/v2/bloco-4.webp',
+    itens: [
+      '6 atividades de linguagem completas',
+      'Sacola literária viajante (projeto contínuo)',
+      'Roda de conversa temática (20 temas)',
+      'Ditado para o professor',
+      'Caixa de histórias (objetos mágicos)',
+      'Nome próprio (projeto 3 semanas)',
+      'Rimas e parlendas (jogos)',
+      'Estratégias para ampliar vocabulário',
+    ],
+    bonus: 'Técnicas de contação de histórias',
+  },
+  {
+    titulo: 'CAMPO 5: Espaços, Tempos, Quantidades...',
+    emoji: '🔢',
+    img: '/images/v2/bloco-5.webp',
+    itens: [
+      '6 atividades matemáticas e científicas',
+      'Horta na escola (projeto 3 meses)',
+      '3 experimentos científicos completos',
+      'Gráficos e pesquisas (com exemplos)',
+      'Jogos matemáticos (boliche, trilha, memória)',
+      'Rotina visual (template)',
+      'Classificação e seriação',
+      'Matemática no cotidiano',
+    ],
+    bonus: 'Materiais não estruturados',
+  },
+];
+---
+<section class="py-16 md:py-24 bg-surface px-6">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-2xl md:text-4xl font-extrabold text-center text-gray-900 mb-12">
+      Veja TUDO que vem na Versão 2.0
+    </h2>
+    <p class="text-center text-gray-600 mb-12">5 blocos de 60 páginas cada · 360 páginas no total</p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+      {blocos.map((b) => (
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+          <div class="aspect-[1024/1536] bg-[#2C3E99]/10 flex items-center justify-center relative overflow-hidden">
+            <img src={b.img} alt={`Capa ${b.titulo}`} class="w-full h-full object-cover object-center" width="1024" height="1536" />
+          </div>
+          <div class="p-6">
+          <div class="text-2xl mb-2">{b.emoji}</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4">{b.titulo}</h3>
+          <ul class="space-y-2 mb-4">
+            {b.itens.map((item) => (
+              <li class="flex items-start gap-2 text-gray-700 text-sm">
+                <span class="text-secondary flex-shrink-0">✅</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p class="text-sm font-semibold text-primary">Bônus: {b.bonus}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="text-center">
+      <a href={CHECKOUT_BASIC} class="inline-flex items-center justify-center mx-auto bg-gradient-to-r from-[#FF9800] to-[#F57C00] hover:from-amber-400 hover:to-[#FF9800] text-white font-black text-lg px-10 py-4 rounded-2xl shadow-[0_8px_25px_rgba(255,152,0,0.4)] hover:shadow-[0_12px_35px_rgba(255,152,0,0.5)] hover:scale-105 transition-all duration-200 min-h-[60px] border-2 border-amber-600/30">
+        SIM! QUERO TODOS OS 5 BLOCOS AGORA!
+      </a>
+    </div>
+  </div>
+</section>

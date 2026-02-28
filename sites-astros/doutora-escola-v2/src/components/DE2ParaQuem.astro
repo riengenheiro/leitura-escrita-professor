@@ -1,0 +1,28 @@
+---
+const itens = [
+  'É professora de Educação Infantil (creche ou pré-escola)',
+  'Quer economizar HORAS de planejamento toda semana',
+  'Precisa alinhar atividades à BNCC sem complicação',
+  'Busca ideias TESTADAS que realmente funcionam',
+  'Quer impressionar a coordenação com planejamentos bem estruturados',
+  'Deseja ter um BANCO DE ATIVIDADES para o ano todo',
+  'Trabalha com inclusão e precisa de adaptações prontas',
+  'Quer projetos completos sem ter que criar do zero',
+];
+---
+<section class="py-16 md:py-20 bg-white px-6">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-extrabold text-center text-gray-900 mb-10">Este material é para você que...</h2>
+    <ul class="space-y-4 mb-8">
+      {itens.map((item) => (
+        <li class="flex items-start gap-3 text-gray-800">
+          <span class="text-secondary font-bold flex-shrink-0">+</span>
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+    <p class="text-center text-lg font-semibold text-gray-900">
+      Se você se identificou com PELO MENOS 3 desses itens, este material foi feito ESPECIALMENTE para você!
+    </p>
+  </div>
+</section>

@@ -1,0 +1,49 @@
+---
+import '../styles/global.css';
+
+const FACEBOOK_PIXEL_ID = '456669227289266';
+const title = 'Energia Sem Limites — Descubra Por Que Você Está Sempre Cansado';
+const description = 'Não é estresse. Não é fraqueza. Existe uma causa real — e pouquíssimas pessoas sabem o que é. Descubra os 6 elementos que controlam 100% da sua energia.';
+const canonical = 'https://protocolo.vivasuamissap.top/';
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favico.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favico.png" />
+    <link rel="shortcut icon" href="/favico.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favico.png" />
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="energia, cansaço, fadiga, suplementos, nutrição, saúde, vitalidade, bem-estar" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <!-- Facebook Pixel -->
+    <script is:inline define:vars={{ FACEBOOK_PIXEL_ID }}>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', FACEBOOK_PIXEL_ID);
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" alt="" src={"https://www.facebook.com/tr?id=" + FACEBOOK_PIXEL_ID + "&ev=PageView&noscript=1"} /></noscript>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+

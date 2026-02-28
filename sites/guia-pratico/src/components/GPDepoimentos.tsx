@@ -1,32 +1,38 @@
+import { OptimizedImage } from './OptimizedImage'
+
+// Fotos dos depoimentos: coloque em public/images/guia-pratico/
+// - 05-depoimento-1.png
+// - 06-depoimento-2.png
+const DEPOIMENTOS = [
+  { src: '/images/guia-pratico/05-depoimento-1.png', alt: 'Depoimento sobre o Guia Prático' },
+  { src: '/images/guia-pratico/06-depoimento-2.png', alt: 'Depoimento sobre o Guia Prático' },
+]
+
 export function GPDepoimentos() {
   return (
-    <section className="bg-gradient-to-b from-gray-100 to-white text-black py-16 md:py-20">
+    <section className="bg-[var(--color-papel-escuro)] border-y-2 border-[var(--color-borda-livro)] py-14 md:py-16">
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-8">
-          SE FALTA MAIS ALGO A DIZER, DEIXO PRAS PESSOAS QUE JÁ ADQUIRIRAM MEUS MATERIAIS:
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-2 text-[var(--color-texte-livro)]">
+          Quem já usa
         </h2>
-        <p className="text-xl text-center text-gray-600 mb-14">
-          Bom, se você já se convenceu, siga o exemplo de <strong className="text-red-600">MAIS de 4.000 pessoas</strong> que adquiriram meus materiais e tiveram seus estudos facilitados!
+        <p className="text-center text-gray-600 mb-10">
+          Mais de <strong className="text-[var(--color-destaque)]">4.000 professoras e profissionais</strong> já utilizaram nossos materiais.
         </p>
         
-        {/* Placeholder para depoimentos - adicione imagens de depoimentos reais */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <div className="bg-gray-200 rounded-xl h-64 flex items-center justify-center mb-6">
-              <p className="text-gray-500 text-center px-4">
-                [Imagem de depoimento 1]<br/>
-                Adicione prints de depoimentos reais aqui
-              </p>
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          {DEPOIMENTOS.map((dep, i) => (
+            <div key={i} className="bg-white rounded-xl p-6 border-2 border-[var(--color-borda-livro)]">
+              <div className="rounded-lg overflow-hidden border border-[var(--color-borda-livro)]">
+                <OptimizedImage
+                  src={dep.src}
+                  alt={dep.alt}
+                  className="w-full h-auto min-h-64 object-cover object-top"
+                  width={600}
+                  height={400}
+                />
+              </div>
             </div>
-          </div>
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <div className="bg-gray-200 rounded-xl h-64 flex items-center justify-center mb-6">
-              <p className="text-gray-500 text-center px-4">
-                [Imagem de depoimento 2]<br/>
-                Adicione prints de depoimentos reais aqui
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

@@ -2,7 +2,10 @@ import { Routes, Route, Navigate, useNavigate } from 'react-router-dom'
 import { LandingPage } from './pages/LandingPage'
 import { LoginPage } from './pages/LoginPage'
 import { ManualInterativo } from './components/ManualInterativo'
+import { FacebookPixel } from './components/FacebookPixel'
 import { useState, useEffect } from 'react'
+
+const FACEBOOK_PIXEL_ID = '456669227289266'
 
 function AppContent() {
   const navigate = useNavigate()
@@ -62,7 +65,12 @@ function AppContent() {
 }
 
 function App() {
-  return <AppContent />
+  return (
+    <>
+      <FacebookPixel pixelId={FACEBOOK_PIXEL_ID} autoPageView trackRouteChanges />
+      <AppContent />
+    </>
+  )
 }
 
 export default App

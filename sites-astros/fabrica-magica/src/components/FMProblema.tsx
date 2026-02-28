@@ -1,4 +1,4 @@
-import { AlertTriangle, Clock, Brain, Heart, Users, ChevronDown } from 'lucide-react'
+import { AlertTriangle, Clock, Brain, Heart, Users, ChevronDown, Sparkles } from 'lucide-react'
 
 export function FMProblema() {
   return (
@@ -178,6 +178,16 @@ export function FMProblema() {
             <p className="text-lg font-semibold max-w-2xl mx-auto" style={{ color: '#F2C849' }}>
               A boa notícia? A Fábrica Mágica te ensina fazendo — não em meses, não em anos. Em minutos.
             </p>
+            <div className="mt-10 flex justify-center">
+              <a
+                href="#oferta"
+                className="inline-flex items-center gap-2 px-8 py-4 text-white text-lg font-bold rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-xl shadow-lg"
+                style={{ background: 'linear-gradient(135deg, #1C8C4D 0%, #167d44 100%)', boxShadow: '0 4px 20px rgba(28, 140, 77, 0.4)' }}
+              >
+                <Sparkles className="w-5 h-5" style={{ color: '#F2C849' }} />
+                Ver planos e preços
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -17,7 +17,7 @@ import { FACEBOOK_PIXEL_CONFIG } from './config/facebookPixel'
 
 export default function App() {
   return (
-    <main className="min-h-screen w-full bg-white text-black font-sans antialiased">
+    <main className="min-h-screen w-full bg-[var(--color-papel)] text-[var(--color-texte-livro)] antialiased">
       <FacebookPixelLazy 
         pixelId={FACEBOOK_PIXEL_CONFIG.pixelId}
         autoPageView={FACEBOOK_PIXEL_CONFIG.autoPageView}

@@ -57,7 +57,12 @@ export function FacebookPixelLazy({
   const [shouldLoad, setShouldLoad] = useState(false);
 
   useEffect(() => {
-    // Estratégia: carregar após interação do usuário ou timeout
+    // delay 0 = carrega na hora para o pixel aparecer no Pixel Helper
+    if (delay === 0) {
+      setShouldLoad(true);
+      return;
+    }
+    // Caso contrário: carregar após interação do usuário ou timeout
     let timeoutId: ReturnType<typeof setTimeout>;
     let hasInteracted = false;
 
@@ -67,16 +72,12 @@ export function FacebookPixelLazy({
       setShouldLoad(true);
     };
 
-    // Eventos de interação do usuário
     const events = ['scroll', 'click', 'touchstart', 'keydown', 'mousemove'];
     events.forEach((event) => {
       window.addEventListener(event, loadPixel, { once: true, passive: true });
     });
 
-    // Timeout como fallback
-    timeoutId = setTimeout(() => {
-      loadPixel();
-    }, delay);
+    timeoutId = setTimeout(loadPixel, delay);
 
     return () => {
       events.forEach((event) => {

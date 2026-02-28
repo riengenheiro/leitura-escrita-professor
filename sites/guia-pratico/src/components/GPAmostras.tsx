@@ -2,13 +2,13 @@ import { OptimizedImage } from './OptimizedImage'
 
 export function GPAmostras() {
   return (
-    <section className="bg-white text-black py-16 md:py-20">
+    <section className="bg-white border-y-2 border-[var(--color-borda-livro)] text-[var(--color-texte-livro)] py-14 md:py-16">
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-center mb-4">
-          POR DENTRO DO GUIA PRÁTICO
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-2">
+          Por dentro do guia
         </h2>
-        <p className="text-xl text-center text-gray-600 mb-14">
-          Confira algumas amostras dos materiais que você poderá adquirir:
+        <p className="text-center text-gray-600 mb-10">
+          Algumas páginas do material que você vai receber:
         </p>
         
         <div className="flex justify-center">
@@ -16,7 +16,7 @@ export function GPAmostras() {
             <OptimizedImage
               src="/images/guia-pratico/02-amostras.png"
               alt="Amostras do Guia Prático - Doutora Escola"
-              className="w-full h-auto rounded-2xl shadow-2xl"
+              className="w-full h-auto rounded-lg shadow-lg border-2 border-[var(--color-borda-livro)]"
               width={800}
               height={600}
             />
