@@ -9,6 +9,8 @@ if [ -z "$1" ]; then
     echo "         ./build-site.sh doutora-escola"
     echo "         ./build-site.sh ideias-doutora-escola      # ideias.doutoraescola.com.br (Astro, /v1 /v2...)"
     echo "         ./build-site.sh ideias-doutora-escola-v2   # colecao_campos_de_experiencias (Astro V2.0)"
+    echo "         ./build-site.sh sondagem-na-pratica        # sondagem.doutoraescola.com.br (Astro)"
+    echo "         ./build-site.sh fm-fonoaudiologa          # fono.doutoraescola.com.br (Astro)"
     echo "         ./build-site.sh clube-doutora-escola"
     echo "         ./build-site.sh guia-pratico"
     echo "         ./build-site.sh roteiro-relatorios"
@@ -41,6 +43,14 @@ case $SITE in
     ideias-doutora-escola-v2)
         # Site colecao_campos_de_experiencias.doutoraescola.com.br (Astro) – V2.0, 5 blocos
         SITE_PATH="/var/www/projetos/sites-astros/doutora-escola-v2"
+        ;;
+    sondagem-na-pratica)
+        # Site sondagem.doutoraescola.com.br (Astro) – Sondagem na Prática
+        SITE_PATH="/var/www/projetos/sites-astros/sondagem-na-pratica"
+        ;;
+    fm-fonoaudiologa)
+        # Site fono.doutoraescola.com.br (Astro) – Fábrica Mágica para Fonoaudiólogas
+        SITE_PATH="/var/www/projetos/sites-astros/fm-fonoaudiologa"
         ;;
     codigos-bncc)
         SITE_PATH="/var/www/projetos/sites/codigos-bncc"
@@ -95,12 +105,12 @@ fi
 
 echo -e "${YELLOW}📦 Building $SITE em $SITE_PATH...${NC}"
 
-# Usar container Docker temporário para build
+# Usar container Docker temporário para build (chmod dentro do container = arquivos criados por root ficam legíveis)
 docker run --rm \
     -v "$SITE_PATH:/app" \
     -w /app \
     node:20-alpine \
-    sh -c "$BUILD_CMD"
+    sh -c "$BUILD_CMD && (test -d /app/dist && chmod -R a+rX /app/dist || true)"
 
 echo -e "${GREEN}✅ $SITE buildado!${NC}\n"
 
