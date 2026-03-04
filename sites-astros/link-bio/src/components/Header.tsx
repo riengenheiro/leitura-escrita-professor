@@ -17,12 +17,24 @@ export function Header() {
           <img
             src="/images/avatar.webp"
             alt="Dra. Guaciara Fornaciari"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover avatar-main"
             onError={(e) => {
               const target = e.target as HTMLImageElement
-              target.style.display = 'none'
               const fallback = target.parentElement?.querySelector('.avatar-fallback') as HTMLImageElement
-              if (fallback) fallback.style.display = 'block'
+              const tryNext = (path: string) => {
+                target.onerror = () => {
+                  target.style.display = 'none'
+                  if (fallback) fallback.style.display = 'block'
+                }
+                target.src = path
+                target.style.display = 'block'
+              }
+              if (target.src.endsWith('.webp')) tryNext('/images/avatar.jpg')
+              else if (target.src.endsWith('.jpg')) tryNext('/images/avatar.png')
+              else {
+                target.style.display = 'none'
+                if (fallback) fallback.style.display = 'block'
+              }
             }}
           />
           <img
