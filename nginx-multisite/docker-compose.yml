@@ -19,7 +19,7 @@ services:
       - /var/www/projetos/sites/relatorios-construtivistas/dist:/var/www/projetos/sites/relatorios-construtivistas/dist:ro
       - /var/www/projetos/sites/planejamento-bncc/dist:/var/www/planejamento-bncc/dist:ro
       - /var/www/projetos/sites/roteiro-relatorios/dist:/var/www/projetos/sites/roteiro-relatorios/dist:ro
-      - /var/www/projetos/sites/link-bio/dist:/var/www/projetos/sites/link-bio/dist:ro
+      - /var/www/projetos/sites-astros/link-bio/dist:/var/www/projetos/sites-astros/link-bio/dist:ro
       - /var/www/projetos/sites-astros/fabrica-magica/dist:/var/www/projetos/sites-astros/fabrica-magica/dist:ro
       - /var/www/projetos/sites-astros/doutora-escola-v2/dist:/var/www/projetos/sites-astros/doutora-escola-v2/dist:ro
       - /var/www/projetos/sites-astros/sondagem-na-pratica/dist:/var/www/projetos/sites-astros/sondagem-na-pratica/dist:ro

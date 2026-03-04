@@ -52,8 +52,8 @@ build_with_docker "/var/www/projetos/sites/guia-pratico" "Guia Prático"
 # Build Roteiro Relatórios
 build_with_docker "/var/www/projetos/sites/roteiro-relatorios" "Roteiro Relatórios"
 
-# Build Link Bio
-build_with_docker "/var/www/projetos/sites/link-bio" "Link Bio"
+# Build Link Bio (Astro)
+build_with_docker "/var/www/projetos/sites-astros/link-bio" "Link Bio"
 
 # Build Depoimentos Fábrica Mágica
 build_with_docker "/var/www/projetos/sites/depoimentos-fabrica" "Depoimentos Fábrica Mágica"

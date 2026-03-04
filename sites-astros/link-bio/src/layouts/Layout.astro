@@ -1,0 +1,44 @@
+---
+import '../styles/global.css';
+
+const title = 'Doutora Escola | Links';
+const description = 'Acesse a Fábrica Mágica, veja depoimentos e entre para o nosso Grupo VIP. Crie PDI, PEI, Avaliações, Relatórios e Planejamentos em menos de 3 minutos!';
+---
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favico.png" />
+    <link rel="apple-touch-icon" href="/favico.png" />
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="Fábrica Mágica, PDI, PEI, Avaliações, Relatórios, Planejamentos, Doutora Escola, educação, professores" />
+    <meta name="author" content="Dra. Guaciara Fornaciari - Doutora Escola" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Portuguese" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://link.doutoraescola.com.br/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content="Acesse a Fábrica Mágica e crie PDI, PEI, Avaliações, Relatórios em menos de 3 minutos!" />
+    <meta property="og:image" content="https://link.doutoraescola.com.br/images/og-image.png" />
+    <meta property="og:site_name" content="Doutora Escola" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://link.doutoraescola.com.br/" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content="Acesse a Fábrica Mágica e crie PDI, PEI, Avaliações, Relatórios em menos de 3 minutos!" />
+    <meta name="theme-color" content="#f1f5f9" />
+    <meta name="msapplication-TileColor" content="#f1f5f9" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" />
+    </noscript>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

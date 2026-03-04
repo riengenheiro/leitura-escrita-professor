@@ -74,7 +74,8 @@ case $SITE in
         SITE_PATH="/var/www/projetos/sites/roteiro-relatorios"
         ;;
     link-bio)
-        SITE_PATH="/var/www/projetos/sites/link-bio"
+        # Site link.doutoraescola.com.br (Astro) – Link em bio
+        SITE_PATH="/var/www/projetos/sites-astros/link-bio"
         ;;
     depoimentos-fabrica)
         SITE_PATH="/var/www/projetos/sites/depoimentos-fabrica"
