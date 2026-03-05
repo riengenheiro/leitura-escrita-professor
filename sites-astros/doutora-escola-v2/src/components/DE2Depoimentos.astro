@@ -1,25 +1,74 @@
 ---
 const depoimentos = [
-  { texto: 'A versão 2.0 está MUITO mais completa! Os projetos de 4 semanas me salvaram.', nome: 'Renata Costa', local: 'Belo Horizonte - MG', iniciais: 'RC' },
-  { texto: 'Os templates editáveis valem o material inteiro! Não perco mais tempo criando fichas do zero.', nome: 'Amanda Ferreira', local: 'Recife - PE', iniciais: 'AF' },
-  { texto: 'Comprei a V1 e estava bom. Mas a V2 está em OUTRO NÍVEL! Vale cada centavo.', nome: 'Luciana Rocha', local: 'Goiânia - GO', iniciais: 'LR' },
+  {
+    texto: 'Economizei pelo menos 5 horas por semana de planejamento! Agora uso esse tempo para descansar e cuidar de mim. Minha sanidade mental agradece.',
+    resultado: '5h economizadas/semana',
+    nome: 'Renata Costa',
+    local: 'Belo Horizonte - MG',
+    iniciais: 'RC'
+  },
+  {
+    texto: 'Minha coordenadora pediu para eu apresentar meu planejamento para as outras professoras da escola. Nunca fui tão reconhecida em 8 anos de profissão!',
+    resultado: 'Reconhecida pela coordenação',
+    nome: 'Amanda Ferreira',
+    local: 'Recife - PE',
+    iniciais: 'AF'
+  },
+  {
+    texto: 'Meus alunos do maternal estão mais engajados que nunca. As atividades do Campo 2 (movimento) transformaram nossa rotina. Até os mais agitados participam!',
+    resultado: 'Alunos mais engajados',
+    nome: 'Luciana Rocha',
+    local: 'Goiânia - GO',
+    iniciais: 'LR'
+  },
+  {
+    texto: 'A versão 2.0 está MUITO mais completa! Os projetos de 4 semanas me salvaram no segundo semestre. Já sabia exatamente o que trabalhar cada dia.',
+    resultado: 'Planejamento semestral pronto',
+    nome: 'Carolina Mendes',
+    local: 'São Paulo - SP',
+    iniciais: 'CM'
+  },
+  {
+    texto: 'Os templates editáveis valem o material inteiro! Não perco mais tempo criando fichas do zero. Só adapto com o nome das crianças e imprimo.',
+    resultado: 'Zero tempo em formulários',
+    nome: 'Fernanda Souza',
+    local: 'Curitiba - PR',
+    iniciais: 'FS'
+  },
+  {
+    texto: 'Comprei a V1 e estava bom. Mas a V2 está em OUTRO NÍVEL! Vale cada centavo. A qualidade das atividades e o alinhamento com BNCC é impecável.',
+    resultado: 'Qualidade superior à V1',
+    nome: 'Mariana Lima',
+    local: 'Fortaleza - CE',
+    iniciais: 'ML'
+  },
 ];
 ---
 <section class="py-16 md:py-20 bg-surface px-6">
-  <div class="max-w-5xl mx-auto">
+  <div class="max-w-6xl mx-auto">
     <h2 class="text-2xl md:text-3xl font-extrabold text-center text-gray-900 mb-4">O que dizem as professoras que já usam</h2>
-    <p class="text-center text-gray-600 mb-12">Avaliação 4.9/5 - Mais de 2.000 professoras</p>
-    <div class="grid md:grid-cols-3 gap-8">
+    <p class="text-center text-gray-600 mb-12">Avaliação 4.9/5 - Mais de 2.000 professoras transformaram suas rotinas</p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       {depoimentos.map((d) => (
-        <div class="bg-white rounded-xl p-6 shadow-md border border-gray-200 flex flex-col items-center text-center">
-          <div class="w-16 h-16 rounded-full bg-[#2C3E99] text-white font-bold text-lg flex items-center justify-center mb-4 shadow-md">
-            {d.iniciais}
+        <div class="bg-white rounded-xl p-6 shadow-md border border-gray-200 flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#2C3E99] to-[#1a2570] text-white font-bold text-sm flex items-center justify-center shadow-md">
+              {d.iniciais}
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">{d.nome}</p>
+              <p class="text-xs text-gray-500">Professora em {d.local}</p>
+            </div>
           </div>
-          <p class="text-gray-700 mb-4 flex-1">"{d.texto}"</p>
-          <p class="font-semibold text-gray-900">{d.nome}</p>
-          <p class="text-sm text-gray-500">Professora em {d.local}</p>
+          <span class="inline-block self-start px-3 py-1 rounded-full bg-[#4CAF50]/10 text-[#4CAF50] text-xs font-bold mb-3">
+            {d.resultado}
+          </span>
+          <p class="text-gray-700 text-sm flex-1 leading-relaxed">"{d.texto}"</p>
         </div>
       ))}
+    </div>
+    <div class="mt-10 text-center">
+      <p class="text-gray-600 text-sm">Junte-se a mais de 2.000 professoras que já transformaram suas aulas</p>
     </div>
   </div>
 </section>

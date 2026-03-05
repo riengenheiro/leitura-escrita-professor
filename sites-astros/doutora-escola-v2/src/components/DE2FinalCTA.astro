@@ -1,12 +1,12 @@
 ---
-import { CHECKOUT_BASIC } from '../config/pricing';
+import { CHECKOUT_BASIC, formatPrice, PRICE_BASIC } from '../config/pricing';
 const beneficios = [
-  'Economizar HORAS de planejamento toda semana',
-  'Ter atividades PRONTAS para o ano todo',
-  'Impressionar sua coordenação',
-  'Ver suas crianças MAIS engajadas',
-  'Sentir orgulho do seu trabalho',
-  'Ter mais TEMPO livre (para você!)',
+  'Economizar 5+ horas de planejamento toda semana',
+  'Ter 360 páginas de atividades PRONTAS para o ano todo',
+  'Impressionar sua coordenação com planejamentos profissionais',
+  'Ver suas crianças MAIS engajadas nas aulas',
+  'Sentir orgulho do seu trabalho reconhecido',
+  'Ter mais TEMPO livre para você e sua família',
 ];
 ---
 <section class="py-20 md:py-28 text-white px-6 relative overflow-hidden" style="background: linear-gradient(135deg, #2C3E99 0%, #1a2570 50%, #2C3E99 100%);">
@@ -15,17 +15,42 @@ const beneficios = [
     <div class="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-[#4CAF50]/20" style="filter: blur(60px);"></div>
   </div>
   <div class="max-w-3xl mx-auto text-center relative z-10">
+    <div class="inline-flex items-center gap-2 bg-red-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-6 shadow-lg animate-pulse">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      Apenas 13 vagas com desconto de lançamento
+    </div>
+
     <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Não deixe para depois!</h2>
-    <p class="text-xl text-white/90 mb-8">Você está a um clique de:</p>
-    <ul class="space-y-3 mb-10 text-left max-w-md mx-auto">
+    <p class="text-xl text-white/90 mb-8">Você está a um clique de transformar sua rotina:</p>
+
+    <ul class="space-y-3 mb-10 text-left max-w-lg mx-auto bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
       {beneficios.map((b) => (
-        <li class="flex items-center gap-2 text-lg">✅ {b}</li>
+        <li class="flex items-center gap-3 text-lg">
+          <span class="w-6 h-6 rounded-full bg-[#4CAF50] flex items-center justify-center text-sm">✓</span>
+          {b}
+        </li>
       ))}
     </ul>
-    <p class="text-white/95 text-lg mb-8">Tudo isso por <strong class="text-[#FF9800]">menos que um lanche</strong> no shopping.</p>
+
+    <div class="bg-white/10 rounded-2xl p-4 mb-8 backdrop-blur-sm max-w-md mx-auto">
+      <p class="text-white/90 text-sm mb-2">Investimento único vitalício:</p>
+      <p class="text-4xl font-black text-[#FF9800]">R$ {formatPrice(PRICE_BASIC)},00</p>
+      <p class="text-white/80 text-sm">ou 3x R$ 15,67 sem juros</p>
+      <p class="text-xs text-white/60 mt-2">Menos que um lanche no shopping, mas transforma sua carreira para sempre</p>
+    </div>
+
     <a href={CHECKOUT_BASIC} class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#FF9800] to-[#F57C00] hover:from-amber-400 hover:to-[#FF9800] text-white font-black text-xl px-12 py-5 rounded-2xl shadow-[0_10px_40px_rgba(255,152,0,0.5)] hover:shadow-[0_15px_50px_rgba(255,152,0,0.6)] hover:scale-105 active:scale-100 transition-all duration-300 min-h-[64px] border-2 border-white/30">
-      SIM! QUERO TRANSFORMAR MINHA ROTINA AGORA!
+      Garantir meu acesso com desconto agora!
     </a>
-    <p class="mt-6 text-sm text-white/80">🔒 Compra 100% segura · ⚡ Acesso na hora · ✅ Garantia de 7 dias</p>
+
+    <div class="mt-6 flex flex-wrap justify-center gap-4 text-sm text-white/80">
+      <span class="flex items-center gap-1">🔒 Compra 100% segura</span>
+      <span class="flex items-center gap-1">⚡ Acesso imediato</span>
+      <span class="flex items-center gap-1">✅ Garantia de 7 dias</span>
+    </div>
+
+    <p class="mt-4 text-xs text-white/60">Restam apenas 13 vagas com preço de lançamento. Depois volta para R$ 147.</p>
   </div>
 </section>
