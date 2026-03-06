@@ -9,9 +9,11 @@ import CBFAQ from '../components/cb/CBFAQ.astro';
 import CBAbout from '../components/cb/CBAbout.astro';
 import CBFinalCTA from '../components/cb/CBFinalCTA.astro';
 import CBFooter from '../components/cb/CBFooter.astro';
+import CBCheckoutModal from '../components/cb/CBCheckoutModal.astro';
 import { FACEBOOK_PIXEL_CONFIG } from '../config/facebookPixel';
 ---
 <Layout>
+  <CBCheckoutModal />
   <main class="min-h-screen w-full bg-white text-black font-sans antialiased">
     <FacebookPixelLazy
       client:idle

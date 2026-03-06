@@ -1,0 +1,72 @@
+---
+// Rastreamento de conversão para o worker (site: codigos-bncc)
+// Usa cookie com domain wildcard para rastrear entre subdomínios
+---
+<script>
+  const workerEndpoint = "https://conversion-worker.ricardo-e99.workers.dev";
+  // Rastreamento: identificador único do site (nome + código). Usado no worker para segmentar eventos e conversões. Não altere ao duplicar para outro projeto.
+  const siteId = "codigos-bncc-cb7k2m";
+
+  // Cookie com nome que o checkout PHP já usa: $_COOKIE['_px_session'] (e opcionalmente $_GET['px_sid'])
+  // Assim o checkout captura a mesma sessão sem alterar código no backend.
+  const COOKIE_DOMAIN = ".vivasuamissao.top";
+  const COOKIE_NAME = "_px_session";
+  const COOKIE_MAX_AGE = 30 * 24 * 60 * 60; // 30 dias = 2.592.000 segundos
+
+  // Função para ler cookie
+  function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+    return null;
+  }
+
+  // Função para definir cookie com domain wildcard
+  function setCookie(name, value, domain, maxAge) {
+    document.cookie = `${name}=${value}; domain=${domain}; path=/; max-age=${maxAge}; SameSite=Lax`;
+  }
+
+  function generateSessionId() {
+    let session = getCookie(COOKIE_NAME);
+    if (!session) {
+      session = crypto.randomUUID();
+      setCookie(COOKIE_NAME, session, COOKIE_DOMAIN, COOKIE_MAX_AGE);
+    }
+    return session;
+  }
+
+  const sessionId = generateSessionId();
+  const startTime = Date.now();
+
+  function track(event, extra = {}) {
+    fetch(workerEndpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        site_id: siteId,
+        session_id: sessionId,
+        page: window.location.pathname,
+        event,
+        ...extra
+      })
+    });
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const cta = document.querySelector("#btn-comprar");
+    if (!cta) return;
+    cta.addEventListener("click", () => {
+      const timeToClick = Math.floor((Date.now() - startTime) / 1000);
+      track("cta_click", {
+        time_to_click: timeToClick
+      });
+    });
+  });
+
+  // detectar página de obrigado
+  if (window.location.pathname.includes("obrigado")) {
+    track("conversion");
+  }
+</script>

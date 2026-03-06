@@ -1,5 +1,9 @@
 ---
 import '../styles/global.css';
+import ConversionTracker from '../components/ConversionTracker.astro';
+
+// URL do site — TESTE: http://codigos.vivasuamissao.top/ | PROD: https://codigos.doutoraescola.com.br/
+const SITE_URL = 'http://codigos.vivasuamissao.top';
 
 interface Props {
   title?: string;
@@ -13,11 +17,11 @@ const productSchema = {
   '@type': 'Product',
   name: 'Guia Completo dos Códigos Alfanuméricos da BNCC',
   description: 'Aprenda de uma vez por todas como usar os Códigos da BNCC de forma simples, prática e sem enrolação! Este guia completo explica cada detalhe dos códigos alfanuméricos, com exemplos reais.',
-  image: 'https://codigos.doutoraescola.com.br/images/doutora-escola/01-hero.png',
+  image: `${SITE_URL}/images/doutora-escola/01-hero.png`,
   brand: { '@type': 'Organization', name: 'Doutora Escola', description: 'G&R Instituto Educacional - Especialistas em Educação' },
   offers: {
     '@type': 'Offer',
-    url: 'https://codigos.doutoraescola.com.br/',
+    url: `${SITE_URL}/`,
     priceCurrency: 'BRL',
     price: '19.90',
     priceValidUntil: '2026-12-31',
@@ -32,7 +36,7 @@ const webPageSchema = {
   '@type': 'WebPage',
   name: 'Doutora Escola - Guia Completo dos Códigos Alfanuméricos da BNCC',
   description: 'Guia completo e prático para entender e usar os códigos alfanuméricos da BNCC',
-  url: 'https://codigos.doutoraescola.com.br/',
+  url: `${SITE_URL}/`,
   author: { '@type': 'Person', name: 'Dra. Guaciara Fornaciari', jobTitle: 'Fonoaudióloga e Especialista em Educação' },
 };
 ---
@@ -51,13 +55,13 @@ const webPageSchema = {
     <meta name="robots" content="index, follow" />
     <meta name="language" content="Portuguese" />
     <meta name="revisit-after" content="7 days" />
-    <link rel="canonical" href="https://codigos.doutoraescola.com.br/" />
+    <link rel="canonical" href={`${SITE_URL}/`} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://codigos.doutoraescola.com.br/" />
+    <meta property="og:url" content={`${SITE_URL}/`} />
     <meta property="og:title" content="Guia Completo dos Códigos Alfanuméricos da BNCC - R$ 19,90" />
     <meta property="og:description" content="Aprenda de uma vez por todas como usar os Códigos da BNCC de forma simples, prática e sem enrolação! Este guia completo explica cada detalhe dos códigos alfanuméricos, com exemplos reais." />
-    <meta property="og:image" content="https://codigos.doutoraescola.com.br/images/doutora-escola/01-hero.png" />
-    <meta property="og:image:secure_url" content="https://codigos.doutoraescola.com.br/images/doutora-escola/01-hero.png" />
+    <meta property="og:image" content={`${SITE_URL}/images/doutora-escola/01-hero.png`} />
+    <meta property="og:image:secure_url" content={`${SITE_URL}/images/doutora-escola/01-hero.png`} />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -65,10 +69,10 @@ const webPageSchema = {
     <meta property="og:site_name" content="Doutora Escola" />
     <meta property="og:locale" content="pt_BR" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://codigos.doutoraescola.com.br/" />
+    <meta name="twitter:url" content={`${SITE_URL}/`} />
     <meta name="twitter:title" content="Guia Completo dos Códigos Alfanuméricos da BNCC - R$ 19,90" />
     <meta name="twitter:description" content="Aprenda de uma vez por todas como usar os Códigos da BNCC de forma simples, prática e sem enrolação! Este guia completo explica cada detalhe dos códigos alfanuméricos." />
-    <meta name="twitter:image" content="https://codigos.doutoraescola.com.br/images/doutora-escola/01-hero.png" />
+    <meta name="twitter:image" content={`${SITE_URL}/images/doutora-escola/01-hero.png`} />
     <meta name="twitter:image:alt" content="Guia Completo dos Códigos Alfanuméricos da BNCC - Doutora Escola" />
     <meta name="theme-color" content="#10b981" />
     <meta name="msapplication-TileColor" content="#10b981" />
@@ -80,6 +84,13 @@ const webPageSchema = {
         if(!f._fbq)f._fbq=n;
         n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
       })(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    </script>
+    <script type="text/javascript" is:inline>
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "vr1hrzuj48");
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -94,5 +105,6 @@ const webPageSchema = {
   </head>
   <body>
     <slot />
+    <ConversionTracker />
   </body>
 </html>
