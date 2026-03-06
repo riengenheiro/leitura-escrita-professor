@@ -19,7 +19,11 @@ import { FACEBOOK_PIXEL_CONFIG } from '../config/facebookPixel';
       autoPageView={FACEBOOK_PIXEL_CONFIG.autoPageView}
       delay={2000}
     />
-    <CBHero client:load />
+    <CBHero 
+      title="Decodifique qualquer código da BNCC em 3 segundos — sem ler o PDF oficial de 600 páginas"
+      example="EI01EO02 → Educação Infantil, Campo de Experiência 'O eu, o outro e o nós', Habilidade 2"
+      client:load 
+    />
     <CBProblema />
     <CBPricing />
     <CBGuarantee />
