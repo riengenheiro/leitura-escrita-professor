@@ -1,4 +1,5 @@
 ---
+---
 import Layout from '../layouts/Layout.astro';
 import { FacebookPixelLazy } from '../components/FacebookPixelLazy';
 import { CBHero } from '../components/CBHero';
@@ -26,6 +27,25 @@ import { FACEBOOK_PIXEL_CONFIG } from '../config/facebookPixel';
       example="EI01EO02 → Educação Infantil, Campo de Experiência 'O eu, o outro e o nós', Habilidade 2"
       client:load 
     />
+    <section class="py-12 bg-gray-50 border-b border-gray-200">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <p class="text-2xl font-bold text-gray-900 mb-8">+847 professores já usam no dia a dia</p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <p class="text-gray-700 italic">"Antes eu perdia 30 minutos por código, agora decodifico em 3 segundos."</p>
+            <p class="mt-4 font-semibold text-gray-900">— Mariana S., professora de Educação Infantil</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <p class="text-gray-700 italic">"Finalmente um material que entende a rotina de quem está na sala de aula."</p>
+            <p class="mt-4 font-semibold text-gray-900">— Carlos M., professor de Ensino Fundamental</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <p class="text-gray-700 italic">"Economizei mais de 10 horas por semana na elaboração de planejamentos."</p>
+            <p class="mt-4 font-semibold text-gray-900">— Juliana R., coordenadora pedagógica</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <CBProblema />
     <CBPricing />
     <CBGuarantee />
@@ -35,3 +55,4 @@ import { FACEBOOK_PIXEL_CONFIG } from '../config/facebookPixel';
     <CBFooter />
   </main>
 </Layout>
+---
