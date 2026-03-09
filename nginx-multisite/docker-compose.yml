@@ -26,6 +26,8 @@ services:
       - /var/www/projetos/sites-astros/protocolo/dist:/var/www/projetos/sites-astros/protocolo/dist:ro
       - /var/www/projetos/sites-astros/fm-fonoaudiologa/dist:/var/www/projetos/sites-astros/fm-fonoaudiologa/dist:ro
 
+      - /var/www/projetos/sites-astros/relatorios-fm/dist:/var/www/projetos/sites-astros/relatorios-fm/dist:ro
+
       # Adicione novos sites aqui:
       # - /var/www/site5/dist:/var/www/site5/dist:ro
       # - /var/www/site6/dist:/var/www/site6/dist:ro

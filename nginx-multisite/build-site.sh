@@ -21,6 +21,7 @@ if [ -z "$1" ]; then
     echo "         ./build-site.sh relatorios-construtivistas"
     echo "         ./build-site.sh link-bio"
     echo "         ./build-site.sh fabrica-magica"
+    echo "         ./build-site.sh relatorios-fm          # relatorios.doutoraescola.com.br (Astro)"
     echo "         ./build-site.sh protocolo-viva   # ou protocolo-vivasuamissap (Astro)"
     exit 1
 fi
@@ -87,6 +88,10 @@ case $SITE in
         ;;
     fabrica-magica)
         SITE_PATH="/var/www/projetos/sites-astros/fabrica-magica"
+        ;;
+    relatorios-fm)
+        # Site relatorios.doutoraescola.com.br (Astro) – Relatórios Fábrica Mágica
+        SITE_PATH="/var/www/projetos/sites-astros/relatorios-fm"
         ;;
     protocolo-viva|protocolo-vivasuamissap)
         # Site protocolo.vivasuamissap.top (Astro) - Energia Sem Limites

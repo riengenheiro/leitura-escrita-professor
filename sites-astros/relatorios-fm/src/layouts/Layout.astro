@@ -1,0 +1,63 @@
+---
+import '../styles/global.css';
+
+const title = 'Fábrica Mágica | Relatórios Escolares Prontos em Minutos';
+const description = 'Pare de perder seus fins de semana com relatórios. A Fábrica Mágica transforma o que você já sabe sobre seus alunos em documentos profissionais — em minutos. Mais de 5.300 professoras já usam.';
+const canonical = 'https://relatorios.doutoraescola.com.br/';
+const ogImage = 'https://relatorios.doutoraescola.com.br/images/relatorios-fm/og-image.webp';
+const FACEBOOK_PIXEL_ID = '1327489972419238';
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favico.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favico.png" />
+    <link rel="shortcut icon" href="/favico.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favico.png" />
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="relatório escolar, relatório de aluno, PEI, PDI, documento escolar, professor, educação especial, inclusão, AEE, BNCC, Fábrica Mágica, Doutora Escola" />
+    <meta name="author" content="Dra. Guaciara Fornaciari - Doutora Escola" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="theme-color" content="#1C2340" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" /></noscript>
+  </head>
+  <body>
+    <slot />
+    <!-- Facebook Pixel (lazy: 2s ou primeira interação) -->
+    <script is:inline define:vars={{ FACEBOOK_PIXEL_ID }}>
+      (function() {
+        var loaded = false;
+        function loadPixel() {
+          if (loaded) return;
+          loaded = true;
+          !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', FACEBOOK_PIXEL_ID);
+          fbq('track', 'PageView');
+        }
+        ['scroll','click','touchstart','keydown','mousemove'].forEach(function(ev){ window.addEventListener(ev, loadPixel, { once: true, passive: true }); });
+        setTimeout(loadPixel, 2000);
+      })();
+    </script>
+    <noscript><img height="1" width="1" style="display:none" alt="" src={"https://www.facebook.com/tr?id=" + FACEBOOK_PIXEL_ID + "&ev=PageView&noscript=1"} /></noscript>
+  </body>
+</html>
