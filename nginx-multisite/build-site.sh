@@ -15,6 +15,7 @@ if [ -z "$1" ]; then
     echo "         ./build-site.sh guia-pratico"
     echo "         ./build-site.sh roteiro-relatorios"
     echo "         ./build-site.sh codigos-bncc"
+    echo "         ./build-site.sh codigos-bncc-astro   # Códigos BNCC (Astro, em sites-astros)"
     echo "         ./build-site.sh planejamento-bncc"
     echo "         ./build-site.sh atividades-ludicas"
     echo "         ./build-site.sh relatorios-construtivistas"
@@ -54,6 +55,10 @@ case $SITE in
         ;;
     codigos-bncc)
         SITE_PATH="/var/www/projetos/sites/codigos-bncc"
+        ;;
+    codigos-bncc-astro)
+        # Códigos BNCC (Astro) – codigos.doutoraescola.com.br
+        SITE_PATH="/var/www/projetos/sites-astros/codigos-bncc"
         ;;
     atividades-ludicas)
         SITE_PATH="/var/www/projetos/sites/atividades-ludicas"
