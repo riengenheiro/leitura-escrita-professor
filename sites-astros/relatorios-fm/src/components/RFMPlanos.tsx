@@ -1,6 +1,5 @@
-import { Check, Star, Crown, ArrowRight, Lock, Clock } from 'lucide-react';
+import { Check, Star, Crown, ArrowRight, Clock } from 'lucide-react';
 
-const CTA_GRATIS = 'https://fm.doutoraescola.com.br/register.php';
 const CTA_ANUAL = 'https://fm.doutoraescola.com.br/checkout/?s=UtP0C';
 const CTA_PREMIUM = 'https://fm.doutoraescola.com.br/checkout/?s=OZtRH';
 
@@ -21,24 +20,6 @@ interface Plano {
 }
 
 const planos: Plano[] = [
-  {
-    id: 'gratis',
-    nome: 'Teste Grátis',
-    preco: 'R$ 0',
-    precoDetalhe: '7 dias para testar',
-    descricao:
-      'Antes de qualquer decisão, experimente com seus próprios alunos. Se não funcionar, não tem problema.',
-    features: [
-      '2 documentos completos',
-      '7 dias de acesso',
-      'Sem cartão de crédito',
-      'Sem compromisso',
-    ],
-    cta: 'Quero testar gratuitamente',
-    ctaUrl: CTA_GRATIS,
-    destaque: false,
-    tom: 'verde',
-  },
   {
     id: 'anual',
     nome: 'Plano Anual',
@@ -118,7 +99,7 @@ export function RFMPlanos() {
         </div>
 
         {/* Cards de planos */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {planos.map((plano) => (
             <div
               key={plano.id}
@@ -126,7 +107,7 @@ export function RFMPlanos() {
                 relative rounded-3xl p-6 md:p-8 flex flex-col
                 ${
                   plano.destaque
-                    ? 'bg-white border-2 border-vermelho/20 shadow-xl scale-[1.02] md:scale-105 z-10'
+                    ? 'bg-white border-2 border-mais-vendido/20 shadow-xl scale-[1.02] md:scale-105 z-10'
                     : 'bg-white border border-gray-200 shadow-sm'
                 }
               `}
@@ -136,7 +117,7 @@ export function RFMPlanos() {
                 <div
                   className={`
                     absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-white text-xs font-body font-semibold
-                    ${plano.destaque ? 'bg-vermelho' : 'bg-azul'}
+                    ${plano.badge === 'Mais vendido' ? 'bg-mais-vendido' : 'bg-completo'}
                   `}
                 >
                   {plano.badgeIcon}
@@ -177,7 +158,7 @@ export function RFMPlanos() {
                       <Check
                         size={18}
                         className={`flex-shrink-0 mt-0.5 ${
-                          plano.destaque ? 'text-vermelho' : 'text-verde'
+                          plano.destaque ? 'text-mais-vendido' : 'text-completo'
                         }`}
                       />
                       <span className="text-cinza font-body text-sm">
@@ -194,10 +175,8 @@ export function RFMPlanos() {
                     w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-body font-bold text-base transition-all hover:-translate-y-0.5
                     ${
                       plano.destaque
-                        ? 'bg-vermelho text-white hover:bg-vermelho-hover shadow-md hover:shadow-lg'
-                        : plano.id === 'gratis'
-                          ? 'bg-verde text-white hover:bg-verde/90 shadow-md hover:shadow-lg'
-                          : 'bg-azul text-white hover:bg-azul/90 shadow-md hover:shadow-lg'
+                        ? 'bg-mais-vendido text-white hover:opacity-90 shadow-md hover:shadow-lg'
+                        : 'bg-completo text-white hover:opacity-90 shadow-md hover:shadow-lg'
                     }
                   `}
                 >
@@ -205,12 +184,6 @@ export function RFMPlanos() {
                   <ArrowRight size={16} />
                 </a>
 
-                {plano.id === 'gratis' && (
-                  <div className="flex items-center gap-1.5 justify-center text-cinza-light font-body text-xs mt-3">
-                    <Lock size={12} />
-                    Sem cartão necessário
-                  </div>
-                )}
               </div>
             </div>
           ))}

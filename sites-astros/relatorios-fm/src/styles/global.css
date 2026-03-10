@@ -48,7 +48,7 @@ img {
   justify-content: center;
   gap: 0.5rem;
   padding: 1rem 2rem;
-  background-color: #C0392B;
+  background-color: #1a7a4a;
   color: #fff;
   font-family: 'DM Sans', system-ui, sans-serif;
   font-weight: 700;
@@ -58,13 +58,13 @@ img {
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(192, 57, 43, 0.3);
+  box-shadow: 0 4px 14px rgba(26, 122, 74, 0.3);
 }
 
 .btn-primary:hover {
-  background-color: #A93226;
+  background-color: #04af59;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(192, 57, 43, 0.4);
+  box-shadow: 0 6px 20px rgba(4, 175, 89, 0.4);
 }
 
 .btn-secondary {

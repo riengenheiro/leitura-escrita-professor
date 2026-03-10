@@ -10,6 +10,8 @@ export default {
         azul: '#1C2340',
         verde: '#1A7A4A',
         'verde-light': '#E8F5E9',
+        'mais-vendido': '#E67E22',
+        completo: '#2ECC71',
         cinza: '#555555',
         'cinza-light': '#999999',
         bege: '#FDF6F0',
