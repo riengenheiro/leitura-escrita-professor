@@ -161,7 +161,7 @@ export function RFMTransformacao() {
             <p className="text-cinza font-body text-sm mb-6">
               — O que uma professora disse que estava perdendo, na pesquisa de 2018.
               <br />
-              <strong className="text-verde">A Fábrica Mágica devolveu isso para mais de 5.300 professoras.</strong>
+              <strong className="text-verde">A Fábrica Mágica devolveu isso para mais de 5.325 professoras.</strong>
             </p>
             <a
               href={CTA_URL}

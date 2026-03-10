@@ -1,6 +1,6 @@
-import { ArrowRight, Lock } from 'lucide-react';
+import { ArrowRight, ShieldCheck } from 'lucide-react';
 
-const CTA_URL = 'https://fm.doutoraescola.com.br/register.php';
+const CTA_URL = 'https://fm.doutoraescola.com.br/checkout/?s=UtP0C';
 
 export function RFMCTA() {
   return (
@@ -12,7 +12,7 @@ export function RFMCTA() {
           </h2>
 
           <p className="font-body text-white/80 text-lg md:text-xl mb-4 leading-relaxed">
-            Só te contar por que mais de 5.300 professoras escolheram a Fábrica
+            Só te contar por que mais de 5.325 professoras escolheram a Fábrica
             Mágica — e continuam renovando.
           </p>
 
@@ -27,15 +27,15 @@ export function RFMCTA() {
 
           <a
             href={CTA_URL}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-vermelho text-white font-body font-bold text-lg rounded-xl hover:bg-vermelho-hover transition-all hover:-translate-y-1 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-mais-vendido text-white font-body font-bold text-lg rounded-xl hover:opacity-90 transition-all hover:-translate-y-1 shadow-lg hover:shadow-xl"
           >
-            Quero conhecer a Fábrica
+            Esse é meu plano
             <ArrowRight size={20} />
           </a>
 
           <div className="flex items-center gap-2 justify-center text-white/50 font-body text-sm mt-4">
-            <Lock size={14} />
-            Acesso gratuito · Sem cartão · Sem compromisso
+            <ShieldCheck size={14} />
+            Garantia de 7 dias · Suporte por WhatsApp · Cancele quando quiser
           </div>
 
           {/* Contadores sociais */}

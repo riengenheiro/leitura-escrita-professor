@@ -50,7 +50,7 @@ export function RFMAutoridade() {
               </p>
               <p className="italic text-azul font-display text-lg md:text-xl">
                 "Não quero te convencer de nada. Só te contar por que mais de
-                5.300 professoras escolheram a Fábrica — e continuam renovando."
+                5.325 professoras escolheram a Fábrica — e continuam renovando."
               </p>
             </div>
 

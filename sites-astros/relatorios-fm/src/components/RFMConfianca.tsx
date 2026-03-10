@@ -4,6 +4,7 @@ import {
   MessageCircle,
   Eye,
   ShieldCheck,
+  RefreshCw,
 } from 'lucide-react';
 
 const elementos = [
@@ -24,6 +25,12 @@ const elementos = [
     titulo: 'Transparência total',
     descricao:
       'A Fábrica não escreve sozinha. Você responde perguntas sobre seu aluno e ela transforma o que você já sabe em um documento profissional.',
+  },
+  {
+    icon: <RefreshCw size={28} />,
+    titulo: 'Garantia de 7 dias',
+    descricao:
+      'Se em uma semana você não perceber diferença na sua rotina, devolvemos seu dinheiro. Sem burocracia, sem perguntas, sem pressão.',
   },
   {
     icon: <ShieldCheck size={28} />,

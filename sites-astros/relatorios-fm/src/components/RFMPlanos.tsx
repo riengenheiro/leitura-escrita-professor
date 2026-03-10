@@ -88,10 +88,10 @@ export function RFMPlanos() {
             <span className="font-body text-sm">A conta que ninguém faz</span>
           </div>
           <p className="text-cinza font-body text-base md:text-lg leading-relaxed">
+            Uma hora de aula particular custa em média <strong className="text-vermelho">R$ 60</strong>.
             Uma professora que gasta <strong className="text-vermelho">10h por bimestre</strong> em
-            relatórios está perdendo o equivalente a{' '}
-            <strong className="text-vermelho">R$ 600 em tempo</strong> — ou simplesmente
-            R$ 600 em vida.
+            relatórios está perdendo <strong className="text-vermelho">R$ 600 em oportunidade</strong> —
+            ou simplesmente R$ 600 em vida.
           </p>
           <p className="text-azul font-body font-semibold text-lg mt-3">
             O Plano Anual da Fábrica custa R$ 99,90 o ano inteiro.
