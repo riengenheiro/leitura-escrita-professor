@@ -10,7 +10,7 @@ interface Props {
   description?: string;
 }
 
-const { title = 'Doutora Escola | Guia Completo dos Códigos Alfanuméricos da BNCC - R$ 19,90', description = 'Aprenda de uma vez por todas como usar os Códigos da BNCC de forma simples, prática e sem enrolação! Este guia completo explica cada detalhe dos códigos alfanuméricos, com exemplos reais. De R$ 59,00 por apenas R$ 19,90!' } = Astro.props;
+const { title = 'Doutora Escola | Guia Completo dos Códigos Alfanuméricos da BNCC - R$ 10,00', description = 'Aprenda de uma vez por todas como usar os Códigos da BNCC de forma simples, prática e sem enrolação! Este guia completo explica cada detalhe dos códigos alfanuméricos, com exemplos reais. Por apenas R$ 10,00!' } = Astro.props;
 
 const productSchema = {
   '@context': 'https://schema.org',
@@ -23,7 +23,7 @@ const productSchema = {
     '@type': 'Offer',
     url: `${SITE_URL}/`,
     priceCurrency: 'BRL',
-    price: '19.90',
+    price: '10.00',
     priceValidUntil: '2026-12-31',
     availability: 'https://schema.org/InStock',
     seller: { '@type': 'Organization', name: 'Doutora Escola' },
@@ -58,7 +58,7 @@ const webPageSchema = {
     <link rel="canonical" href={`${SITE_URL}/`} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={`${SITE_URL}/`} />
-    <meta property="og:title" content="Guia Completo dos Códigos Alfanuméricos da BNCC - R$ 19,90" />
+    <meta property="og:title" content="Guia Completo dos Códigos Alfanuméricos da BNCC - R$ 10,00" />
     <meta property="og:description" content="Aprenda de uma vez por todas como usar os Códigos da BNCC de forma simples, prática e sem enrolação! Este guia completo explica cada detalhe dos códigos alfanuméricos, com exemplos reais." />
     <meta property="og:image" content={`${SITE_URL}/images/doutora-escola/01-hero.png`} />
     <meta property="og:image:secure_url" content={`${SITE_URL}/images/doutora-escola/01-hero.png`} />
@@ -70,7 +70,7 @@ const webPageSchema = {
     <meta property="og:locale" content="pt_BR" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content={`${SITE_URL}/`} />
-    <meta name="twitter:title" content="Guia Completo dos Códigos Alfanuméricos da BNCC - R$ 19,90" />
+    <meta name="twitter:title" content="Guia Completo dos Códigos Alfanuméricos da BNCC - R$ 10,00" />
     <meta name="twitter:description" content="Aprenda de uma vez por todas como usar os Códigos da BNCC de forma simples, prática e sem enrolação! Este guia completo explica cada detalhe dos códigos alfanuméricos." />
     <meta name="twitter:image" content={`${SITE_URL}/images/doutora-escola/01-hero.png`} />
     <meta name="twitter:image:alt" content="Guia Completo dos Códigos Alfanuméricos da BNCC - Doutora Escola" />

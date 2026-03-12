@@ -1,12 +1,12 @@
 /**
  * Configuração do checkout em iframe (embed).
- * Usado na página /checkout para carregar o checkout PHP em embed.
+ * Guia Completo dos Códigos Alfanuméricos da BNCC — R$ 10,00
  */
 export const CHECKOUT_EMBED = {
-  /** URL do checkout embed (backend PHP) */
-  url: 'https://vivasuamissao.top/fabricaderelatorios//checkout/embed_light.php?s=xwQOP',
+  /** URL do checkout embed (backend) */
+  url: 'https://fm.doutoraescola.com.br/checkout/embed_light.php?s=QO2kY',
   /** Origens permitidas para postMessage (deve bater com o backend) */
-  allowedOrigin: 'https://vivasuamissao.top',
+  allowedOrigin: 'https://fm.doutoraescola.com.br',
   /** URL de redirecionamento após sucesso (se o backend não enviar, usa esta) */
   defaultSuccessUrl: '/obrigado',
 } as const;
