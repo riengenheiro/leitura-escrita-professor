@@ -1,6 +1,6 @@
 ---
-import { CHECKOUT_EMBED } from '../../config/checkoutEmbed';
-const { url, allowedOrigin, defaultSuccessUrl } = CHECKOUT_EMBED;
+import { CHECKOUT_EMBED } from '../config/checkoutEmbed';
+const { allowedOrigin, defaultSuccessUrl } = CHECKOUT_EMBED;
 ---
 <div
   id="checkout-modal"
@@ -8,7 +8,7 @@ const { url, allowedOrigin, defaultSuccessUrl } = CHECKOUT_EMBED;
   role="dialog"
   aria-modal="true"
   aria-labelledby="checkout-modal-title"
-  data-checkout-url={url}
+  aria-hidden="true"
   data-allowed-origin={allowedOrigin}
   data-default-success-url={defaultSuccessUrl}
 >
@@ -19,7 +19,8 @@ const { url, allowedOrigin, defaultSuccessUrl } = CHECKOUT_EMBED;
       <span id="checkout-modal-title" class="font-semibold text-gray-800">Finalizar compra</span>
       <div class="flex items-center gap-3">
         <a
-          href={url}
+          id="checkout-external-link"
+          href="#"
           target="_blank"
           rel="noopener noreferrer"
           class="text-sm text-green-600 hover:text-green-700 font-medium underline"
@@ -65,7 +66,8 @@ const { url, allowedOrigin, defaultSuccessUrl } = CHECKOUT_EMBED;
             Tentar novamente
           </button>
           <a
-            href={url}
+            id="checkout-fallback-link"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             class="px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold transition-colors"
@@ -88,28 +90,63 @@ const { url, allowedOrigin, defaultSuccessUrl } = CHECKOUT_EMBED;
   (function () {
     const modal = document.getElementById('checkout-modal');
     if (!modal) return;
-    modal.setAttribute('aria-hidden', 'true');
 
-    const checkoutUrl = modal.getAttribute('data-checkout-url') || '';
-    const allowedOrigin = modal.getAttribute('data-allowed-origin') || '';
-    const defaultSuccessUrl = modal.getAttribute('data-default-success-url') || '/obrigado';
     const iframe = document.getElementById('checkout-iframe');
     const loading = document.getElementById('checkout-loading');
     const errorBox = document.getElementById('checkout-error');
     const retryButton = document.getElementById('checkout-retry');
     const closeButtons = modal.querySelectorAll('[data-close-modal]');
+    const externalLink = document.getElementById('checkout-external-link');
+    const fallbackLink = document.getElementById('checkout-fallback-link');
 
-    let preloaded = false;
     let iframeLoaded = false;
     let preloadTimeout = null;
     let lastFocusedElement = null;
+    let activeCheckoutUrl = '';
+    let preloadedUrl = '';
 
+    const defaultSuccessUrl = modal.getAttribute('data-default-success-url') || '/';
+    const configAllowedOrigin = modal.getAttribute('data-allowed-origin') || '';
     const focusableSelector =
       'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
     function isSafari() {
       const ua = navigator.userAgent;
       return (ua.includes('Safari') && !ua.includes('Chrome')) || /iPhone|iPad|iPod/.test(ua);
+    }
+
+    function parseOrigin(url) {
+      try {
+        return new URL(url, window.location.origin).origin;
+      } catch {
+        return '';
+      }
+    }
+
+    function getAllowedOrigin() {
+      if (configAllowedOrigin) return configAllowedOrigin;
+      return parseOrigin(activeCheckoutUrl || preloadedUrl);
+    }
+
+    function getCheckoutUrlFromTrigger(el) {
+      if (!el) return '';
+      const dataUrl = el.getAttribute('data-checkout-url') || '';
+      const href = el.getAttribute('href') || '';
+      const url = dataUrl || href;
+      if (!url || url === '#') return '';
+      return url;
+    }
+
+    /** Converte URL do embed para URL do checkout normal (nova aba / fallback) */
+    function embedUrlToDirectUrl(embedUrl) {
+      if (!embedUrl) return '';
+      return embedUrl.replace('/checkout/embed_light.php', '/checkout/');
+    }
+
+    function updateExternalLinks(embedUrl) {
+      const directUrl = embedUrlToDirectUrl(embedUrl);
+      if (externalLink) externalLink.setAttribute('href', directUrl || '#');
+      if (fallbackLink) fallbackLink.setAttribute('href', directUrl || '#');
     }
 
     function showLoading() {
@@ -151,6 +188,7 @@ const { url, allowedOrigin, defaultSuccessUrl } = CHECKOUT_EMBED;
       if (e.key !== 'Tab' || modal.classList.contains('hidden')) return;
       const focusableElements = getFocusableElements();
       if (!focusableElements.length) return;
+
       const first = focusableElements[0];
       const last = focusableElements[focusableElements.length - 1];
 
@@ -173,19 +211,27 @@ const { url, allowedOrigin, defaultSuccessUrl } = CHECKOUT_EMBED;
       }
     }
 
-    /** Carrega o checkout no iframe em background (só uma vez). Ao clicar, já está carregado. */
-    function preloadCheckout() {
-      if (!iframe || !checkoutUrl || preloaded) return;
-      preloaded = true;
+    function preloadCheckout(url) {
+      if (!iframe || !url) return;
+      if (preloadedUrl === url && iframeLoaded) return;
+
+      activeCheckoutUrl = url;
+      preloadedUrl = url;
+      iframeLoaded = false;
       showLoading();
       startPreloadTimeout();
-      iframe.src = checkoutUrl;
+      updateExternalLinks(url);
+      iframe.src = url;
     }
 
-    function openModal() {
-      if (!iframe || !checkoutUrl) return;
+    function openModal(url) {
+      if (!url) return;
+      if (isSafari()) {
+        window.open(embedUrlToDirectUrl(url), '_blank', 'noopener,noreferrer');
+        return;
+      }
       lastFocusedElement = document.activeElement;
-      preloadCheckout();
+      if (preloadedUrl !== url || !iframeLoaded) preloadCheckout(url);
       setModalOpenState();
     }
 
@@ -193,7 +239,6 @@ const { url, allowedOrigin, defaultSuccessUrl } = CHECKOUT_EMBED;
       modal.classList.add('hidden');
       modal.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
-      // Não limpa o iframe: ao reabrir o checkout já está carregado (melhor UX)
       if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
         lastFocusedElement.focus();
       }
@@ -210,17 +255,18 @@ const { url, allowedOrigin, defaultSuccessUrl } = CHECKOUT_EMBED;
     const openTriggers = document.querySelectorAll('.js-open-checkout-modal');
     openTriggers.forEach(function (el) {
       el.addEventListener('click', function (e) {
+        const checkoutUrl = getCheckoutUrlFromTrigger(el);
+        if (!checkoutUrl) return;
         e.preventDefault();
-        if (isSafari()) {
-          window.open(checkoutUrl, '_blank', 'noopener,noreferrer');
-          return;
-        }
-        openModal();
+        openModal(checkoutUrl);
       });
-      // Preload ao passar o mouse no botão — quando clicar, já está carregado
+
       let hoverTimer;
       el.addEventListener('mouseenter', function () {
-        hoverTimer = setTimeout(preloadCheckout, 300);
+        const checkoutUrl = getCheckoutUrlFromTrigger(el);
+        hoverTimer = setTimeout(function () {
+          preloadCheckout(checkoutUrl);
+        }, 300);
       });
       el.addEventListener('mouseleave', function () {
         clearTimeout(hoverTimer);
@@ -228,21 +274,22 @@ const { url, allowedOrigin, defaultSuccessUrl } = CHECKOUT_EMBED;
       el.addEventListener(
         'touchstart',
         function () {
-          preloadCheckout();
+          const checkoutUrl = getCheckoutUrlFromTrigger(el);
+          preloadCheckout(checkoutUrl);
         },
         { passive: true, once: true }
       );
     });
 
-    // Preload quando a seção de preços (#opcoes) entra na tela
-    const pricingSection = document.getElementById('opcoes');
+    const pricingSection = document.getElementById('preco');
     if (pricingSection && typeof IntersectionObserver !== 'undefined') {
       const observer = new IntersectionObserver(
         function (entries) {
-          if (entries[0].isIntersecting) {
-            preloadCheckout();
-            observer.disconnect();
-          }
+          if (!entries[0].isIntersecting) return;
+          const firstTrigger = document.querySelector('.js-open-checkout-modal');
+          const firstCheckoutUrl = getCheckoutUrlFromTrigger(firstTrigger);
+          preloadCheckout(firstCheckoutUrl);
+          observer.disconnect();
         },
         { rootMargin: '100px', threshold: 0.1 }
       );
@@ -264,17 +311,16 @@ const { url, allowedOrigin, defaultSuccessUrl } = CHECKOUT_EMBED;
 
     if (retryButton) {
       retryButton.addEventListener('click', function () {
-        if (!iframe || !checkoutUrl) return;
-        iframeLoaded = false;
-        showLoading();
-        startPreloadTimeout();
-        iframe.src = checkoutUrl;
+        if (!activeCheckoutUrl) return;
+        preloadCheckout(activeCheckoutUrl);
       });
     }
 
     window.addEventListener('message', function (event) {
-      if (event.origin !== allowedOrigin) return;
+      const expectedOrigin = getAllowedOrigin();
+      if (expectedOrigin && event.origin !== expectedOrigin) return;
       if (iframe && event.source !== iframe.contentWindow) return;
+
       const data = event.data;
       if (data && data.type === 'CHECKOUT_SUCCESS') {
         closeModal();

@@ -14,8 +14,10 @@ import DE2Urgencia from '../components/DE2Urgencia.astro';
 import DE2FinalCTA from '../components/DE2FinalCTA.astro';
 import DE2About from '../components/DE2About.astro';
 import DE2Footer from '../components/DE2Footer.astro';
+import DE2CheckoutModal from '../components/DE2CheckoutModal.astro';
 ---
 <Layout>
+  <DE2CheckoutModal />
   <main class="min-h-screen w-full bg-white text-black font-sans antialiased">
     <DE2UrgencyBar client:load />
     <DE2Hero />

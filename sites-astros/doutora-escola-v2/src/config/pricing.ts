@@ -13,8 +13,16 @@ export function formatPrice(value: number, withCents = false): string {
   return String(value);
 }
 
-const CHECKOUT_BASE = 'https://fm.doutoraescola.com.br/checkout/?s=';
+/** Checkout em embed (modal) — embed_light.php */
+const CHECKOUT_EMBED_BASE = 'https://fm.doutoraescola.com.br/checkout/embed_light.php?s=';
+/** Checkout normal (nova aba / fallback) */
+const CHECKOUT_DIRECT_BASE = 'https://fm.doutoraescola.com.br/checkout/?s=';
+
 /** Plano básico R$ 47 - Ideias para Trabalhar os Campos de Experiências V2 */
-export const CHECKOUT_BASIC = CHECKOUT_BASE + 'OdvIY';
+export const CHECKOUT_BASIC = CHECKOUT_EMBED_BASE + 'OdvIY';
+/** URL normal (nova aba / fallback) para o plano básico */
+export const CHECKOUT_BASIC_DIRECT = CHECKOUT_DIRECT_BASE + 'OdvIY';
 /** Plano completo R$ 119 - Kit Completo com Bônus */
-export const CHECKOUT_COMPLETO = CHECKOUT_BASE + '0LuhT';
+export const CHECKOUT_COMPLETO = CHECKOUT_EMBED_BASE + '0LuhT';
+/** URL normal (nova aba / fallback) para o plano completo */
+export const CHECKOUT_COMPLETO_DIRECT = CHECKOUT_DIRECT_BASE + '0LuhT';

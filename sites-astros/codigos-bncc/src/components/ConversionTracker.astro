@@ -55,12 +55,15 @@
   }
 
   window.addEventListener("DOMContentLoaded", () => {
-    const cta = document.querySelector("#btn-comprar");
-    if (!cta) return;
-    cta.addEventListener("click", () => {
-      const timeToClick = Math.floor((Date.now() - startTime) / 1000);
-      track("cta_click", {
-        time_to_click: timeToClick
+    const ctas = document.querySelectorAll(".track-cta");
+    if (!ctas.length) return;
+
+    ctas.forEach((cta) => {
+      cta.addEventListener("click", () => {
+        const timeToClick = Math.floor((Date.now() - startTime) / 1000);
+        track("cta_click", {
+          time_to_click: timeToClick
+        });
       });
     });
   });

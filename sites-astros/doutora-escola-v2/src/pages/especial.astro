@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DE2CheckoutModal from '../components/DE2CheckoutModal.astro';
+import { CHECKOUT_COMPLETO, PRICE_COMPLETO, PRICE_BASIC } from '../config/pricing';
+
+const precoUnitario = 47;
+const totalAvulso = 7 * precoUnitario; // R$ 329
+const precoOferta = PRICE_COMPLETO - PRICE_BASIC; // R$ 72
+
+const materiais = [
+  { emoji: '🗓️', nome: 'Calendário Escolar Sem Estresse', imagem: '/images/v2/calendario.webp' },
+  { emoji: '🧩', nome: 'Campos de Experiências na Educação Especial', imagem: '/images/v2/educacao-especial.webp' },
+  { emoji: '☀️', nome: 'Como Desconectar de Verdade no Fim de Semana', imagem: '/images/v2/fim-de-semana.webp' },
+  { emoji: '😤', nome: 'Estratégias para Alunos Difíceis', imagem: '/images/v2/alunos-nao-fazem-nada.webp' },
+  { emoji: '📋', nome: 'Projeto Pedagógico Saindo do Papel', imagem: '/images/v2/projeto-pedagogico.webp' },
+  { emoji: '👨‍👩‍👧', nome: 'Reunião de Pais Sem Conflito', imagem: '/images/v2/reuniao-pais.webp' },
+  { emoji: '📚', nome: 'Livro de Atividades — Educação Infantil', imagem: '/images/v2/livro-atividades.webp' },
+];
+---
+<Layout>
+  <DE2CheckoutModal />
+  
+  <main class="min-h-screen bg-gradient-to-b from-[#f0fdf4] via-white to-[#f7fee7] px-4 py-12">
+    <div class="max-w-5xl mx-auto">
+      
+      {/* Gancho */}
+      <div class="text-center mb-8">
+        <div class="inline-flex items-center gap-2 bg-[#4CAF50] text-white px-6 py-3 rounded-full text-lg font-bold shadow-lg mb-4">
+          <span class="text-2xl">🎉</span>
+          <span>Seu ebook está garantido!</span>
+        </div>
+        <p class="text-gray-700 text-lg mb-2">
+          Antes de entrar na sua área de membros, uma única oferta:
+        </p>
+        <p class="text-gray-800 text-xl font-semibold">
+          Esses 7 materiais custam R$47 cada — mas agora você leva todos por <strong class="text-[#4CAF50]">R$72</strong>.
+        </p>
+      </div>
+
+      {/* Grid de capas */}
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
+        {materiais.map((item, index) => (
+          <div class="group text-center">
+            <div class="relative aspect-[2/3] rounded-xl overflow-hidden shadow-lg border-2 border-gray-200 group-hover:border-[#4CAF50] transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+              <img 
+                src={item.imagem} 
+                alt={item.nome}
+                class="w-full h-full object-cover"
+                width="512"
+                height="768"
+                loading={index < 4 ? "eager" : "lazy"}
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-3 text-white text-left">
+                <p class="font-bold text-sm leading-tight">{item.emoji} {item.nome}</p>
+                <p class="text-xs text-white/90 font-semibold">R$47</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Preço */}
+      <div class="text-center mb-6">
+        <p class="text-2xl md:text-3xl font-black text-gray-900">
+          <span class="line-through text-gray-400">R${totalAvulso}</span>
+          <span class="mx-2 text-[#4CAF50]">por apenas R${precoOferta}</span>
+        </p>
+      </div>
+
+      {/* Depoimento + benefícios + aviso */}
+      <div class="bg-white rounded-3xl shadow-2xl border-2 border-[#4CAF50]/30 p-8 mb-6 max-w-2xl mx-auto">
+        <div class="flex gap-3 items-start mb-6">
+          <span class="text-2xl flex-shrink-0">💬</span>
+          <p class="text-gray-700 italic">"O de Reunião de Pais sozinho já valeu tudo que paguei." <span class="not-italic text-gray-500 font-semibold">— Carolina, SP</span></p>
+        </div>
+
+        <p class="text-center text-gray-700 font-semibold mb-6">
+          ✅ Um clique. Sem novo cartão. Acesso imediato.
+        </p>
+
+        <div class="flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-800 px-4 py-3 rounded-lg text-sm font-semibold mb-6">
+          <span>⚠️</span>
+          <span>Essa oferta some quando você fechar essa página.</span>
+        </div>
+
+        <a href={CHECKOUT_COMPLETO} class="js-open-checkout-modal block w-full text-center bg-gradient-to-r from-[#4CAF50] to-[#2E7D32] hover:from-[#43A047] hover:to-[#1B5E20] text-white font-black text-xl md:text-2xl px-8 py-6 rounded-2xl shadow-[0_10px_40px_rgba(76,175,80,0.4)] hover:shadow-[0_15px_50px_rgba(76,175,80,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 mb-4">
+          SIM! Quero os 7 materiais por R${precoOferta}
+        </a>
+
+        <div class="text-center">
+          <a href="https://atividadesludicas.doutoraescola.com.br/" class="text-gray-400 hover:text-gray-600 text-sm underline transition-colors">
+            Não, obrigada. Prefiro pagar R$47 por cada um depois.
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</Layout>
+
+<style>
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  main > div {
+    animation: fadeInUp 0.6s ease-out;
+  }
+</style>
