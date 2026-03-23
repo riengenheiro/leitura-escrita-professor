@@ -1,0 +1,446 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { CHECKOUT_EMBED, CHECKOUT_DIRECT, CHECKOUT_CONFIG } from '../config/site';
+
+const benefits = [
+  {
+    icon: '🧠',
+    title: 'O que é dislexia — sem jargão, com clareza',
+    text: 'Entenda como o cérebro da criança disléxica processa sons e formas de maneira diferente — e por que isso muda tudo na forma de ensinar.',
+  },
+  {
+    icon: '👀',
+    title: 'Como observar e identificar os sinais',
+    text: 'O olhar atento da professora e o diagnóstico precoce são fundamentais para que a criança não se sinta incapaz.',
+  },
+  {
+    icon: '✋',
+    title: 'Estratégias multissensoriais práticas',
+    text: 'Bandejas com areia, massinha, sentir a forma da letra com os dedos. Aprender com o corpo todo. Não exige material caro.',
+  },
+  {
+    icon: '📋',
+    title: 'Ambiente visual simplificado',
+    text: 'Cartões com imagens claras, fontes sem serifa, maior espaçamento. Menos poluição visual, mais compreensão.',
+  },
+  {
+    icon: '⭐',
+    title: 'Avaliações que valorizam o saber',
+    text: 'Permitir que o aluno demonstre conhecimento oralmente ou com desenhos. Essa mudança transforma a autoestima.',
+  },
+  {
+    icon: '💚',
+    title: 'Reforço positivo como ferramenta',
+    text: 'Cada pequeno acerto celebrado constrói uma barreira contra o desânimo e mostra que o cérebro é diferente, não defeituoso.',
+  },
+  {
+    icon: '🤝',
+    title: 'Rede de apoio escola-família-especialistas',
+    text: 'A parceria entre escola, fonoaudiólogos e psicopedagogos sustenta o desenvolvimento da criança de forma integral.',
+  },
+];
+
+const faqs = [
+  {
+    q: 'O ebook é realmente gratuito?',
+    a: 'Sim. Não há cobrança, nem agora nem depois. É um material preparado para que mais professoras tenham acesso a orientações práticas sobre dislexia.',
+  },
+  {
+    q: 'Preciso ter conhecimento prévio sobre dislexia?',
+    a: 'Não. O guia foi escrito em linguagem acessível, através de uma história. Ele parte do zero e conduz você passo a passo.',
+  },
+  {
+    q: 'Serve para quem trabalha com educação infantil ou só para o fundamental?',
+    a: 'Serve para qualquer professora que tenha ou possa vir a ter um aluno com dislexia na sala — independentemente da etapa.',
+  },
+  {
+    q: 'Vou receber por onde?',
+    a: 'No e-mail que você informar no formulário, em formato PDF. Se preferir, também enviaremos o link pelo WhatsApp cadastrado.',
+  },
+];
+---
+<Layout>
+  <main class="min-h-screen w-full bg-white font-sans antialiased">
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-[#EEF2FF] via-[#F0F4FF] to-white">
+      <div class="absolute inset-0 opacity-30">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-20">
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div class="order-2 md:order-1">
+            <span class="inline-flex items-center gap-2 bg-secondary/10 text-secondary-dark font-semibold text-sm px-4 py-2 rounded-full mb-6">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/></svg>
+              Ebook 100% Gratuito
+            </span>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary-dark leading-[1.1] mb-3">
+              As Letras<br/>Dançarinas
+            </h1>
+            <h2 class="text-xl sm:text-2xl font-semibold text-gray-600 mb-4">
+              Um Guia para uma Sala de Aula de Todos
+            </h2>
+
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-2xl flex-shrink-0">
+                👩‍⚕️
+              </div>
+              <div>
+                <p class="font-bold text-gray-800">De Guaciara Fornaciari</p>
+                <p class="text-sm text-gray-500">Fonoaudióloga · Pós-graduada em Inclusão · +25 anos na Educação</p>
+              </div>
+            </div>
+
+            <p class="text-gray-600 mb-8 text-lg">
+              Baixe agora e receba no seu e-mail. Estratégias práticas para ajudar seus alunos com dislexia na sala de aula.
+            </p>
+
+            <a
+              href="#cadastro"
+              class="inline-flex items-center gap-2 bg-gradient-to-r from-secondary to-secondary-dark text-white font-bold text-lg px-8 py-4 rounded-xl shadow-[0_8px_30px_rgba(76,175,80,0.35)] hover:shadow-[0_12px_40px_rgba(76,175,80,0.45)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+            >
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              QUERO RECEBER O EBOOK GRATUITO
+            </a>
+
+            <div class="flex flex-wrap items-center gap-4 mt-5 text-sm text-gray-500">
+              <span class="flex items-center gap-1">
+                <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Gratuito
+              </span>
+              <span class="flex items-center gap-1">
+                <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Prático
+              </span>
+              <span class="flex items-center gap-1">
+                <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Receba por e-mail
+              </span>
+            </div>
+          </div>
+
+          <div class="order-1 md:order-2 flex justify-center">
+            <div class="relative">
+              <div class="absolute -inset-4 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl blur-2xl"></div>
+              <img
+                src="/images/mockup-ebook.webp"
+                alt="Mockup do ebook As Letras Dançarinas — Um Guia para uma Sala de Aula de Todos"
+                class="relative w-64 sm:w-72 md:w-80 lg:w-96 rounded-2xl shadow-2xl"
+                width="384"
+                height="480"
+                loading="eager"
+              />
+              <div class="absolute -bottom-3 -right-3 bg-white rounded-xl shadow-lg px-4 py-2 flex items-center gap-2">
+                <span class="text-secondary font-bold text-lg">100%</span>
+                <span class="text-sm text-gray-600 font-medium">Gratuito</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SEÇÃO 2 — DOR / DESEJO ═══════════ -->
+    <section class="py-16 md:py-24 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 fade-in">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-dark text-center mb-8 leading-tight">
+          Para toda professora que já se perguntou:<br/>
+          <span class="italic text-primary">"Eu sei que esse aluno é inteligente — mas como eu ajudo?"</span>
+        </h2>
+
+        <div class="bg-warm rounded-2xl p-6 md:p-8 border border-amber-100">
+          <p class="text-gray-700 mb-4">
+            Na Escola das Cores, a professora Beatriz amava o som das risadas e o cheiro de giz. Ela sabia que cada criança trazia um mundo dentro de si. Mas percebeu que, para alguns, as letras no quadro pareciam brincar de esconde-esconde.
+          </p>
+          <p class="text-gray-800 font-semibold text-lg">
+            Beatriz decidiu que <span class="text-primary font-bold">ninguém ficaria para trás.</span>
+          </p>
+        </div>
+
+        <p class="text-center text-gray-600 mt-8 text-lg">
+          Se essa decisão também é sua, este guia foi escrito para você.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════ SEÇÃO 3 — CONTEXTO E EMPATIA ═══════════ -->
+    <section class="py-16 md:py-24 bg-surface">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 fade-in">
+        <div class="space-y-6 text-gray-700">
+          <p>
+            O pequeno Caio era um artista nato. Construía castelos de blocos e via desenhos nas nuvens.
+          </p>
+          <p>
+            Mas na hora de ler, as palavras pareciam formiguinhas apressadas que mudavam de lugar. Ele trocava letras de sons parecidos — o "P" pelo "B". Evitava ler em voz alta. Se fechava.
+          </p>
+          <p class="text-primary-dark font-semibold text-xl">
+            Você reconhece esse aluno?
+          </p>
+          <p>
+            Talvez ele não se chame Caio. Talvez seja uma menina. Talvez sejam dois, três na mesma turma. E você sabe que ali não é falta de esforço nem falta de inteligência.
+          </p>
+          <p>
+            Mas conectar o som da letra — o <strong>fonema</strong> — com o desenho dela — o <strong>grafema</strong> — exige um mapa que essa criança ainda está aprendendo a desenhar.
+          </p>
+        </div>
+
+        <div class="mt-10 bg-white rounded-2xl p-6 md:p-8 border-l-4 border-accent shadow-sm">
+          <p class="text-gray-800 font-semibold text-lg">
+            E ninguém ensinou você a ajudar nesse processo.
+          </p>
+          <p class="text-gray-600 mt-3">
+            Na faculdade, o tema da dislexia passa voando. Nos cursos de formação, fica na teoria. E no dia a dia, sobra para você — com a turma inteira, sem apoio especializado e sem saber por onde começar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SEÇÃO 4 — REASON WHY ═══════════ -->
+    <section class="py-16 md:py-24 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 fade-in">
+        <div class="grid md:grid-cols-5 gap-8 md:gap-12 items-center">
+          <div class="md:col-span-2 flex justify-center">
+            <div class="relative">
+              <div class="absolute -inset-3 bg-gradient-to-br from-primary/15 to-accent/15 rounded-2xl blur-xl"></div>
+              <img
+                src="/images/guaciara-foto.webp"
+                alt="Guaciara Fornaciari — Fonoaudióloga e autora do ebook"
+                class="relative w-56 md:w-full max-w-xs rounded-2xl shadow-lg object-cover"
+                width="320"
+                height="400"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="md:col-span-3">
+            <h2 class="text-2xl sm:text-3xl font-bold text-primary-dark mb-6">
+              Por que uma fonoaudióloga escreveu um guia para professoras?
+            </h2>
+            <p class="text-gray-700 mb-4">
+              Porque dislexia é, na sua raiz, uma questão de <strong>processamento fonológico</strong> — exatamente a área de atuação da fonoaudiologia.
+            </p>
+            <p class="text-gray-700 mb-4">
+              Meu nome é <strong>Guaciara Fornaciari</strong>. Sou fonoaudióloga, pós-graduada em inclusão, com certificação internacional em autismo e mais de 25 anos de experiência na educação.
+            </p>
+            <p class="text-gray-700 mb-4">
+              Já fui professora. Já fui alfabetizadora. Já fui coordenadora. Já fui diretora escolar. Abri uma escola do zero.
+            </p>
+            <p class="text-gray-700 mb-4">
+              Eu vivi dos dois lados: o da profissional que entende a neurobiologia da dislexia e o da professora que precisa dar conta de 30 alunos ao mesmo tempo.
+            </p>
+            <p class="text-gray-800 font-semibold text-lg">
+              Escrevi <em>"As Letras Dançarinas"</em> para unir esses dois mundos — e entregar para você, em linguagem clara, o que eu levei anos para reunir.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SEÇÃO 5 — BENEFÍCIOS ═══════════ -->
+    <section class="py-16 md:py-24 bg-gradient-to-b from-surface to-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 fade-in">
+        <div class="text-center mb-12">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-dark mb-3">
+            O que você vai encontrar no ebook
+          </h2>
+          <p class="text-gray-600 text-lg">
+            Aprenda com a jornada da professora Beatriz e do pequeno Caio:
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          {benefits.map((item) => (
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md hover:border-primary/20 transition-all duration-300">
+              <div class="flex gap-4">
+                <span class="text-3xl flex-shrink-0 mt-1">{item.icon}</span>
+                <div>
+                  <h3 class="font-bold text-gray-800 mb-2">{item.title}</h3>
+                  <p class="text-gray-600 text-base leading-relaxed">{item.text}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SEÇÃO 6 — PROVA SOCIAL ═══════════ -->
+    <section class="py-16 md:py-20 bg-gradient-to-r from-primary-dark to-primary text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center fade-in">
+        <div class="grid grid-cols-3 gap-6 mb-10">
+          <div>
+            <p class="text-3xl sm:text-4xl md:text-5xl font-extrabold">6.000+</p>
+            <p class="text-white/80 text-sm sm:text-base mt-1">Professoras confiam no trabalho da Guaciara</p>
+          </div>
+          <div>
+            <p class="text-3xl sm:text-4xl md:text-5xl font-extrabold">25</p>
+            <p class="text-white/80 text-sm sm:text-base mt-1">Anos de experiência na educação</p>
+          </div>
+          <div>
+            <p class="text-3xl sm:text-4xl md:text-5xl font-extrabold">100%</p>
+            <p class="text-white/80 text-sm sm:text-base mt-1">Gratuito — sem cobrança</p>
+          </div>
+        </div>
+
+        <p class="text-white/90 text-lg max-w-2xl mx-auto">
+          Guaciara reúne neste ebook o que a maioria dos cursos de formação não aborda: <strong class="text-white">como agir diante da dislexia na prática escolar do dia a dia</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════ SEÇÃO 7 — FORMULÁRIO / EMBED CHECKOUT ═══════════ -->
+    <section id="cadastro" class="py-16 md:py-24 bg-gradient-to-b from-white via-[#f0fdf4] to-white">
+      <div class="max-w-2xl mx-auto px-4 sm:px-6 fade-in">
+        <div class="text-center mb-8">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-dark mb-3">
+            Baixe agora <em>"As Letras Dançarinas"</em>
+          </h2>
+          <p class="text-gray-600 text-lg">
+            Cadastre-se e receba o ebook no seu e-mail em poucos instantes:
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+          <iframe
+            id="checkout-embed"
+            src={CHECKOUT_EMBED}
+            title="Cadastro para receber o ebook gratuito"
+            class="w-full border-0"
+            style="min-height: 520px;"
+            allow="payment"
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-6 text-sm text-gray-500">
+          <span class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
+            Seus dados estão seguros
+          </span>
+          <span class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+            Receba no e-mail
+          </span>
+          <span class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            100% Gratuito
+          </span>
+        </div>
+
+        <noscript>
+          <div class="text-center mt-4">
+            <a href={CHECKOUT_DIRECT} class="text-primary underline font-semibold">
+              Clique aqui para se cadastrar e receber o ebook
+            </a>
+          </div>
+        </noscript>
+      </div>
+    </section>
+
+    <!-- ═══════════ SEÇÃO 8 — FAQ ═══════════ -->
+    <section class="py-16 md:py-24 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 fade-in">
+        <h2 class="text-2xl sm:text-3xl font-bold text-primary-dark text-center mb-10">
+          Perguntas Frequentes
+        </h2>
+
+        <div class="space-y-4">
+          {faqs.map((faq) => (
+            <details class="group bg-surface rounded-xl border border-gray-200 overflow-hidden">
+              <summary class="flex items-center justify-between gap-4 px-6 py-5 font-semibold text-gray-800 hover:bg-gray-50 transition-colors">
+                <span>{faq.q}</span>
+                <span class="faq-icon text-primary text-xl font-light transition-transform duration-300 flex-shrink-0">+</span>
+              </summary>
+              <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                {faq.a}
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SEÇÃO 9 — REFORÇO FINAL ═══════════ -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-[#EEF2FF] via-white to-[#f0fdf4]">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center fade-in">
+        <div class="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 md:p-12">
+          <p class="text-gray-700 text-lg mb-4">
+            No final da história, a sala da professora Beatriz era um exemplo de inclusão. Caio ainda encontrava desafios — mas agora tinha ferramentas para enfrentá-los. Ele aprendeu que seu cérebro era apenas diferente, não defeituoso.
+          </p>
+
+          <p class="text-xl md:text-2xl font-bold text-primary-dark mb-8">
+            E tudo começou com uma professora que decidiu agir.
+          </p>
+
+          <p class="text-gray-600 mb-8">
+            Baixe o guia. É gratuito, é prático e foi escrito de professora para professora — por alguém que entende a ciência por trás das letras que dançam.
+          </p>
+
+          <a
+            href="#cadastro"
+            class="inline-flex items-center gap-2 bg-gradient-to-r from-secondary to-secondary-dark text-white font-bold text-lg px-8 py-4 rounded-xl shadow-[0_8px_30px_rgba(76,175,80,0.35)] hover:shadow-[0_12px_40px_rgba(76,175,80,0.45)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+          >
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            QUERO RECEBER O EBOOK GRATUITO
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="py-8 bg-gray-900 text-gray-400 text-sm">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-3">
+        <p class="font-semibold text-gray-300">Doutora Escola</p>
+        <p>
+          G&R INSTITUTO EDUCACIONAL LTDA · CNPJ: 39.969.764/0001-25
+        </p>
+        <p class="text-xs text-gray-500">
+          Pagamento processado por ASAAS Gestão Financeira Instituição de Pagamento S.A. · CNPJ: 19.540.550/0001-21
+        </p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ═══════════ SCRIPTS ═══════════ -->
+  <script is:inline define:vars={{ allowedOrigin: CHECKOUT_CONFIG.allowedOrigin, successUrl: CHECKOUT_CONFIG.successUrl }}>
+    window.addEventListener('message', function (event) {
+      if (event.origin !== allowedOrigin) return;
+      var data = event.data;
+      if (data && data.type === 'CHECKOUT_SUCCESS') {
+        window.location.href = (typeof data.url === 'string' && data.url) ? data.url : successUrl;
+      }
+    });
+
+    var iframeEl = document.getElementById('checkout-embed');
+    if (iframeEl) {
+      iframeEl.addEventListener('load', function () {
+        try {
+          iframeEl.style.height = iframeEl.contentWindow.document.body.scrollHeight + 'px';
+        } catch (e) { /* cross-origin */ }
+      });
+    }
+
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+      document.querySelectorAll('.fade-in').forEach(function (el) {
+        observer.observe(el);
+      });
+    } else {
+      document.querySelectorAll('.fade-in').forEach(function (el) {
+        el.classList.add('visible');
+      });
+    }
+  </script>
+</Layout>
