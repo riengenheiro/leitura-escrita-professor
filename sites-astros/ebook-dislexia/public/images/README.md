@@ -1,5 +1,7 @@
 # Imagens — Landing Page Ebook Dislexia
 
+Use exatamente estes nomes de arquivo (sem extensão duplicada `.webp.webp`).
+
 ## Imagens necessárias
 
 ### `mockup-ebook.webp`
