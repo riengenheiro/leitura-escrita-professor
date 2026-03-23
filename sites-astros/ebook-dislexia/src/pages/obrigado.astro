@@ -1,5 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+
+const base = import.meta.env.BASE_URL;
+const publicImg = (path: string) => `${base}${path.replace(/^\//, '')}`;
 ---
 <Layout
   title="Ebook enviado! | As Letras Dançarinas — Doutora Escola"
@@ -117,7 +121,7 @@ import Layout from '../layouts/Layout.astro';
 
         <div class="inline-flex flex-col items-center gap-3">
           <img
-            src="/images/guaciara-foto.webp"
+            src={publicImg('images/guaciara-foto.webp')}
             alt="Guaciara Fornaciari"
             class="w-20 h-20 rounded-full object-cover shadow-md border-2 border-white"
             width="80"
@@ -133,15 +137,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </section>
 
-    <!-- ═══════════ FOOTER ═══════════ -->
-    <footer class="py-8 bg-gray-900 text-gray-400 text-sm">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-3">
-        <p class="font-semibold text-gray-300">Doutora Escola</p>
-        <p>
-          G&R INSTITUTO EDUCACIONAL LTDA · CNPJ: 39.969.764/0001-25
-        </p>
-      </div>
-    </footer>
+    <Footer />
 
   </main>
 </Layout>

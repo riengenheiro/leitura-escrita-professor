@@ -11,6 +11,8 @@ const {
   title = 'As Letras Dançarinas — Ebook Gratuito | Doutora Escola',
   description = 'Ebook gratuito para professoras: "As Letras Dançarinas — Um Guia para uma Sala de Aula de Todos". Estratégias práticas para ajudar alunos com dislexia na sala de aula. Por Guaciara Fornaciari.',
 } = Astro.props;
+
+const base = import.meta.env.BASE_URL;
 ---
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -26,8 +28,8 @@ const {
     <link rel="preconnect" href="https://fm.doutoraescola.com.br" crossorigin />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="icon" type="image/png" href={`${base}favicon.png`} />
+    <link rel="apple-touch-icon" href={`${base}favicon.png`} />
     <link rel="canonical" href={SITE_URL + Astro.url.pathname} />
     <title>{title}</title>
     <meta name="description" content={description} />
