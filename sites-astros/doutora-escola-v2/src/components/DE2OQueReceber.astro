@@ -9,15 +9,16 @@ const blocos = [
     titulo: 'CAMPO 1: O Eu, o Outro e o Nós',
     emoji: '📚',
     img: '/images/v2/bloco-1.webp',
+    contexto: 'Para trabalhar identidade e convivencia sem passar horas procurando atividade pronta.',
     itens: [
       '5 atividades completas passo a passo',
-      'Álbum do Eu (projeto de 4 semanas)',
-      'Espelho, espelho meu',
-      'Jogo das Emoções',
-      'Árvore da Amizade',
-      'Caixinha de Gratidão',
-      'Checklist de observação pronto',
-      'Template de planejamento',
+      'Album do Eu (projeto de 4 semanas para envolver familia e coordenacao)',
+      'Espelho, espelho meu (acolhimento leve para inicio da semana)',
+      'Jogo das Emocoes (apoio para turmas agitadas)',
+      'Arvore da Amizade (convivencia com pratica guiada)',
+      'Caixinha de Gratidao (rotina socioemocional rapida)',
+      'Checklist de observacao pronto (menos tempo no relatorio bimestral)',
+      'Template de planejamento (copiar, adaptar e aplicar)',
     ],
     bonus: 'Ideias relâmpago (5 minutos)',
   },
@@ -25,15 +26,16 @@ const blocos = [
     titulo: 'CAMPO 2: Corpo, Gestos e Movimentos',
     emoji: '🏃',
     img: '/images/v2/bloco-2.webp',
+    contexto: 'Para gastar energia da turma com intencao pedagogica e menos desgaste para voce.',
     itens: [
       '6 atividades motoras completas',
-      'Circuito motor (com montagem ilustrada)',
-      'Estátua musical (variações)',
-      'Massinha caseira (receita + exploração)',
-      'Yoga para crianças',
-      'Pintura corporal',
-      'Pega-pega cooperativo',
-      'Materiais de baixo custo',
+      'Circuito motor (com montagem ilustrada para preparar rapido)',
+      'Estatua musical (variacoes para diferentes idades)',
+      'Massinha caseira (receita + exploracao com baixo custo)',
+      'Yoga para criancas (transicao de momentos de agitacao)',
+      'Pintura corporal (experiencia sensorial com organizacao)',
+      'Pega-pega cooperativo (participacao de toda a turma)',
+      'Materiais de baixo custo (sem depender de verba extra)',
     ],
     bonus: 'Rotina motora diária',
   },
@@ -41,15 +43,16 @@ const blocos = [
     titulo: 'CAMPO 3: Traços, Sons, Cores e Formas',
     emoji: '🎨',
     img: '/images/v2/bloco-3.webp',
+    contexto: 'Para planejar experiencias artisticas mais ricas, mesmo com poucos recursos.',
     itens: [
       '6 atividades artísticas detalhadas',
-      'Pintura com tintas naturais (receitas)',
-      'Banda de sucata (construção de instrumentos)',
-      'Mistura de cores (3 versões)',
-      'Caixa de fantasias e teatro',
-      'Arte com elementos naturais',
-      'Show de talentos (projeto 2 semanas)',
-      'Playlist para cada momento',
+      'Pintura com tintas naturais (receitas simples e economicas)',
+      'Banda de sucata (construcao de instrumentos com reaproveitamento)',
+      'Mistura de cores (3 versoes para repetir sem cair na mesmice)',
+      'Caixa de fantasias e teatro (engajamento imediato)',
+      'Arte com elementos naturais (atividade pronta para dias de patio)',
+      'Show de talentos (projeto de 2 semanas com roteiro)',
+      'Playlist para cada momento (entrada, foco e fechamento)',
     ],
     bonus: 'Como montar seu atelier',
   },
@@ -57,15 +60,16 @@ const blocos = [
     titulo: 'CAMPO 4: Escuta, Fala, Pensamento e Imaginação',
     emoji: '📖',
     img: '/images/v2/bloco-4.webp',
+    contexto: 'Para fortalecer linguagem e participacao com propostas aplicaveis no dia seguinte.',
     itens: [
       '6 atividades de linguagem completas',
-      'Sacola literária viajante (projeto contínuo)',
-      'Roda de conversa temática (20 temas)',
-      'Ditado para o professor',
-      'Caixa de histórias (objetos mágicos)',
-      'Nome próprio (projeto 3 semanas)',
-      'Rimas e parlendas (jogos)',
-      'Estratégias para ampliar vocabulário',
+      'Sacola literaria viajante (projeto continuo com orientacao para familia)',
+      'Roda de conversa tematica (20 temas prontos para conduzir)',
+      'Ditado para o professor (avaliacao diagnostica simplificada)',
+      'Caixa de historias (objetos para estimular imaginacao)',
+      'Nome proprio (projeto de 3 semanas com progressao)',
+      'Rimas e parlendas (jogos para ampliar repertorio oral)',
+      'Estrategias para ampliar vocabulario (uso imediato em sala)',
     ],
     bonus: 'Técnicas de contação de histórias',
   },
@@ -73,15 +77,16 @@ const blocos = [
     titulo: 'CAMPO 5: Espaços, Tempos, Quantidades...',
     emoji: '🔢',
     img: '/images/v2/bloco-5.webp',
+    contexto: 'Para trabalhar matematica e ciencias com experiencias concretas e organizadas.',
     itens: [
       '6 atividades matemáticas e científicas',
-      'Horta na escola (projeto 3 meses)',
-      '3 experimentos científicos completos',
-      'Gráficos e pesquisas (com exemplos)',
-      'Jogos matemáticos (boliche, trilha, memória)',
-      'Rotina visual (template)',
-      'Classificação e seriação',
-      'Matemática no cotidiano',
+      'Horta na escola (projeto de 3 meses com planejamento por etapa)',
+      '3 experimentos cientificos completos (materiais e condução)',
+      'Graficos e pesquisas (com exemplos para registrar evidencias)',
+      'Jogos matematicos (boliche, trilha e memoria com objetivo claro)',
+      'Rotina visual (template pronto para imprimir)',
+      'Classificacao e seriacao (sequencia didatica pronta)',
+      'Matematica no cotidiano (contextos reais para a turma)',
     ],
     bonus: 'Materiais não estruturados',
   },
@@ -102,6 +107,7 @@ const blocos = [
           <div class="p-6">
           <div class="text-2xl mb-2">{b.emoji}</div>
           <h3 class="text-lg font-bold text-gray-900 mb-4">{b.titulo}</h3>
+          <p class="text-sm text-gray-600 mb-4">{b.contexto}</p>
           <ul class="space-y-2 mb-4">
             {b.itens.map((item) => (
               <li class="flex items-start gap-2 text-gray-700 text-sm">
@@ -117,7 +123,7 @@ const blocos = [
     </div>
     <div class="text-center">
       <a href={CHECKOUT_BASIC} class="js-open-checkout-modal inline-flex items-center justify-center mx-auto bg-gradient-to-r from-[#4CAF50] to-[#2E7D32] hover:from-[#43A047] hover:to-[#1B5E20] text-white font-black text-lg px-10 py-4 rounded-2xl shadow-[0_8px_25px_rgba(76,175,80,0.4)] hover:shadow-[0_12px_35px_rgba(76,175,80,0.5)] hover:scale-105 transition-all duration-200 min-h-[60px] border-2 border-green-600/30">
-        SIM! QUERO TODOS OS 5 BLOCOS AGORA!
+        VER O QUE ESTA INCLUIDO NOS 5 CAMPOS
       </a>
     </div>
   </div>

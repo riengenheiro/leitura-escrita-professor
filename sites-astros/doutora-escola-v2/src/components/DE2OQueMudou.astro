@@ -1,34 +1,42 @@
 ---
 import { CHECKOUT_BASIC } from '../config/pricing';
 const rows = [
-  { v1: '41 páginas', v2: '360 páginas (60 por bloco)' },
-  { v1: 'Ideias gerais', v2: '25+ atividades DETALHADAS passo a passo' },
-  { v1: 'Sem projetos', v2: '3 projetos interdisciplinares completos (4 semanas cada)' },
-  { v1: 'Sem templates', v2: '10+ templates editáveis (planos, fichas, relatórios)' },
-  { v1: 'Teoria básica', v2: '50+ ideias rápidas prontas para usar' },
-  { v1: 'Sem diferenciação por idade', v2: 'Atividades por faixa etária (0-1, 2-3, 4-5 anos)' },
-  { v1: 'Básico sobre inclusão', v2: 'Adaptações inclusivas em TODAS as atividades' },
+  {
+    comum: 'PDF generico com ideias soltas e pouco aplicaveis na rotina real.',
+    diferencial: 'Atividades detalhadas passo a passo com materiais, tempo e codigos BNCC em cada proposta.',
+  },
+  {
+    comum: 'Material sem adaptacao para turmas heterogeneas.',
+    diferencial: 'Adaptacoes inclusivas em todas as atividades, com orientacao para diferentes perfis de aluno.',
+  },
+  {
+    comum: 'Conteudo sem separacao clara por idade.',
+    diferencial: 'Atividades organizadas por faixa etaria: 0-1, 2-3 e 4-5 anos.',
+  },
+  {
+    comum: 'Professora termina a leitura e ainda precisa montar tudo do zero.',
+    diferencial: 'Templates editaveis prontos para planejamento, fichas e relatorios.',
+  },
 ];
 ---
 <section class="py-16 md:py-20 bg-white px-6">
   <div class="max-w-4xl mx-auto">
     <h2 class="text-2xl md:text-3xl font-extrabold text-center text-gray-900 mb-10">
-      O que mudou da versão 1.0 para 2.0?<br />
-      <span class="text-primary">(E por que você VAI querer essa atualização)</span>
+      Por que este material e diferente do que voce encontra por ai
     </h2>
     <div class="overflow-x-auto rounded-xl border-2 border-primary/20 shadow-lg mb-10">
       <table class="w-full text-left">
         <thead>
           <tr class="bg-primary text-white">
-            <th class="p-4 font-bold">VERSÃO 1.0</th>
-            <th class="p-4 font-bold">VERSÃO 2.0 ⭐</th>
+            <th class="p-4 font-bold">O que voce ve no mercado</th>
+            <th class="p-4 font-bold">O que voce recebe aqui</th>
           </tr>
         </thead>
         <tbody>
           {rows.map((row) => (
             <tr class="border-b border-gray-200 even:bg-surface/50">
-              <td class="p-4 text-gray-600">{row.v1}</td>
-              <td class="p-4 font-medium text-gray-900">{row.v2}</td>
+              <td class="p-4 text-gray-600">{row.comum}</td>
+              <td class="p-4 font-medium text-gray-900">{row.diferencial}</td>
             </tr>
           ))}
         </tbody>
@@ -36,7 +44,7 @@ const rows = [
     </div>
     <div class="text-center">
       <a href={CHECKOUT_BASIC} class="js-open-checkout-modal inline-flex items-center justify-center bg-gradient-to-r from-[#4CAF50] to-[#2E7D32] hover:from-[#43A047] hover:to-[#1B5E20] text-white font-black text-lg px-10 py-4 rounded-2xl shadow-[0_8px_25px_rgba(76,175,80,0.4)] hover:shadow-[0_12px_35px_rgba(76,175,80,0.5)] hover:scale-105 transition-all duration-200">
-        QUERO A VERSÃO COMPLETA AGORA!
+        QUERO CONHECER O MATERIAL COMPLETO
       </a>
     </div>
   </div>

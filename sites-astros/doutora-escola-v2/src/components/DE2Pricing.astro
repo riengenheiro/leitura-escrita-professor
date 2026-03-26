@@ -51,12 +51,9 @@ import { PRICE_ANCHOR, PRICE_BASIC, formatPrice, CHECKOUT_BASIC } from '../confi
           <li class="flex items-center gap-2"><span class="text-[#4CAF50] font-bold">✓</span> Acesso vitalício + atualizações gratuitas</li>
         </ul>
         <a href={CHECKOUT_BASIC} class="js-open-checkout-modal block w-full text-center text-white font-black text-xl py-5 rounded-xl transition-all duration-150 active:scale-[0.98]" style="background:#2E7D32; box-shadow: 0 5px 0 #1a4d1e;">
-          QUERO GARANTIR MEU EBOOK!
+          QUERO VER MEU ACESSO IMEDIATO
         </a>
-        <div class="flex flex-col items-center gap-1 mt-3">
-          <p class="text-xs text-green-700 font-semibold">⏰ Oferta expira em:</p>
-          <p id="timer-preco" class="text-xl font-black text-[#4CAF50] tabular-nums" role="timer" aria-live="polite">05:00</p>
-        </div>
+        <p class="text-center text-xs text-green-700 font-semibold mt-3">Vagas com preco especial sujeitas a disponibilidade.</p>
       </div>
     </div>
 
@@ -86,19 +83,3 @@ import { PRICE_ANCHOR, PRICE_BASIC, formatPrice, CHECKOUT_BASIC } from '../confi
   </div>
 </section>
 
-<script>
-  (function () {
-    const el = document.getElementById('timer-preco');
-    if (!el) return;
-    let segundos = 5 * 60; // 05:00
-    function atualizar() {
-      if (segundos < 0) return;
-      const m = Math.floor(segundos / 60);
-      const s = segundos % 60;
-      el.textContent = String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
-      segundos--;
-      if (segundos >= 0) setTimeout(atualizar, 1000);
-    }
-    atualizar();
-  })();
-</script>
