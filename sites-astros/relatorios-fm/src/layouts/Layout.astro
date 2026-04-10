@@ -59,5 +59,52 @@ const FACEBOOK_PIXEL_ID = '1327489972419238';
       })();
     </script>
     <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1327489972419238&amp;ev=PageView&amp;noscript=1" /></noscript>
+    <script is:inline data-cfasync="false">
+      (function () {
+        var ALLOWED = ['aff', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'src', 'ref'];
+        var HOST_MATCH = /(^|\.)((fm\.doutoraescola\.com\.br)|(pay\.kiwify\.com(\.br)?)|(voomp\.com\.br))$/;
+
+        function appendLandingParamsToUrl(targetUrl) {
+          if (!targetUrl) return targetUrl;
+          var landingParams;
+          var out;
+          try {
+            landingParams = new URL(window.location.href).searchParams;
+            out = new URL(targetUrl, window.location.origin);
+          } catch (e) {
+            return targetUrl;
+          }
+          landingParams.forEach(function (value, key) {
+            if (ALLOWED.indexOf(key) === -1) return;
+            if (!out.searchParams.has(key)) out.searchParams.set(key, value);
+          });
+          return out.href;
+        }
+
+        document.addEventListener(
+          'click',
+          function (event) {
+            var target = event.target;
+            if (!(target instanceof Element)) return;
+            var link = target.closest('a[href]');
+            if (!link) return;
+
+            var href = link.getAttribute('href');
+            if (!href || href === '#' || href.indexOf('javascript:') === 0) return;
+
+            var parsed;
+            try {
+              parsed = new URL(href, window.location.origin);
+            } catch (e) {
+              return;
+            }
+            if (!HOST_MATCH.test(parsed.hostname)) return;
+
+            link.setAttribute('href', appendLandingParamsToUrl(parsed.href));
+          },
+          true
+        );
+      })();
+    </script>
   </body>
 </html>
