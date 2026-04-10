@@ -1,6 +1,19 @@
+import { useEffect, useState } from 'react'
+import { appendLandingParamsToUrl } from '@shared/affiliateCheckoutUrl'
 import { Check, Sparkles, Shield, Zap, Award, X, Star } from 'lucide-react'
 
+const URL_ESSENCIAL = 'https://fm.doutoraescola.com.br/checkout/?s=UtP0C'
+const URL_COMPLETO = 'https://fm.doutoraescola.com.br/checkout/?s=3ujA2'
+
 export function FMPricing() {
+  const [urlEssencial, setUrlEssencial] = useState(URL_ESSENCIAL)
+  const [urlCompleto, setUrlCompleto] = useState(URL_COMPLETO)
+
+  useEffect(() => {
+    setUrlEssencial(appendLandingParamsToUrl(URL_ESSENCIAL))
+    setUrlCompleto(appendLandingParamsToUrl(URL_COMPLETO))
+  }, [])
+
   return (
     <section
       id="oferta"
@@ -129,7 +142,7 @@ export function FMPricing() {
               </ul>
 
               <a
-                href="https://fm.doutoraescola.com.br/checkout/?s=UtP0C"
+                href={urlEssencial}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full py-4 text-white font-bold rounded-xl transition-all duration-300 hover:scale-[1.02] shadow-lg"
@@ -207,7 +220,7 @@ export function FMPricing() {
               </ul>
 
               <a
-                href="https://fm.doutoraescola.com.br/checkout/?s=3ujA2"
+                href={urlCompleto}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3 w-full py-5 text-white text-lg font-extrabold rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl shadow-xl"

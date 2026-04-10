@@ -1,9 +1,16 @@
 import { useState, useEffect, useCallback } from 'react'
+import { appendLandingParamsToUrl } from '@shared/affiliateCheckoutUrl'
 
 const STORAGE_KEY = 'de_exit_intent_shown'
+const CHECKOUT_BASICO = 'https://fm.doutoraescola.com.br/checkout/?s=ZAZZe'
 
 export function DEExitIntent() {
   const [isVisible, setIsVisible] = useState(false)
+  const [checkoutUrl, setCheckoutUrl] = useState(CHECKOUT_BASICO)
+
+  useEffect(() => {
+    setCheckoutUrl(appendLandingParamsToUrl(CHECKOUT_BASICO))
+  }, [])
 
   const showPopup = useCallback(() => {
     if (sessionStorage.getItem(STORAGE_KEY)) return
@@ -46,7 +53,7 @@ export function DEExitIntent() {
           Mais de 2.000 professoras já transformaram suas aulas. Não perca essa oportunidade!
         </p>
         <a
-          href="https://fm.doutoraescola.com.br/checkout/?s=ZAZZe"
+          href={checkoutUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="block w-full py-4 bg-btn-primary hover:opacity-90 text-white text-center font-bold text-lg rounded-xl transition-colors"

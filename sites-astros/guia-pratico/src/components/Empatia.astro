@@ -1,0 +1,31 @@
+---
+const dores = [
+  "Você tem um aluno que todo bimestre entrega pouco — e na reunião com os pais, você não sabe ao certo o que dizer, porque o diagnóstico nunca veio.",
+  "Você percebe que ele é inteligente, mas algo trava: a letra não sai, a leitura trava, ele parece não estar ouvindo — e você não sabe se é comportamento ou algo mais.",
+  "Você já tentou de tudo: mudar de lugar, dar atenção extra, adaptar a atividade — e nada resolve de forma consistente.",
+  "Na hora de escrever o relatório ou conversar com a coordenação, faltam palavras técnicas. Você sente o que está acontecendo, mas não sabe como nomear.",
+  'Você já ficou em dúvida: "Isso é dificuldade de aprendizagem, é comportamento ou é problema de saúde?" — e não teve ninguém para responder com clareza.',
+  "Você passa a noite pensando naquele aluno específico, sabendo que ele precisa de ajuda, mas sem saber qual caminho seguir.",
+];
+---
+
+<section class="bg-[#fdf6f0] py-20 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#0F4C75] text-center mb-12">
+      Reconhece alguma dessas situações?
+    </h2>
+
+    <div class="grid gap-4">
+      {dores.map((dor) => (
+        <div class="flex gap-4 bg-white rounded-xl p-5 shadow-sm border border-red-100">
+          <span class="text-red-500 text-xl font-bold mt-0.5 shrink-0">✗</span>
+          <p class="text-gray-700 leading-relaxed">{dor}</p>
+        </div>
+      ))}
+    </div>
+
+    <p class="mt-10 text-center text-lg font-semibold text-[#0F4C75]">
+      Se você se reconheceu em alguma dessas situações, este material foi criado para você.
+    </p>
+  </div>
+</section>

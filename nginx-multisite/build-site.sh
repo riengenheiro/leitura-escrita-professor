@@ -74,7 +74,7 @@ case $SITE in
         SITE_PATH="/var/www/projetos/sites/planejamento-bncc"
         ;;
     guia-pratico)
-        SITE_PATH="/var/www/projetos/sites/guia-pratico"
+        SITE_PATH="/var/www/projetos/sites-astros/guia-pratico"
         ;;
     roteiro-relatorios)
         SITE_PATH="/var/www/projetos/sites/roteiro-relatorios"

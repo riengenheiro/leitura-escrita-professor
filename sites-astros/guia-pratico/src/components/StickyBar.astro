@@ -1,0 +1,16 @@
+---
+import { CHECKOUT_EMBED_URL } from '../config/checkoutEmbed';
+---
+
+<div id="sticky-bar" class="fixed top-0 left-0 right-0 z-50 bg-[#0F4C75] text-white text-sm py-2.5 px-4 shadow-md">
+  <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+    <p class="text-center sm:text-left text-white/90">
+      <span class="font-semibold">R$ 47,00</span> &nbsp;·&nbsp; Acesso imediato &nbsp;·&nbsp; 7 dias de garantia incondicional
+    </p>
+    <a href={CHECKOUT_EMBED_URL} class="js-open-checkout-modal shrink-0 bg-[#E07B39] text-white font-bold text-xs uppercase tracking-wide px-4 py-1.5 rounded hover:brightness-110 transition-all whitespace-nowrap">
+      Verificar o que está incluído ▸
+    </a>
+  </div>
+</div>
+
+<div class="h-[52px] sm:h-[44px]"></div>

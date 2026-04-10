@@ -1,0 +1,41 @@
+---
+const depoimentos = [
+  {
+    nome: "Professora Ana C.",
+    cargo: "Educação Infantil",
+    texto: "Eu tinha um aluno que todo mundo só via como bagunceiro. Depois da Maratona, percebi que era respiração oral — ele estava sempre sonolento e irritado. Encaminhei para a fonoaudióloga. A mãe chorou de gratidão quando soube que tinha tratamento.",
+  },
+  {
+    nome: "Professora Renata M.",
+    cargo: "Ensino Fundamental — 2º ano",
+    texto: "Finalmente entendi a diferença entre dislexia e dificuldade de aprendizagem. Parece óbvio depois que você aprende, mas sem esse conhecimento eu estava adaptando as coisas erradas para o aluno errado.",
+  },
+  {
+    nome: "Professora Daniela F.",
+    cargo: "Sala de inclusão",
+    texto: "O checklist de sondagem mudou o meu trabalho. Antes eu sabia que o aluno tinha uma defasagem, mas não sabia onde exatamente. Agora eu sei o ponto de partida — e isso muda tudo no planejamento.",
+  },
+];
+---
+
+<section class="bg-[#0F4C75] py-20 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-4">
+      O que professoras que já fizeram a Maratona de Dificuldades Escolares dizem:
+    </h2>
+    <p class="text-center text-white/60 mb-12 text-sm">Resultados reais de professoras que já aplicaram o método</p>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      {depoimentos.map((d) => (
+        <div class="bg-white rounded-2xl p-6 shadow-md flex flex-col">
+          <div class="text-[#E07B39] text-4xl font-serif leading-none mb-3">"</div>
+          <p class="text-gray-700 leading-relaxed flex-1 italic text-sm">{d.texto}</p>
+          <div class="mt-5 pt-4 border-t border-gray-100">
+            <p class="font-bold text-[#0F4C75]">{d.nome}</p>
+            <p class="text-gray-500 text-xs">{d.cargo}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

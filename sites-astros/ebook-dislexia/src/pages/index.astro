@@ -128,4 +128,11 @@ const img = (path: string) => `${base}${path.replace(/^\//, '')}`;
       }
     });
   </script>
+
+  <script type="module" define:vars={{ embedUrl: CHECKOUT_EMBED, directUrl: CHECKOUT_DIRECT }}>
+    import { appendLandingParamsToUrl } from '@shared/affiliateCheckoutUrl';
+    const merged = appendLandingParamsToUrl(embedUrl);
+    const iframe = document.getElementById('checkout-embed');
+    if (iframe) iframe.src = merged;
+  </script>
 </Layout>

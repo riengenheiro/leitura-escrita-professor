@@ -15,7 +15,7 @@ services:
       - /var/www/projetos/sites-astros/codigos-bncc/dist:/var/www/projetos/sites-astros/codigos-bncc/dist:ro
       - /var/www/projetos/sites/atividades-ludicas/dist:/var/www/projetos/sites/atividades-ludicas/dist:ro
       - /var/www/projetos/sites/clube-doutora-escola/dist:/var/www/projetos/sites/clube-doutora-escola/dist:ro
-      - /var/www/projetos/sites/guia-pratico/dist:/var/www/projetos/sites/guia-pratico/dist:ro
+      - /var/www/projetos/sites-astros/guia-pratico/dist:/var/www/projetos/sites-astros/guia-pratico/dist:ro
       - /var/www/projetos/sites/relatorios-construtivistas/dist:/var/www/projetos/sites/relatorios-construtivistas/dist:ro
       - /var/www/projetos/sites/planejamento-bncc/dist:/var/www/planejamento-bncc/dist:ro
       - /var/www/projetos/sites/roteiro-relatorios/dist:/var/www/projetos/sites/roteiro-relatorios/dist:ro

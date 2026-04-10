@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+import { appendLandingParamsToUrl } from '@shared/affiliateCheckoutUrl';
 import { Check, Star, Crown, ArrowRight, Clock } from 'lucide-react';
 
 const CTA_ANUAL = 'https://fm.doutoraescola.com.br/checkout/?s=UtP0C';
@@ -68,6 +70,17 @@ const planos: Plano[] = [
 ];
 
 export function RFMPlanos() {
+  const [ctaById, setCtaById] = useState<Record<string, string>>(() =>
+    Object.fromEntries(planos.map((p) => [p.id, p.ctaUrl]))
+  );
+
+  useEffect(() => {
+    setCtaById({
+      anual: appendLandingParamsToUrl(CTA_ANUAL),
+      premium: appendLandingParamsToUrl(CTA_PREMIUM),
+    });
+  }, []);
+
   return (
     <section className="section-padding bg-offwhite" id="planos">
       <div className="container">
@@ -170,7 +183,7 @@ export function RFMPlanos() {
 
                 {/* CTA */}
                 <a
-                  href={plano.ctaUrl}
+                  href={ctaById[plano.id] ?? plano.ctaUrl}
                   className={`
                     w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-body font-bold text-base transition-all hover:-translate-y-0.5
                     ${

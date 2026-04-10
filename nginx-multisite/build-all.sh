@@ -47,7 +47,7 @@ build_with_docker "/var/www/projetos/sites/clube-doutora-escola" "Clube Doutora 
 build_with_docker "/var/www/projetos/sites/relatorios-construtivistas" "Relatórios Construtivistas"
 
 # Build Guia Prático
-build_with_docker "/var/www/projetos/sites/guia-pratico" "Guia Prático"
+build_with_docker "/var/www/projetos/sites-astros/guia-pratico" "Guia Prático"
 
 # Build Roteiro Relatórios
 build_with_docker "/var/www/projetos/sites/roteiro-relatorios" "Roteiro Relatórios"

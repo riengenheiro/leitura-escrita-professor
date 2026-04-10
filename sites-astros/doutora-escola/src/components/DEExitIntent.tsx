@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
+import { appendLandingParamsToUrl } from '@shared/affiliateCheckoutUrl'
 import { usePagePrice } from '../hooks/usePagePrice'
 import { getCheckoutUrl } from '../config/pricing'
 
@@ -11,6 +12,11 @@ interface DEExitIntentProps {
 export function DEExitIntent({ price }: DEExitIntentProps) {
   const pagePrice = usePagePrice(price)
   const [isVisible, setIsVisible] = useState(false)
+  const [checkoutUrl, setCheckoutUrl] = useState(() => getCheckoutUrl(pagePrice, 'basic'))
+
+  useEffect(() => {
+    setCheckoutUrl(appendLandingParamsToUrl(getCheckoutUrl(pagePrice, 'basic')))
+  }, [pagePrice])
 
   const showPopup = useCallback(() => {
     if (sessionStorage.getItem(STORAGE_KEY)) return
@@ -53,7 +59,7 @@ export function DEExitIntent({ price }: DEExitIntentProps) {
           Mais de 2.000 professoras já transformaram suas aulas. Não perca essa oportunidade!
         </p>
         <a
-          href={getCheckoutUrl(pagePrice, 'basic')}
+          href={checkoutUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="block w-full py-4 bg-btn-primary hover:opacity-90 text-white text-center font-bold text-lg rounded-xl transition-colors"

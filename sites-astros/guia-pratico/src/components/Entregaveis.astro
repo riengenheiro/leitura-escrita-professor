@@ -1,0 +1,157 @@
+---
+import { CHECKOUT_EMBED_URL } from '../config/checkoutEmbed';
+
+const itens = [
+  {
+    emoji: "📗",
+    numero: "1",
+    titulo: "Ebook: Guia de Dificuldades Escolares",
+    subtitulo: "O seu manual de cabeceira para identificar o que os outros não veem",
+    descricao: "Dividido em 4 grandes grupos que cobrem todas as dificuldades que aparecem na sala de aula:",
+    grupos: [
+      {
+        nome: "Grupo 1 — Aspectos Socioemocionais e de Comportamento:",
+        texto: "TDAH, TOD, depressão infantil, fobia social, mutismo seletivo, bullying e muito mais — com os sinais que a professora pode observar, sem precisar ser médica.",
+      },
+      {
+        nome: "Grupo 2 — Linguagem Oral, Leitura e Escrita:",
+        texto: "Dislexia, trocas fonológicas, dificuldades de interpretação, impacto em Matemática e demais disciplinas — como identificar e o que fazer na prática.",
+      },
+      {
+        nome: "Grupo 3 — Aspectos Musculares e Fisiológicos:",
+        texto: "Respiração oral (que parece preguiça, mas é saúde), funções estomatognáticas, fadiga e sono — questões de saúde que se parecem com comportamento.",
+      },
+      {
+        nome: "Grupo 4 — Planejamento e Intervenção:",
+        texto: "Como comunicar o que você observou aos pais e à equipe de saúde, com a linguagem certa, sem medo de errar.",
+      },
+    ],
+  },
+  {
+    emoji: "📘",
+    numero: "2",
+    titulo: "Ebook: Pilares da Sondagem — Método Doutora Escola",
+    subtitulo: "Para você entender O que avaliar — antes de saber Como avaliar",
+    descricao: "A base teórica do método de sondagem: como olhar para um aluno e saber exatamente qual etapa de desenvolvimento ele está, o que ainda não consolidou e por onde começar a intervir.",
+    grupos: [],
+  },
+  {
+    emoji: "📋",
+    numero: "3",
+    titulo: "Sondagem Escolar — Educação Infantil (Checklist Completo)",
+    subtitulo: "Método Doutora Escola",
+    descricao: "Um checklist estruturado, organizado por faixa etária e área de desenvolvimento. Você aplica a observação seguindo o método: se a criança não responde ao estímulo do nível esperado, você \"desce\" na escala e encontra exatamente onde está a lacuna. Sem achismo. Com método.",
+    grupos: [],
+  },
+  {
+    emoji: "📋",
+    numero: "4",
+    titulo: "Sondagem Escolar — Ensino Fundamental (Checklist Completo)",
+    subtitulo: "Método Doutora Escola",
+    descricao: "O mesmo método aplicado ao Ensino Fundamental — para professoras dos Anos Iniciais e Finais que precisam identificar com clareza o que cada aluno ainda não aprendeu e por quê.",
+    grupos: [],
+  },
+  {
+    emoji: "🎬",
+    numero: "5",
+    titulo: "Curso em Vídeo: Dificuldades Escolares na Prática",
+    subtitulo: "8 horas de aulas — o mesmo conteúdo que gerou a Maratona DE",
+    descricao: "Esse é o curso que nasceu da demanda das professoras que fizeram a Maratona de Dificuldades Escolares. Você assiste no seu ritmo, pause quando precisar e aplica direto na semana seguinte.",
+    grupos: [
+      { nome: "", texto: "Como observar um aluno dentro da sala de aula com olhar clínico-pedagógico." },
+      { nome: "", texto: "Os sinais distintos de cada tipo de dificuldade." },
+      { nome: "", texto: "Como diferenciar comportamento de transtorno de dificuldade de aprendizagem." },
+      { nome: "", texto: "O que falar para os pais — e o que encaminhar para cada especialista." },
+      { nome: "", texto: "Adaptações pedagógicas que realmente funcionam por tipo de dificuldade." },
+    ],
+  },
+];
+
+const bonus = [
+  {
+    emoji: "🛑",
+    numero: "Bônus",
+    titulo: "Como Acabar com as Interrupções em Sala",
+    subtitulo: "Porque nenhuma estratégia de identificação funciona em uma sala que você não consegue gerir",
+    descricao: "15 técnicas testadas em sala de aula para reduzir as interrupções, criar uma rotina de engajamento e ter o espaço necessário para observar seus alunos com atenção. Inclui estratégias de posicionamento físico, conexão emocional com a turma e micro-rotinas que mudam o clima da sala em dias.",
+  },
+  {
+    emoji: "⏱️",
+    numero: "Bônus",
+    titulo: "Planejamento de Aulas em 1 Hora — Método Step-by-Step",
+    subtitulo: "Para você ter tempo de observar os alunos — sem ser engolida pelo planejamento",
+    descricao: "O método passo a passo que organiza seu planejamento semanal em uma única hora. Porque quando o planejamento está resolvido, você finalmente tem fôlego para perceber o que está acontecendo com cada aluno.",
+  },
+];
+---
+
+<section id="entregaveis" class="bg-white py-20 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#0F4C75] text-center mb-4">
+      Tudo que está incluído no seu acesso:
+    </h2>
+    <p class="text-center text-gray-500 mb-14">Um sistema completo — não apenas um ebook isolado.</p>
+
+    <div class="space-y-6">
+      {itens.map((item) => (
+        <div class="rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+          <div class="bg-[#0F4C75] text-white px-6 py-4 flex items-start gap-3">
+            <span class="text-3xl shrink-0">{item.emoji}</span>
+            <div>
+              <p class="text-xs uppercase tracking-wider text-white/60 font-semibold mb-0.5">
+                {item.numero === "Bônus" ? "Bônus" : `Material ${item.numero}`}
+              </p>
+              <p class="font-bold text-lg leading-snug">{item.titulo}</p>
+              <p class="text-white/75 text-sm mt-1 italic">{item.subtitulo}</p>
+            </div>
+          </div>
+          <div class="bg-white px-6 py-5">
+            <p class="text-gray-700 leading-relaxed mb-3">{item.descricao}</p>
+            {item.grupos && item.grupos.length > 0 && (
+              <ul class="space-y-2 mt-3">
+                {item.grupos.map((g) => (
+                  <li class="flex gap-2 text-gray-700 text-sm">
+                    <span class="text-[#16A34A] font-bold shrink-0 mt-0.5">✓</span>
+                    <span>
+                      {g.nome && <strong>{g.nome}</strong>}{" "}
+                      {g.texto}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-6 mb-10 bg-[#fdf6f0] rounded-2xl p-5 border border-orange-100">
+      <p class="text-sm text-gray-600 italic text-center mb-6">
+        Para que você consiga observar seus alunos com atenção, duas coisas precisam estar resolvidas: a gestão da sala e o planejamento. Por isso incluí estes dois materiais:
+      </p>
+      <div class="space-y-4">
+        {bonus.map((b) => (
+          <div class="rounded-xl border border-orange-200 overflow-hidden">
+            <div class="bg-[#E07B39] text-white px-5 py-3 flex items-start gap-3">
+              <span class="text-2xl shrink-0">{b.emoji}</span>
+              <div>
+                <p class="text-xs uppercase tracking-wider text-white/70 font-semibold mb-0.5">Bônus</p>
+                <p class="font-bold leading-snug">{b.titulo}</p>
+                <p class="text-white/75 text-xs mt-1 italic">{b.subtitulo}</p>
+              </div>
+            </div>
+            <div class="bg-white px-5 py-4">
+              <p class="text-gray-700 text-sm leading-relaxed">{b.descricao}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a href={CHECKOUT_EMBED_URL} class="js-open-checkout-modal btn-cta text-base md:text-lg px-8 py-4 shadow-lg">
+        Verificar se este método faz sentido para você
+      </a>
+    </div>
+  </div>
+</section>

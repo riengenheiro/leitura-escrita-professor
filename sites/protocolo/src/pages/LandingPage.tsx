@@ -1,4 +1,6 @@
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import { appendLandingParamsToUrl } from '@shared/affiliateCheckoutUrl'
 import { BookOpen, Shield, ArrowRight, Check, MessageCircle, Monitor, Smartphone, Clock } from 'lucide-react'
 
 const CHECKOUT_URL = 'https://pay.kiwify.com.br/1CXPFuY'
@@ -15,9 +17,14 @@ const fadeUp = {
 }
 
 function CTAButton({ className = '' }: { className?: string }) {
+  const [checkoutHref, setCheckoutHref] = useState(CHECKOUT_URL)
+  useEffect(() => {
+    setCheckoutHref(appendLandingParamsToUrl(CHECKOUT_URL))
+  }, [])
+
   return (
     <a
-      href={CHECKOUT_URL}
+      href={checkoutHref}
       target="_blank"
       rel="noopener noreferrer"
       className={`inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-gray-900 font-bold text-lg transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-amber-500/20 ${className}`}

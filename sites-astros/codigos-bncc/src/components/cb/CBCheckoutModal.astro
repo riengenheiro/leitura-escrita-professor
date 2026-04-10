@@ -84,13 +84,16 @@ const { url, allowedOrigin, defaultSuccessUrl } = CHECKOUT_EMBED;
   </div>
 </div>
 
-<script>
+<script type="module">
+  import { appendLandingParamsToUrl } from '@shared/affiliateCheckoutUrl';
+
   (function () {
     const modal = document.getElementById('checkout-modal');
     if (!modal) return;
     modal.setAttribute('aria-hidden', 'true');
 
-    const checkoutUrl = modal.getAttribute('data-checkout-url') || '';
+    const rawCheckoutUrl = modal.getAttribute('data-checkout-url') || '';
+    const checkoutUrl = appendLandingParamsToUrl(rawCheckoutUrl);
     const allowedOrigin = modal.getAttribute('data-allowed-origin') || '';
     const defaultSuccessUrl = modal.getAttribute('data-default-success-url') || '/obrigado';
     const iframe = document.getElementById('checkout-iframe');
@@ -98,6 +101,10 @@ const { url, allowedOrigin, defaultSuccessUrl } = CHECKOUT_EMBED;
     const errorBox = document.getElementById('checkout-error');
     const retryButton = document.getElementById('checkout-retry');
     const closeButtons = modal.querySelectorAll('[data-close-modal]');
+
+    modal.querySelectorAll('a[href*="fm.doutoraescola.com.br"]').forEach(function (a) {
+      a.setAttribute('href', checkoutUrl);
+    });
 
     let preloaded = false;
     let iframeLoaded = false;

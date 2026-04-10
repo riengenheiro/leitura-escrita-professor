@@ -30,7 +30,7 @@
             <div class="price-install">ou 11x de R$ 5,22 no cartão</div>
           </div>
 
-          <a href="https://pay.kiwify.com.br/1CXPFuY" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display:block; text-align:center; width:100%; font-size:18px; padding:20px;">
+          <a id="offer-checkout-cta" href="https://pay.kiwify.com.br/1CXPFuY" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display:block; text-align:center; width:100%; font-size:18px; padding:20px;">
             Garantir acesso agora →
           </a>
           <p style="text-align:center; color:var(--muted); font-size:13px; margin-top:10px;">
@@ -90,4 +90,13 @@
     </div>
   </div>
 </div>
+
+<script type="module">
+  import { appendLandingParamsToUrl } from '@shared/affiliateCheckoutUrl';
+  const a = document.getElementById('offer-checkout-cta');
+  if (a) {
+    const h = a.getAttribute('href');
+    if (h) a.setAttribute('href', appendLandingParamsToUrl(h));
+  }
+</script>
 

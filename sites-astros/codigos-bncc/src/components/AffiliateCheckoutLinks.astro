@@ -1,0 +1,11 @@
+---
+/** Enriquece links externos de checkout com aff/UTM da URL atual. */
+---
+<script type="module">
+  import { appendLandingParamsToUrl } from '@shared/affiliateCheckoutUrl';
+
+  document.querySelectorAll('a.js-affiliate-checkout-url').forEach(function (a) {
+    const h = a.getAttribute('href');
+    if (h && h !== '#') a.setAttribute('href', appendLandingParamsToUrl(h));
+  });
+</script>

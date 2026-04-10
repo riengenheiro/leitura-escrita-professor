@@ -425,4 +425,12 @@ import Layout from '../layouts/Layout.astro';
       });
     });
   </script>
+
+  <script type="module">
+    import { appendLandingParamsToUrl } from '@shared/affiliateCheckoutUrl';
+    document.querySelectorAll('a[href*="fm.doutoraescola.com.br/checkout"]').forEach(function (el) {
+      const h = el.getAttribute('href');
+      if (h) el.setAttribute('href', appendLandingParamsToUrl(h));
+    });
+  </script>
 </Layout>

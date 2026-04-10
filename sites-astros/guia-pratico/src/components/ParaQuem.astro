@@ -1,0 +1,57 @@
+---
+const paraQuem = [
+  "É professora de Educação Infantil ou Ensino Fundamental e já percebeu que algum aluno precisa de mais do que a aula comum oferece.",
+  "Quer entender a diferença entre comportamento, dificuldade de aprendizagem e questão de saúde — sem precisar se tornar especialista clínica.",
+  "Quer ter palavras seguras para conversar com pais, coordenação e equipe de saúde — sem medo de dizer algo errado.",
+  "Quer fazer encaminhamentos corretos, que realmente chegam ao profissional certo.",
+  "Quer adaptar suas atividades com mais precisão, sabendo <em>por que</em> está adaptando — não só <em>que</em> está adaptando.",
+  "Trabalha com inclusão e quer ferramentas concretas para cada aluno.",
+];
+
+const naoParaQuem = [
+  "Quer um certificado de hora para cumprir tabela — aqui o foco é aplicação real, não volume.",
+  "Espera uma solução mágica que resolve a dificuldade do aluno <em>sem</em> observação cuidadosa da sua parte.",
+  "Procura um curso com centenas de horas para colocar no currículo — aqui são 8 horas focadas em resultado prático.",
+  "Não está disposta a dedicar tempo de observação ao aluno — o método exige olhar atento, não atalho.",
+];
+---
+
+<section class="bg-[#f8f9fa] py-20 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#0F4C75] text-center mb-14">
+      Este material foi feito para você que...
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-[#16A34A] font-bold text-xl mb-5 flex items-center gap-2">
+          <span class="bg-green-100 text-[#16A34A] w-8 h-8 rounded-full flex items-center justify-center text-sm">✓</span>
+          Para você que:
+        </h3>
+        <div class="space-y-3">
+          {paraQuem.map((item) => (
+            <div class="flex gap-3 bg-white rounded-xl p-4 shadow-sm border border-green-100">
+              <span class="text-[#16A34A] text-lg shrink-0 mt-0.5">✅</span>
+              <p class="text-gray-700 text-sm leading-relaxed" set:html={item} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-red-500 font-bold text-xl mb-5 flex items-center gap-2">
+          <span class="bg-red-100 text-red-500 w-8 h-8 rounded-full flex items-center justify-center text-sm">✗</span>
+          Não é para você que:
+        </h3>
+        <div class="space-y-3">
+          {naoParaQuem.map((item) => (
+            <div class="flex gap-3 bg-white rounded-xl p-4 shadow-sm border border-red-100">
+              <span class="text-red-400 text-lg shrink-0 mt-0.5">✗</span>
+              <p class="text-gray-600 text-sm leading-relaxed" set:html={item} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

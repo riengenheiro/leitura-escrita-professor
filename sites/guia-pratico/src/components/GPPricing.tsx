@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+import { appendLandingParamsToUrl } from '@shared/affiliateCheckoutUrl'
 import { Check, BookOpen, Shield, Zap, Sparkles } from 'lucide-react'
 
 // Checkout Doutora Escola
@@ -18,6 +20,14 @@ const bonusPacoteEspecial = [
 ]
 
 export function GPPricing() {
+  const [urlBasico, setUrlBasico] = useState(LINK_PACOTE_BASICO)
+  const [urlCompleto, setUrlCompleto] = useState(LINK_PACOTE_COMPLETO)
+
+  useEffect(() => {
+    setUrlBasico(appendLandingParamsToUrl(LINK_PACOTE_BASICO))
+    setUrlCompleto(appendLandingParamsToUrl(LINK_PACOTE_COMPLETO))
+  }, [])
+
   return (
     <section id="opcoes" className="bg-[var(--color-papel)] py-16 md:py-20">
       <div className="max-w-4xl mx-auto px-6">
@@ -55,7 +65,7 @@ export function GPPricing() {
                 </li>
               </ul>
               <a
-                href={LINK_PACOTE_BASICO}
+                href={urlBasico}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-ui flex items-center justify-center gap-2 w-full py-4 bg-[var(--color-texte-livro)] hover:bg-gray-800 text-white text-base font-bold rounded-lg transition-all"
@@ -93,7 +103,7 @@ export function GPPricing() {
               </ul>
               <p className="text-xs text-gray-500 mb-4">+ todo o conteúdo do Pacote Básico</p>
               <a
-                href={LINK_PACOTE_COMPLETO}
+                href={urlCompleto}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-ui flex items-center justify-center gap-2 w-full py-4 bg-[var(--color-destaque)] hover:bg-red-800 text-white text-base font-bold rounded-lg transition-all mt-auto"

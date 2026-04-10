@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  font-family: 'Poppins', system-ui, sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+:root {
+  --color-primary: #0F4C75;
+  --color-accent: #E07B39;
+  --color-green: #16A34A;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.0625rem;
+}
+
+.btn-cta {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: filter 0.2s, transform 0.15s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-cta:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+}
+
+.btn-cta:active {
+  transform: translateY(0);
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 2.25rem;
+  }
+}

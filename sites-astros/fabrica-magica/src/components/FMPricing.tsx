@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+import { appendLandingParamsToUrl } from '@shared/affiliateCheckoutUrl'
 import { Check, X, Shield, Heart, Gift, Zap, Star, Award } from 'lucide-react'
 
 const LINK_GRATIS = 'https://fm.doutoraescola.com.br/register.php'
@@ -6,6 +8,16 @@ const LINK_ESSENCIAL = 'https://fm.doutoraescola.com.br/checkout/?s=UtP0C'
 const LINK_COMPLETA = 'https://fm.doutoraescola.com.br/checkout/?s=3ujA2'
 
 export function FMPricing() {
+  const [urlEmergencia, setUrlEmergencia] = useState(LINK_EMERGENCIA)
+  const [urlEssencial, setUrlEssencial] = useState(LINK_ESSENCIAL)
+  const [urlCompleta, setUrlCompleta] = useState(LINK_COMPLETA)
+
+  useEffect(() => {
+    setUrlEmergencia(appendLandingParamsToUrl(LINK_EMERGENCIA))
+    setUrlEssencial(appendLandingParamsToUrl(LINK_ESSENCIAL))
+    setUrlCompleta(appendLandingParamsToUrl(LINK_COMPLETA))
+  }, [])
+
   return (
     <section id="oferta" className="bg-cream py-16 md:py-24">
       <div className="max-w-5xl mx-auto px-6">
@@ -112,7 +124,7 @@ export function FMPricing() {
               </ul>
 
               <a
-                href={LINK_EMERGENCIA}
+                href={urlEmergencia}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary w-full justify-center text-sm"
@@ -164,7 +176,7 @@ export function FMPricing() {
               </ul>
 
               <a
-                href={LINK_ESSENCIAL}
+                href={urlEssencial}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary w-full justify-center text-sm"
@@ -224,7 +236,7 @@ export function FMPricing() {
               </ul>
 
               <a
-                href={LINK_COMPLETA}
+                href={urlCompleta}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary w-full justify-center text-sm"

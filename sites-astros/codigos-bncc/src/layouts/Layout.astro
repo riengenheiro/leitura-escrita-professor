@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import AffiliateCheckoutLinks from '../components/AffiliateCheckoutLinks.astro';
 import ConversionTracker from '../components/ConversionTracker.astro';
 
 // URL do site — TESTE: http://codigos.vivasuamissao.top/ | PROD: https://codigos.doutoraescola.com.br/
@@ -105,6 +106,7 @@ const webPageSchema = {
   </head>
   <body>
     <slot />
+    <AffiliateCheckoutLinks />
     <ConversionTracker />
   </body>
 </html>

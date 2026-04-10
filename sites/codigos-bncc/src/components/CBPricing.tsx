@@ -1,4 +1,10 @@
+import { useEffect, useState } from 'react'
+import { appendLandingParamsToUrl } from '@shared/affiliateCheckoutUrl'
 import { Check, X, FileText, Sparkles, Shield, Zap } from 'lucide-react'
+
+const URL_BASICO = 'https://fm.doutoraescola.com.br/checkout/?s=QO2kY'
+const URL_COMPLETO =
+  'https://pay.voompcreators.com.br/8534/offer/KShiZL/?b_id_1=2497&b_offer_1=7AYnyF&b_id_2=1503&b_offer_2=NzZHqM&b_id_3=2058&b_offer_3=vtCUUI&ch_id=1806'
 
 const basicoFeatures = [
   { text: 'Guia dos Códigos Alfanuméricos da BNCC', included: true },
@@ -19,6 +25,14 @@ const completoFeatures = [
 ]
 
 export function CBPricing() {
+  const [urlBasico, setUrlBasico] = useState(URL_BASICO)
+  const [urlCompleto, setUrlCompleto] = useState(URL_COMPLETO)
+
+  useEffect(() => {
+    setUrlBasico(appendLandingParamsToUrl(URL_BASICO))
+    setUrlCompleto(appendLandingParamsToUrl(URL_COMPLETO))
+  }, [])
+
   return (
     <section id="opcoes" className="bg-gradient-to-b from-gray-100 to-white text-black py-12 md:py-16">
       <div className="max-w-5xl mx-auto px-6">
@@ -60,7 +74,7 @@ export function CBPricing() {
               </ul>
               
               <a
-                href="https://fm.doutoraescola.com.br/checkout/?s=QO2kY"
+                href={urlBasico}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full py-4 bg-gray-500 hover:bg-gray-600 text-white text-lg font-bold rounded-xl transition-all"
@@ -117,7 +131,7 @@ export function CBPricing() {
               </div>
               
               <a
-                href="https://pay.voompcreators.com.br/8534/offer/KShiZL/?b_id_1=2497&b_offer_1=7AYnyF&b_id_2=1503&b_offer_2=NzZHqM&b_id_3=2058&b_offer_3=vtCUUI&ch_id=1806"
+                href={urlCompleto}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full py-5 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white text-xl font-extrabold rounded-xl transition-all transform hover:scale-105 shadow-xl"

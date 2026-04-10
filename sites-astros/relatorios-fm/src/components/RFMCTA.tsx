@@ -1,8 +1,16 @@
+import { useEffect, useState } from 'react';
+import { appendLandingParamsToUrl } from '@shared/affiliateCheckoutUrl';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
 
 const CTA_URL = 'https://fm.doutoraescola.com.br/checkout/?s=UtP0C';
 
 export function RFMCTA() {
+  const [ctaUrl, setCtaUrl] = useState(CTA_URL);
+
+  useEffect(() => {
+    setCtaUrl(appendLandingParamsToUrl(CTA_URL));
+  }, []);
+
   return (
     <section className="section-padding bg-azul text-white relative overflow-hidden">
       <div className="container relative z-10">
@@ -26,7 +34,7 @@ export function RFMCTA() {
           </p>
 
           <a
-            href={CTA_URL}
+            href={ctaUrl}
             className="inline-flex items-center gap-2 px-8 py-4 bg-mais-vendido text-white font-body font-bold text-lg rounded-xl hover:opacity-90 transition-all hover:-translate-y-1 shadow-lg hover:shadow-xl"
           >
             Esse é meu plano

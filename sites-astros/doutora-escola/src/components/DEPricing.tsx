@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+import { appendLandingParamsToUrl } from '@shared/affiliateCheckoutUrl'
 import { Check, Trophy, FileText, Sparkles, Zap } from 'lucide-react'
 import { PRICE_ANCHOR, ADVANCED_EXTRA, formatPrice, getCheckoutUrl } from '../config/pricing'
 import { usePagePrice } from '../hooks/usePagePrice'
@@ -24,6 +26,14 @@ export function DEPricing({ price }: DEPricingProps) {
   const basicPrice = usePagePrice(price)
   const advancedPrice = basicPrice + ADVANCED_EXTRA
   const parcel3x = (advancedPrice / 3).toFixed(2).replace('.', ',')
+  const [urlBasic, setUrlBasic] = useState(() => getCheckoutUrl(basicPrice, 'basic'))
+  const [urlAdvanced, setUrlAdvanced] = useState(() => getCheckoutUrl(basicPrice, 'advanced'))
+
+  useEffect(() => {
+    setUrlBasic(appendLandingParamsToUrl(getCheckoutUrl(basicPrice, 'basic')))
+    setUrlAdvanced(appendLandingParamsToUrl(getCheckoutUrl(basicPrice, 'advanced')))
+  }, [basicPrice])
+
   return (
     <section
       id="opcoes"
@@ -81,7 +91,7 @@ export function DEPricing({ price }: DEPricingProps) {
               </ul>
               
               <a
-                href={getCheckoutUrl(basicPrice, 'basic')}
+                href={urlBasic}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3 w-full py-5 text-white text-xl font-bold rounded-xl transition-all shadow-md hover:opacity-90"
@@ -177,7 +187,7 @@ export function DEPricing({ price }: DEPricingProps) {
               </div>
               
               <a
-                href={getCheckoutUrl(basicPrice, 'advanced')}
+                href={urlAdvanced}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3 w-full py-6 text-white text-2xl font-extrabold rounded-2xl transition-all transform hover:scale-[1.02] hover:shadow-2xl text-center shadow-xl"

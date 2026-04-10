@@ -1,4 +1,9 @@
+import { useEffect, useState } from 'react'
+import { appendLandingParamsToUrl } from '@shared/affiliateCheckoutUrl'
 import { Check, Trophy, FileText, Sparkles, Zap } from 'lucide-react'
+
+const CHECKOUT_BASICO = 'https://fm.doutoraescola.com.br/checkout/?s=ZAZZe'
+const CHECKOUT_AVANCADO = 'https://fm.doutoraescola.com.br/checkout/?s=6sa9j'
 
 const profissionalFeatures = [
   'Livro Digital - Ideias para trabalhar os Campos de Experiência',
@@ -14,6 +19,14 @@ const avancadoFeatures = [
 ]
 
 export function DEPricing() {
+  const [urlBasico, setUrlBasico] = useState(CHECKOUT_BASICO)
+  const [urlAvancado, setUrlAvancado] = useState(CHECKOUT_AVANCADO)
+
+  useEffect(() => {
+    setUrlBasico(appendLandingParamsToUrl(CHECKOUT_BASICO))
+    setUrlAvancado(appendLandingParamsToUrl(CHECKOUT_AVANCADO))
+  }, [])
+
   return (
     <section
       id="opcoes"
@@ -69,7 +82,7 @@ export function DEPricing() {
               </ul>
               
               <a
-                href="https://fm.doutoraescola.com.br/checkout/?s=ZAZZe"
+                href={urlBasico}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3 w-full py-5 text-white text-xl font-bold rounded-xl transition-all shadow-md hover:opacity-90"
@@ -165,7 +178,7 @@ export function DEPricing() {
               </div>
               
               <a
-                href="https://fm.doutoraescola.com.br/checkout/?s=6sa9j"
+                href={urlAvancado}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3 w-full py-6 text-white text-2xl font-extrabold rounded-2xl transition-all transform hover:scale-[1.02] hover:shadow-2xl text-center shadow-xl"

@@ -1,0 +1,37 @@
+---
+const mudancas = [
+  {
+    antes: '"acho que ele precisa de um especialista"',
+    depois: 'Na reunião com os pais, você vai dizer com segurança: <strong>"Observei esses 4 comportamentos específicos — recomendo avaliação fonoaudiológica"</strong>',
+  },
+  {
+    antes: 'depender da memória',
+    depois: 'No relatório para a coordenação, você vai preencher com <strong>clareza técnica em 15 minutos</strong> — usando o checklist',
+  },
+  {
+    antes: 'achismo',
+    depois: 'Na sala de aula, você vai saber se <strong>adapta o material, se encaminha, ou se a questão é de saúde</strong> — com método',
+  },
+  {
+    antes: 'esperar meses por um diagnóstico',
+    depois: 'Quando o próximo aluno desafiador aparecer na sua turma, você <strong>não vai precisar esperar</strong> para começar a agir',
+  },
+];
+---
+
+<section class="bg-[#f0f7f4] py-20 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#0F4C75] text-center mb-12">
+      Na prática, o que muda na sua rotina com esse método:
+    </h2>
+
+    <div class="grid gap-5">
+      {mudancas.map((m) => (
+        <div class="flex gap-4 bg-white rounded-xl p-5 shadow-sm border border-green-100">
+          <span class="text-[#16A34A] text-2xl mt-0.5 shrink-0">✓</span>
+          <p class="text-gray-700 leading-relaxed" set:html={m.depois} />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -261,5 +261,28 @@
       tick();
     })();
   </script>
+
+  <script>
+    (function () {
+      var KEYS = ['aff', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'src', 'ref'];
+      function appendLandingParamsToUrl(targetUrl) {
+        try {
+          var u = new URL(targetUrl);
+          var land = new URL(window.location.href).searchParams;
+          land.forEach(function (value, key) {
+            if (KEYS.indexOf(key) === -1) return;
+            if (!u.searchParams.has(key)) u.searchParams.set(key, value);
+          });
+          return u.href;
+        } catch (e) {
+          return targetUrl;
+        }
+      }
+      document.querySelectorAll('a.btn[href*="pay.voompcreators.com"]').forEach(function (a) {
+        var h = a.getAttribute('href');
+        if (h) a.setAttribute('href', appendLandingParamsToUrl(h));
+      });
+    })();
+  </script>
 </body>
 </html>
