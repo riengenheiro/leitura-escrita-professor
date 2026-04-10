@@ -426,7 +426,7 @@ import Layout from '../layouts/Layout.astro';
     });
   </script>
 
-  <script type="module">
+  <script>
     import { appendLandingParamsToUrl } from '@shared/affiliateCheckoutUrl';
     document.querySelectorAll('a[href*="fm.doutoraescola.com.br/checkout"]').forEach(function (el) {
       const h = el.getAttribute('href');
