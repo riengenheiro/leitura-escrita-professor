@@ -86,8 +86,20 @@ const { allowedOrigin, defaultSuccessUrl } = CHECKOUT_EMBED;
   </div>
 </div>
 
-<script>
-  import { appendLandingParamsToUrl } from '@shared/affiliateCheckoutUrl';
+<script is:inline>
+  function appendLandingParamsToUrl(targetUrl) {
+    var ALLOWED = ['aff','utm_source','utm_medium','utm_campaign','utm_content','utm_term','src','ref'];
+    if (!targetUrl) return targetUrl;
+    var landingParams, out;
+    try { landingParams = new URL(window.location.href).searchParams; } catch(e) { return targetUrl; }
+    try { out = new URL(targetUrl, window.location.origin); } catch(e) { return targetUrl; }
+    var changed = false;
+    landingParams.forEach(function(value, key) {
+      if (ALLOWED.indexOf(key) === -1) return;
+      if (!out.searchParams.has(key)) { out.searchParams.set(key, value); changed = true; }
+    });
+    return changed ? out.href : targetUrl;
+  }
 
   (function () {
     const modal = document.getElementById('checkout-modal');

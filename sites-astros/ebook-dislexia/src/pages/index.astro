@@ -129,10 +129,26 @@ const img = (path: string) => `${base}${path.replace(/^\//, '')}`;
     });
   </script>
 
-  <script define:vars={{ embedUrl: CHECKOUT_EMBED, directUrl: CHECKOUT_DIRECT }}>
-    import { appendLandingParamsToUrl } from '@shared/affiliateCheckoutUrl';
-    const merged = appendLandingParamsToUrl(embedUrl);
-    const iframe = document.getElementById('checkout-embed');
-    if (iframe) iframe.src = merged;
+  <script is:inline>
+    (function () {
+      var ALLOWED = ['aff','utm_source','utm_medium','utm_campaign','utm_content','utm_term','src','ref'];
+      function appendLandingParamsToUrl(targetUrl) {
+        if (!targetUrl) return targetUrl;
+        var landingParams, out;
+        try { landingParams = new URL(window.location.href).searchParams; } catch(e) { return targetUrl; }
+        try { out = new URL(targetUrl, window.location.origin); } catch(e) { return targetUrl; }
+        var changed = false;
+        landingParams.forEach(function(value, key) {
+          if (ALLOWED.indexOf(key) === -1) return;
+          if (!out.searchParams.has(key)) { out.searchParams.set(key, value); changed = true; }
+        });
+        return changed ? out.href : targetUrl;
+      }
+      var iframe = document.getElementById('checkout-embed');
+      if (iframe) {
+        var src = iframe.getAttribute('src');
+        if (src) iframe.src = appendLandingParamsToUrl(src);
+      }
+    })();
   </script>
 </Layout>

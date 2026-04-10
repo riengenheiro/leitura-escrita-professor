@@ -1,11 +1,24 @@
 ---
 /** Enriquece links externos de checkout com aff/UTM da URL atual. */
 ---
-<script>
-  import { appendLandingParamsToUrl } from '@shared/affiliateCheckoutUrl';
-
-  document.querySelectorAll('a.js-affiliate-checkout-url').forEach(function (a) {
-    const h = a.getAttribute('href');
-    if (h && h !== '#') a.setAttribute('href', appendLandingParamsToUrl(h));
-  });
+<script is:inline>
+  (function () {
+    var ALLOWED = ['aff','utm_source','utm_medium','utm_campaign','utm_content','utm_term','src','ref'];
+    function appendLandingParamsToUrl(targetUrl) {
+      if (!targetUrl) return targetUrl;
+      var landingParams, out;
+      try { landingParams = new URL(window.location.href).searchParams; } catch(e) { return targetUrl; }
+      try { out = new URL(targetUrl, window.location.origin); } catch(e) { return targetUrl; }
+      var changed = false;
+      landingParams.forEach(function(value, key) {
+        if (ALLOWED.indexOf(key) === -1) return;
+        if (!out.searchParams.has(key)) { out.searchParams.set(key, value); changed = true; }
+      });
+      return changed ? out.href : targetUrl;
+    }
+    document.querySelectorAll('a.js-affiliate-checkout-url').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (h && h !== '#') a.setAttribute('href', appendLandingParamsToUrl(h));
+    });
+  })();
 </script>
