@@ -1,13 +1,14 @@
   :root {
-    --bg-cream: #FAF5EF;
-    --bg-soft-rose: #F4E3E8;
-    --bg-warm-bone: #F7ECE0;
-    --ink-deep: #2B1F24;
-    --ink-muted: #6B5A5F;
-    --wine-deep: #4A1424;
-    --rose-primary: #B84368;
-    --rose-hover: #9B3556;
-    --gold: #B08D57;
+    /* Identidade Menovitta Premium — paleta roxa/lilás (baseada no logo) */
+    --bg-cream: #FAF7FB;
+    --bg-soft-rose: #F3E8F7;
+    --bg-warm-bone: #F5EDF7;
+    --ink-deep: #231828;
+    --ink-muted: #6B5A70;
+    --wine-deep: #4A1F5E;
+    --rose-primary: #9B4DBF;
+    --rose-hover: #7B3F99;
+    --gold: #8E6FB8;
     --forest: #2D6A4F;
     --forest-hover: #1E4D37;
 
@@ -19,7 +20,7 @@
     --yellow-attn: #E8B100;
     --yellow-attn-bg: #FFF6D9;
     --yellow-attn-text: #6B5008;
-    --divider: #E5D4CE;
+    --divider: #E8DAF0;
 
     --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
     --font-body: 'Lora', Georgia, serif;
@@ -1232,3 +1233,167 @@
   .dev-notice strong { color: #5A4819; }
 
   body.ready { padding-bottom: 0; }
+
+  /* ============ BRAND BAR (logo no topo) ============ */
+  .brand-bar {
+    background: #fff;
+    border-bottom: 1px solid var(--divider);
+    padding: 14px 20px;
+    text-align: center;
+  }
+  .brand-bar img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  @media (min-width: 640px) {
+    .brand-bar img { max-width: 220px; }
+  }
+
+  /* ============ LOGO DO FOOTER ============ */
+  .footer-logo {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 10px;
+    display: block;
+    background: #fff;
+    padding: 14px 18px;
+    border-radius: var(--radius-md);
+  }
+
+  /* ============ HERO PRODUCT IMAGE ============ */
+  .hero-product img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* ============ BUNDLE — miniatura do produto ============ */
+  .bundle-thumb {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* ============ LOJA / PRODUÇÃO — imagem real ============ */
+  .loja-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    aspect-ratio: 16 / 9;
+  }
+
+  /* ============ DEPOIMENTOS — prints reais ============ */
+  .testimonial-print {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid var(--bg-soft-rose);
+  }
+  .influencer-print {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 2px solid #fff;
+    box-shadow: 0 3px 10px rgba(74, 31, 94, 0.12);
+  }
+
+  /* ============ PRICING — DESTAQUE REFORÇADO ============ */
+  .pricing-section {
+    background: linear-gradient(180deg, var(--bg-cream) 0%, var(--bg-soft-rose) 100%);
+  }
+  .plan-card {
+    position: relative;
+    overflow: visible;
+  }
+  .plan-card.featured {
+    border: 3px solid var(--rose-primary);
+    box-shadow: 0 16px 40px rgba(123, 63, 153, 0.18), 0 4px 12px rgba(74, 31, 94, 0.1);
+  }
+  .plan-product-thumb {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto 14px;
+    display: block;
+  }
+  .plan-card.featured .plan-product-thumb { max-width: 220px; }
+
+  .plan-old {
+    position: relative;
+    display: inline-block;
+    color: var(--ink-muted);
+    text-decoration: line-through;
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+  .plan-card.featured .plan-old { font-size: 1.15rem; }
+
+  .plan-save-badge {
+    position: absolute;
+    top: -14px;
+    right: 18px;
+    background: var(--green-buy);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 8px 14px;
+    border-radius: 999px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    box-shadow: 0 6px 16px rgba(30, 148, 79, 0.35);
+    white-space: nowrap;
+    z-index: 2;
+  }
+
+  .plan-price-row { align-items: baseline; }
+  .plan-price {
+    font-weight: 700;
+    color: var(--wine-deep);
+  }
+  .plan-card.featured .plan-price {
+    font-size: 4.6rem;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  @media (max-width: 480px) {
+    .plan-card.featured .plan-price { font-size: 3.8rem; }
+  }
+  .plan-card.featured .plan-currency {
+    font-size: 1.4rem;
+    color: var(--wine-deep);
+    margin-top: 10px;
+    font-weight: 600;
+  }
+  .plan-card.subscription .plan-price.sub-price {
+    font-size: 3.6rem;
+    color: var(--wine-deep);
+  }
+
+  .plan-daily {
+    color: var(--ink-deep);
+    font-size: 0.95rem;
+  }
+  .plan-daily strong { color: var(--rose-primary); font-weight: 700; }
+
+  .plan-economy {
+    display: inline-block;
+    background: var(--yellow-attn-bg);
+    color: var(--yellow-attn-text);
+    border: 1px solid #F0CE53;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin-top: 8px;
+  }
