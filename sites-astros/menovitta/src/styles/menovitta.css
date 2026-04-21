@@ -1016,31 +1016,70 @@
   }
   .plan-bonus ul { list-style: none; }
   .plan-bonus li { font-size: 0.82rem; padding: 4px 0; color: var(--ink-muted); display: flex; align-items: center; gap: 6px; }
+  /* ============ HIERARQUIA DE CTA (conversão) ============
+     Primário  (3 meses)  → verde vibrante · sombra forte · micro-pulse
+     Secundário (6 meses) → verde escuro · sóbrio · sem pulse
+     Terciário  (1 mês)   → outline · menor peso visual
+     Nenhum CTA usa rosa. Rosa = identidade/emoção, não ação. */
+
   .plan-cta {
     display: block;
     width: 100%;
     margin-top: 22px;
     background: var(--green-buy);
     color: #fff;
-    padding: 18px 20px;
+    padding: 20px 20px;
     border-radius: var(--radius-md);
     font-family: var(--font-body);
-    font-size: 1rem;
+    font-size: 1.02rem;
     font-weight: 700;
     letter-spacing: 0.05em;
     text-align: center;
     text-transform: uppercase;
-    border: none;
+    border: 2px solid var(--green-buy);
     cursor: pointer;
-    transition: background 0.2s ease, transform 0.15s ease;
-    box-shadow: 0 4px 14px rgba(30, 148, 79, 0.25);
+    transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    box-shadow: 0 8px 22px rgba(30, 148, 79, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    animation: cta-pulse 2.6s ease-in-out infinite;
   }
-  .plan-cta:hover { background: var(--green-buy-hover); transform: translateY(-1px); }
-  .plan-cta.sub-cta { background: var(--forest); }
-  .plan-cta.sub-cta:hover { background: var(--forest-hover); }
-  .plan-cta.soft-cta { background: #8A6A6E; }
-  .plan-cta.soft-cta:hover { background: #6F5254; }
+  .plan-cta:hover {
+    background: var(--green-buy-hover);
+    border-color: var(--green-buy-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(20, 110, 61, 0.42);
+  }
+  @keyframes cta-pulse {
+    0%, 100% { box-shadow: 0 8px 22px rgba(30, 148, 79, 0.32), inset 0 1px 0 rgba(255,255,255,0.15); }
+    50%      { box-shadow: 0 10px 28px rgba(30, 148, 79, 0.48), inset 0 1px 0 rgba(255,255,255,0.15); }
+  }
+
+  .plan-cta.sub-cta {
+    background: var(--forest);
+    border-color: var(--forest);
+    box-shadow: 0 4px 14px rgba(45, 106, 79, 0.25), inset 0 1px 0 rgba(255,255,255,0.1);
+    animation: none;
+  }
+  .plan-cta.sub-cta:hover {
+    background: var(--forest-hover);
+    border-color: var(--forest-hover);
+    box-shadow: 0 8px 20px rgba(30, 77, 55, 0.32);
+  }
+
+  .plan-cta.soft-cta {
+    background: transparent;
+    color: var(--ink-deep);
+    border: 2px solid var(--divider);
+    box-shadow: none;
+    animation: none;
+  }
+  .plan-cta.soft-cta:hover {
+    background: #F5EDE6;
+    border-color: var(--ink-muted);
+    color: var(--wine-deep);
+  }
+
   .plan-cta small { display: block; font-size: 0.72rem; font-weight: 400; margin-top: 4px; opacity: 0.85; letter-spacing: 0.05em; text-transform: none; }
+  .plan-cta.soft-cta small { opacity: 0.7; }
   .plan-trust {
     display: flex;
     justify-content: center;
