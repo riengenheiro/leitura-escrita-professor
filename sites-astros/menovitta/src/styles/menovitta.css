@@ -43,6 +43,9 @@
     background: var(--bg-cream);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    hyphens: auto;
   }
 
   img { display: block; max-width: 100%; height: auto; }
@@ -55,10 +58,24 @@
   .section-sm { padding: 28px 0; }
 
   /* ============ TYPOGRAPHY ============ */
-  h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.01em; line-height: 1.15; color: var(--wine-deep); }
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.7rem; }
-  h3 { font-size: 1.35rem; }
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    color: var(--wine-deep);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+  h1 { font-size: 1.85rem; }
+  h2 { font-size: 1.55rem; }
+  h3 { font-size: 1.25rem; }
+  @media (min-width: 480px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.7rem; }
+    h3 { font-size: 1.35rem; }
+  }
   @media (min-width: 640px) {
     h1 { font-size: 2.6rem; }
     h2 { font-size: 2rem; }
@@ -82,20 +99,33 @@
     background: var(--wine-deep);
     color: #F4E3E8;
     text-align: center;
-    padding: 10px 16px;
-    font-size: 0.78rem;
+    padding: 10px 12px;
+    font-size: 0.7rem;
     letter-spacing: 0.04em;
     border-bottom: 1px solid rgba(255,255,255,0.08);
+    line-height: 1.4;
   }
   .top-banner strong { color: #fff; font-weight: 600; }
   .top-banner .anvisa-seal { display: inline-block; vertical-align: middle; margin-right: 6px; }
+  @media (min-width: 480px) {
+    .top-banner { font-size: 0.75rem; padding: 10px 16px; }
+  }
+  @media (min-width: 640px) {
+    .top-banner { font-size: 0.78rem; }
+  }
 
   /* ============ BLOCO 3 — HERO ============ */
   .hero {
     text-align: center;
-    padding: 52px 20px 40px;
+    padding: 40px 16px 32px;
     max-width: 640px;
     margin: 0 auto;
+  }
+  @media (min-width: 480px) {
+    .hero { padding: 48px 20px 36px; }
+  }
+  @media (min-width: 640px) {
+    .hero { padding: 52px 20px 40px; }
   }
   .hero h1 {
     margin-bottom: 20px;
@@ -115,8 +145,11 @@
   }
   .hero-product {
     margin: 28px auto;
-    width: 280px;
-    max-width: 70%;
+    width: min(100%, 420px);
+    max-width: 90%;
+  }
+  @media (max-width: 480px) {
+    .hero-product { max-width: 95%; margin: 20px auto; }
   }
   .asset-placeholder {
     background: linear-gradient(135deg, var(--bg-soft-rose) 0%, var(--bg-warm-bone) 100%);
@@ -437,8 +470,15 @@
     font-style: italic;
   }
   @media (max-width: 420px) {
-    .cd-number { font-size: 2.1rem; padding: 8px 10px; min-width: 58px; }
-    .cd-separator { font-size: 1.6rem; }
+    .cd-number { font-size: 1.8rem; padding: 8px 10px; min-width: 54px; }
+    .cd-separator { font-size: 1.4rem; }
+    .cd-label { font-size: 0.62rem; }
+    .countdown-urgent-tag { font-size: 0.68rem; padding: 6px 10px; }
+  }
+  @media (max-width: 360px) {
+    .cd-number { font-size: 1.6rem; padding: 6px 8px; min-width: 48px; }
+    .cd-separator { font-size: 1.2rem; }
+    .cd-label { font-size: 0.58rem; }
   }
 
   /* ============ GENERIC CARD ============ */
@@ -692,10 +732,11 @@
   .influencer-wall .sub { text-align: center; color: var(--ink-muted); font-style: italic; margin-bottom: 36px; font-size: 0.95rem; }
   .influencer-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
-  @media (min-width: 480px) { .influencer-grid { grid-template-columns: repeat(4, 1fr); } }
+  @media (min-width: 380px) { .influencer-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; } }
+  @media (min-width: 480px) { .influencer-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; } }
   @media (min-width: 640px) { .influencer-grid { grid-template-columns: repeat(6, 1fr); gap: 18px; } }
   .influencer {
     text-align: center;
@@ -953,8 +994,31 @@
     text-shadow: 0 1px 0 rgba(74, 20, 36, 0.04);
   }
   @media (max-width: 480px) {
-    .plan-price { font-size: 4rem; }
-    .plan-currency { font-size: 1.4rem; margin-top: 12px; }
+    .plan-price { font-size: 3.4rem; }
+    .plan-currency { font-size: 1.2rem; margin-top: 10px; }
+    .plan-card.featured .plan-price { font-size: 3.6rem; }
+    .plan-card.featured .plan-currency { font-size: 1.25rem; }
+    .plan-card.subscription .plan-price.sub-price { font-size: 3rem; }
+    .plan-body { padding: 24px 16px; }
+    .plan-name { font-size: 1.9rem; }
+    .plan-badge { font-size: 0.7rem; padding: 10px 8px; }
+  }
+
+  @media (max-width: 360px) {
+    .plan-price { font-size: 2.8rem; }
+    .plan-currency { font-size: 1rem; margin-top: 8px; }
+    .plan-card.featured .plan-price { font-size: 3.2rem; }
+    .plan-card.featured .plan-currency { font-size: 1.1rem; }
+    .plan-card.subscription .plan-price.sub-price { font-size: 2.6rem; }
+    .plan-body { padding: 20px 14px; }
+    .plan-checks li { font-size: 0.82rem; padding: 5px 0; }
+    .plan-checks { margin: 16px 0; }
+    .plan-save-badge {
+      font-size: 0.7rem;
+      padding: 6px 10px;
+      top: -12px;
+      right: 10px;
+    }
   }
   .plan-price.sub-price { color: var(--forest); }
   .plan-old {
@@ -1238,14 +1302,18 @@
   .brand-bar {
     background: #fff;
     border-bottom: 1px solid var(--divider);
-    padding: 14px 20px;
+    padding: 12px 16px;
     text-align: center;
   }
   .brand-bar img {
-    max-width: 200px;
+    max-width: 160px;
     width: 100%;
     height: auto;
     margin: 0 auto;
+  }
+  @media (min-width: 480px) {
+    .brand-bar img { max-width: 180px; }
+    .brand-bar { padding: 14px 20px; }
   }
   @media (min-width: 640px) {
     .brand-bar img { max-width: 220px; }
@@ -1320,13 +1388,21 @@
   }
   .plan-product-thumb {
     width: 100%;
-    max-width: 180px;
+    max-width: 140px;
     height: auto;
     object-fit: contain;
     margin: 0 auto 14px;
     display: block;
   }
-  .plan-card.featured .plan-product-thumb { max-width: 220px; }
+  .plan-card.featured .plan-product-thumb { max-width: 160px; }
+  @media (min-width: 480px) {
+    .plan-product-thumb { max-width: 160px; }
+    .plan-card.featured .plan-product-thumb { max-width: 200px; }
+  }
+  @media (min-width: 640px) {
+    .plan-product-thumb { max-width: 180px; }
+    .plan-card.featured .plan-product-thumb { max-width: 220px; }
+  }
 
   .plan-old {
     position: relative;
@@ -1354,6 +1430,22 @@
     box-shadow: 0 6px 16px rgba(30, 148, 79, 0.35);
     white-space: nowrap;
     z-index: 2;
+  }
+  @media (max-width: 480px) {
+    .plan-save-badge {
+      font-size: 0.7rem;
+      padding: 6px 10px;
+      top: -12px;
+      right: 10px;
+    }
+  }
+  @media (max-width: 360px) {
+    .plan-save-badge {
+      font-size: 0.65rem;
+      padding: 5px 8px;
+      top: -10px;
+      right: 6px;
+    }
   }
 
   .plan-price-row { align-items: baseline; }
