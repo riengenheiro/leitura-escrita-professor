@@ -1,0 +1,2038 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rosa Intense — a fórmula que 12 mulheres usam há até 6 anos</title>
+<meta name="description" content="Suplemento feminino desenvolvido pela farmacêutica Valéria Furini. Fenogrego padronizado, assinado por quem entende do assunto." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" />
+
+<style>
+  :root {
+    --bg-cream: #FAF5EF;
+    --bg-soft-rose: #F4E3E8;
+    --bg-warm-bone: #F7ECE0;
+    --ink-deep: #2B1F24;
+    --ink-muted: #6B5A5F;
+    --wine-deep: #4A1424;
+    --rose-primary: #B84368;
+    --rose-hover: #9B3556;
+    --gold: #B08D57;
+    --forest: #2D6A4F;
+    --forest-hover: #1E4D37;
+
+    /* Cores funcionais — psicologia de conversão */
+    --green-buy: #1E944F;
+    --green-buy-hover: #146E3D;
+    --red-alert: #C8362E;
+    --red-alert-soft: #E54A40;
+    --yellow-attn: #E8B100;
+    --yellow-attn-bg: #FFF6D9;
+    --yellow-attn-text: #6B5008;
+    --divider: #E5D4CE;
+
+    --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
+    --font-body: 'Lora', Georgia, serif;
+
+    --container: 640px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--ink-deep);
+    background: var(--bg-cream);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  img { display: block; max-width: 100%; height: auto; }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ============ LAYOUT ============ */
+  .container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 20px; }
+  .section { padding: 48px 0; }
+  .section-sm { padding: 28px 0; }
+
+  /* ============ TYPOGRAPHY ============ */
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.01em; line-height: 1.15; color: var(--wine-deep); }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.7rem; }
+  h3 { font-size: 1.35rem; }
+  @media (min-width: 640px) {
+    h1 { font-size: 2.6rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+  }
+  p { margin-bottom: 1em; }
+  .eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+    margin-bottom: 12px;
+    display: block;
+  }
+  em.accent { font-style: italic; color: var(--rose-primary); font-family: var(--font-display); font-weight: 500; }
+
+  /* ============ BLOCO 1 — TOP BANNER ============ */
+  .top-banner {
+    background: var(--wine-deep);
+    color: #F4E3E8;
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .top-banner strong { color: #fff; font-weight: 600; }
+  .top-banner .anvisa-seal { display: inline-block; vertical-align: middle; margin-right: 6px; }
+
+  /* ============ BLOCO 3 — HERO ============ */
+  .hero {
+    text-align: center;
+    padding: 52px 20px 40px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .hero h1 {
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--rose-primary);
+    font-weight: 500;
+  }
+  .hero .sub {
+    font-size: 1rem;
+    color: var(--ink-muted);
+    max-width: 520px;
+    margin: 0 auto 28px;
+    font-style: italic;
+  }
+  .hero-product {
+    margin: 28px auto;
+    width: 280px;
+    max-width: 70%;
+  }
+  .asset-placeholder {
+    background: linear-gradient(135deg, var(--bg-soft-rose) 0%, var(--bg-warm-bone) 100%);
+    border: 1px dashed var(--gold);
+    border-radius: var(--radius-md);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--gold);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding: 16px;
+    line-height: 1.5;
+  }
+  .asset-placeholder.wide { aspect-ratio: 16 / 9; }
+  .asset-placeholder.portrait { aspect-ratio: 3 / 4; }
+  .asset-placeholder.avatar { aspect-ratio: 1 / 1; border-radius: 50%; font-size: 0.6rem; }
+
+  .trust-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px 20px;
+    font-size: 0.76rem;
+    color: var(--ink-muted);
+    margin-top: 16px;
+  }
+  .trust-item { display: inline-flex; align-items: center; gap: 6px; }
+  .trust-item svg { flex-shrink: 0; }
+  .trust-item.featured { color: var(--wine-deep); font-weight: 600; }
+
+  /* ============ BLOCO LEAD — IDENTIFICAÇÃO DE PÚBLICO ============ */
+  .lead-section {
+    background: var(--bg-warm-bone);
+    padding: 56px 20px 52px;
+    position: relative;
+  }
+  .lead-section .container-lead {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .lead-section .eyebrow { text-align: center; display: block; }
+  .lead-title {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: var(--wine-deep);
+    text-align: center;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  @media (min-width: 640px) { .lead-title { font-size: 2.1rem; } }
+  .lead-sub {
+    text-align: center;
+    color: var(--ink-muted);
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-bottom: 32px;
+  }
+  .lead-scenes {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+  .lead-scene {
+    font-family: var(--font-body);
+    font-size: 1.02rem;
+    line-height: 1.65;
+    color: var(--ink-deep);
+    padding: 16px 0 16px 28px;
+    border-bottom: 1px dotted var(--divider);
+    margin: 0;
+    position: relative;
+  }
+  .lead-scene:last-child { border-bottom: none; }
+  .lead-scene::before {
+    content: "·";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    color: var(--gold);
+    font-size: 2.2rem;
+    line-height: 1;
+    font-family: var(--font-display);
+  }
+  .lead-close {
+    margin: 32px auto 0;
+    padding: 22px 24px;
+    background: #fff;
+    border-left: 3px solid var(--rose-primary);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.12rem;
+    color: var(--wine-deep);
+    line-height: 1.55;
+    text-align: center;
+    max-width: 540px;
+  }
+  .lead-close strong {
+    color: var(--rose-primary);
+    font-weight: 600;
+  }
+
+  /* ============ BLOCO 3.5 — LEAD (IDENTIFICAÇÃO) ============ */
+  .lead-section {
+    padding: 48px 20px 40px;
+    background: var(--bg-cream);
+  }
+  .lead-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid var(--divider);
+    border-radius: var(--radius-lg);
+    padding: 36px 28px 30px;
+    position: relative;
+    box-shadow: 0 6px 24px rgba(74, 20, 36, 0.06);
+  }
+  .lead-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 36px;
+    width: 58px;
+    height: 3px;
+    background: var(--gold);
+    border-radius: 0 0 2px 2px;
+  }
+  .lead-eyebrow {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+  .lead-headline {
+    font-family: var(--font-display);
+    font-size: 1.55rem;
+    font-weight: 500;
+    color: var(--wine-deep);
+    line-height: 1.3;
+    margin-bottom: 26px;
+    letter-spacing: -0.005em;
+  }
+  .lead-headline em {
+    font-style: italic;
+    color: var(--rose-primary);
+    font-family: var(--font-display);
+    font-weight: 500;
+  }
+  .lead-list {
+    list-style: none;
+    margin: 0 0 26px 0;
+    padding: 0;
+  }
+  .lead-list li {
+    display: flex;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px dotted var(--divider);
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--ink-deep);
+  }
+  .lead-list li:last-child { border-bottom: none; padding-bottom: 2px; }
+  .lead-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--bg-soft-rose);
+    color: var(--rose-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-top: 1px;
+  }
+  .lead-close {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--wine-deep);
+    line-height: 1.55;
+    text-align: center;
+    padding: 22px 18px;
+    background: var(--bg-soft-rose);
+    border-radius: var(--radius-md);
+    margin: 0;
+  }
+  .lead-close strong {
+    color: var(--rose-primary);
+    font-weight: 600;
+    font-style: normal;
+    font-family: var(--font-body);
+  }
+
+  /* ============ BLOCO 4 — COUNTDOWN (ESCASSEZ) ============ */
+  .countdown-section {
+    background: linear-gradient(135deg, var(--wine-deep) 0%, #6B2541 100%);
+    padding: 40px 20px 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .countdown-section::before {
+    content: "";
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 180px; height: 180px;
+    background: radial-gradient(circle, rgba(176, 141, 87, 0.18) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .countdown-section::after {
+    content: "";
+    position: absolute;
+    bottom: -60px; left: -60px;
+    width: 220px; height: 220px;
+    background: radial-gradient(circle, rgba(184, 67, 104, 0.12) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .countdown-section .container-cd { max-width: 520px; margin: 0 auto; position: relative; z-index: 1; }
+  .countdown-urgent-tag {
+    display: inline-block;
+    background: var(--red-alert);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+    animation: pulse-red 2.2s ease-in-out infinite;
+  }
+  @keyframes pulse-red {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(200, 54, 46, 0.55); }
+    50% { box-shadow: 0 0 0 12px rgba(200, 54, 46, 0); }
+  }
+  @keyframes blink-soft {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+  .countdown-label {
+    color: var(--gold);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    margin-bottom: 14px;
+  }
+  .countdown-title {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 22px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  .countdown-digits {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: flex-start;
+    margin: 18px 0 20px;
+  }
+  .cd-unit { display: flex; flex-direction: column; align-items: center; }
+  .cd-number {
+    font-family: var(--font-display);
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--gold);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(176, 141, 87, 0.45);
+    border-radius: 8px;
+    padding: 10px 16px;
+    min-width: 72px;
+    line-height: 1;
+    letter-spacing: 0.02em;
+  }
+  .cd-label {
+    font-size: 0.64rem;
+    color: rgba(244, 227, 232, 0.75);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin-top: 8px;
+    font-weight: 700;
+  }
+  .cd-separator {
+    color: var(--gold);
+    font-size: 2rem;
+    font-family: var(--font-display);
+    margin-top: 8px;
+    opacity: 0.6;
+    animation: blink-soft 1.4s ease-in-out infinite;
+  }
+  .countdown-note {
+    color: rgba(244, 227, 232, 0.9);
+    font-size: 0.85rem;
+    margin-top: 12px;
+    line-height: 1.6;
+  }
+  .countdown-note strong { color: var(--gold); font-weight: 700; }
+  .countdown-dev-note {
+    font-size: 0.72rem;
+    color: rgba(244, 227, 232, 0.45);
+    margin-top: 14px;
+    font-style: italic;
+  }
+  @media (max-width: 420px) {
+    .cd-number { font-size: 2.1rem; padding: 8px 10px; min-width: 58px; }
+    .cd-separator { font-size: 1.6rem; }
+  }
+
+  /* ============ GENERIC CARD ============ */
+  .card {
+    background: #fff;
+    border: 1px solid var(--divider);
+    border-radius: var(--radius-md);
+    padding: 28px 22px;
+    margin-bottom: 20px;
+  }
+
+  /* ============ BLOCO 5 — VALIDAÇÃO EMOCIONAL ============ */
+  .validation {
+    background: #fff;
+    border-left: 3px solid var(--rose-primary);
+    padding: 32px 24px;
+    margin: 0 20px;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    max-width: 600px;
+  }
+  .validation strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--wine-deep);
+    margin-bottom: 14px;
+    font-style: italic;
+  }
+  .validation p { color: var(--ink-deep); line-height: 1.75; }
+  @media (min-width: 680px) { .validation { margin-left: auto; margin-right: auto; } }
+
+  /* ============ BLOCO 6 — QUEM É VALÉRIA ============ */
+  .valeria-section {
+    background: var(--bg-warm-bone);
+    padding: 56px 20px;
+  }
+  .valeria-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(74, 20, 36, 0.08);
+  }
+  .valeria-photo {
+    background: linear-gradient(135deg, var(--bg-soft-rose), var(--bg-warm-bone));
+    aspect-ratio: 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--wine-deep);
+    font-family: var(--font-display);
+    font-style: italic;
+    border-bottom: 1px solid var(--divider);
+    flex-direction: column;
+    gap: 6px;
+    padding: 20px;
+    text-align: center;
+  }
+  .valeria-photo .placeholder-label {
+    font-size: 0.68rem;
+    color: var(--gold);
+    font-family: var(--font-body);
+    font-style: normal;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .valeria-content { padding: 32px 28px; }
+  .valeria-content .eyebrow { text-align: center; }
+  .valeria-content h2 { text-align: center; margin-bottom: 20px; }
+  .valeria-content p { font-size: 1.02rem; line-height: 1.75; color: var(--ink-deep); margin-bottom: 14px; }
+  .valeria-signature {
+    margin-top: 26px;
+    padding: 20px;
+    background: var(--bg-soft-rose);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.15rem;
+    text-align: center;
+    color: var(--wine-deep);
+    line-height: 1.5;
+  }
+  .valeria-signature::before { content: "„"; font-size: 2.5rem; line-height: 0.3; vertical-align: top; color: var(--rose-primary); margin-right: 4px; }
+  .valeria-credentials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .valeria-credentials span { display: inline-flex; align-items: center; gap: 5px; }
+
+  /* ============ BLOCO 7 — QUALIFICAÇÃO REVERSA ============ */
+  .qual-reversa {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .qual-reversa h2 { text-align: center; margin-bottom: 8px; }
+  .qual-reversa .sub { text-align: center; color: var(--ink-muted); font-size: 0.9rem; margin-bottom: 28px; font-style: italic; }
+  .qual-block { margin-bottom: 24px; }
+  .qual-label {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .qual-label.no { color: #B0474C; }
+  .qual-label.yes { color: var(--forest); }
+  .qual-list { list-style: none; }
+  .qual-list li {
+    display: flex;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px dotted var(--divider);
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+  .qual-list li:last-child { border-bottom: none; }
+  .qual-list .mark {
+    flex-shrink: 0;
+    font-weight: 700;
+    font-size: 1.05rem;
+    line-height: 1.4;
+  }
+  .qual-list .mark.no { color: #B0474C; }
+  .qual-list .mark.yes { color: var(--forest); }
+
+  /* ============ BLOCO 8 — MECANISMO ============ */
+  .mechanism {
+    background: var(--wine-deep);
+    color: #F4E3E8;
+    padding: 56px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .mechanism::before {
+    content: "";
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 180px; height: 180px;
+    background: radial-gradient(circle, rgba(184, 67, 104, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .mechanism .container { position: relative; z-index: 1; }
+  .mechanism .eyebrow { color: var(--gold); }
+  .mechanism h2 { color: #fff; margin-bottom: 24px; }
+  .mechanism p { color: #F4E3E8; font-size: 1rem; line-height: 1.75; }
+  .mechanism .quote-open {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.15rem;
+    color: #fff;
+    border-left: 2px solid var(--gold);
+    padding: 0 0 0 20px;
+    margin: 0 0 28px 0;
+  }
+  .mechanism .quote-author {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    font-style: normal;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .mechanism strong { color: #fff; }
+  .mechanism .study-ref {
+    margin-top: 28px;
+    padding: 18px;
+    background: rgba(255,255,255,0.06);
+    border-radius: var(--radius-sm);
+    font-size: 0.82rem;
+    color: rgba(244, 227, 232, 0.85);
+  }
+  .mechanism .study-ref a { color: var(--gold); text-decoration: underline; }
+
+  /* ============ BLOCO 9 — O QUE É + COMPARATIVO ============ */
+  .product-section { padding: 56px 20px; }
+  .product-section .container { max-width: 620px; }
+  .product-section h2 { text-align: center; margin-bottom: 18px; }
+  .product-section .intro { text-align: center; color: var(--ink-muted); margin-bottom: 32px; font-size: 1rem; }
+  .dores-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 24px 0 40px;
+  }
+  .dores-tags .tag {
+    background: var(--bg-soft-rose);
+    color: var(--wine-deep);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    border: 1px solid rgba(184, 67, 104, 0.2);
+  }
+  .comp-table {
+    background: #fff;
+    border: 1px solid var(--divider);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-top: 24px;
+  }
+  .comp-table .comp-head {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    background: var(--bg-warm-bone);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-muted);
+  }
+  .comp-table .comp-head > div { padding: 14px 12px; border-right: 1px solid var(--divider); }
+  .comp-table .comp-head > div:last-child { border-right: none; color: var(--rose-primary); background: #fff; }
+  .comp-table .comp-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    border-top: 1px solid var(--divider);
+    font-size: 0.88rem;
+  }
+  .comp-table .comp-row > div { padding: 14px 12px; border-right: 1px solid var(--divider); line-height: 1.4; }
+  .comp-table .comp-row > div:last-child { border-right: none; background: var(--bg-soft-rose); color: var(--wine-deep); font-weight: 500; }
+  .comp-table .comp-row > div:first-child { font-weight: 600; color: var(--ink-deep); }
+  .closing-line {
+    text-align: center;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.4rem;
+    color: var(--wine-deep);
+    margin-top: 32px;
+    line-height: 1.4;
+  }
+
+  /* ============ BLOCO 10 — PAREDE DE INFLUENCIADORAS ============ */
+  .influencer-wall { background: var(--bg-warm-bone); padding: 56px 20px; }
+  .influencer-wall .container { max-width: 680px; }
+  .influencer-wall h2 { text-align: center; margin-bottom: 10px; }
+  .influencer-wall .sub { text-align: center; color: var(--ink-muted); font-style: italic; margin-bottom: 36px; font-size: 0.95rem; }
+  .influencer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  @media (min-width: 480px) { .influencer-grid { grid-template-columns: repeat(4, 1fr); } }
+  @media (min-width: 640px) { .influencer-grid { grid-template-columns: repeat(6, 1fr); gap: 18px; } }
+  .influencer {
+    text-align: center;
+    position: relative;
+  }
+  .influencer .avatar-wrap {
+    position: relative;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .influencer .years-badge {
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--rose-primary);
+    color: #fff;
+    font-size: 0.62rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 999px;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    border: 2px solid var(--bg-warm-bone);
+  }
+  .influencer .years-badge.featured { background: var(--wine-deep); }
+  .influencer-name {
+    font-size: 0.75rem;
+    color: var(--ink-deep);
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .influencer-handle {
+    font-size: 0.68rem;
+    color: var(--ink-muted);
+    font-style: italic;
+    margin-top: 2px;
+  }
+
+  /* ============ BLOCO 11 — STACK / BUNDLE ============ */
+  .bundle-section { padding: 56px 20px; }
+  .bundle-section .container { max-width: 600px; }
+  .bundle-section h2 { text-align: center; margin-bottom: 6px; }
+  .bundle-section .sub { text-align: center; color: var(--ink-muted); margin-bottom: 28px; font-size: 0.9rem; }
+  .bundle-list {
+    background: #fff;
+    border: 1px solid var(--divider);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+  .bundle-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--divider);
+    font-size: 0.92rem;
+  }
+  .bundle-item:last-child { border-bottom: none; }
+  .bundle-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    background: var(--bg-soft-rose);
+    color: var(--wine-deep);
+  }
+  .bundle-main { flex: 1; min-width: 0; }
+  .bundle-title { font-weight: 600; color: var(--ink-deep); line-height: 1.3; font-size: 0.95rem; }
+  .bundle-desc { font-size: 0.78rem; color: var(--ink-muted); margin-top: 2px; line-height: 1.4; }
+  .bundle-value { flex-shrink: 0; text-align: right; }
+  .bundle-old { font-size: 0.78rem; text-decoration: line-through; color: var(--red-alert-soft); display: block; font-weight: 600; }
+  .bundle-free { font-size: 0.78rem; font-weight: 700; color: var(--green-buy); letter-spacing: 0.04em; text-transform: uppercase; }
+  .bundle-incluso { font-size: 0.72rem; font-weight: 700; color: var(--wine-deep); letter-spacing: 0.04em; }
+  .bundle-item.highlight { background: #FCF5F0; border-top: 2px solid var(--gold); border-bottom: 2px solid var(--gold); }
+
+  /* ============ BLOCO 12 — ANTES/DEPOIS ============ */
+  .transform-section { padding: 56px 20px; background: var(--bg-cream); }
+  .transform-section .container { max-width: 640px; }
+  .transform-section h2 { text-align: center; margin-bottom: 32px; }
+  .transform-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  @media (min-width: 600px) { .transform-grid { grid-template-columns: 1fr 1fr; } }
+  .transform-card {
+    padding: 28px 22px;
+    border-radius: var(--radius-md);
+    position: relative;
+  }
+  .transform-card .label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .transform-card.now {
+    background: #fff;
+    border: 1px solid var(--divider);
+  }
+  .transform-card.now .label { color: var(--ink-muted); }
+  .transform-card.now p { color: var(--ink-muted); font-size: 0.98rem; line-height: 1.7; font-style: italic; }
+  .transform-card.future {
+    background: var(--wine-deep);
+    color: #F4E3E8;
+  }
+  .transform-card.future .label { color: var(--gold); }
+  .transform-card.future p { color: #fff; font-size: 1rem; line-height: 1.7; }
+  .transform-card.future em {
+    font-style: italic;
+    color: var(--gold);
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    display: block;
+    margin-top: 10px;
+  }
+
+  /* ============ BLOCO 13 — DEPOIMENTOS RECOMPRA LONGA ============ */
+  .testimonials-long { padding: 56px 20px; background: var(--bg-warm-bone); }
+  .testimonials-long .container { max-width: 620px; }
+  .testimonials-long h2 {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  .testimonials-long .sub {
+    text-align: center;
+    color: var(--ink-muted);
+    margin-bottom: 32px;
+    font-size: 0.95rem;
+  }
+  .testimonial-grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
+  @media (min-width: 600px) { .testimonial-grid { grid-template-columns: 1fr 1fr; } }
+  .testimonial-card {
+    background: #fff;
+    border-radius: var(--radius-md);
+    padding: 22px 20px;
+    border: 1px solid var(--divider);
+    position: relative;
+  }
+  .testimonial-card .time-badge {
+    display: inline-block;
+    background: var(--rose-primary);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+    letter-spacing: 0.05em;
+    margin-bottom: 14px;
+  }
+  .testimonial-card .quote {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--ink-deep);
+    font-style: italic;
+    margin-bottom: 16px;
+  }
+  .testimonial-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 14px;
+    border-top: 1px solid var(--divider);
+  }
+  .testimonial-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--bg-soft-rose);
+    color: var(--wine-deep);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.05rem;
+    flex-shrink: 0;
+  }
+  .testimonial-name { font-size: 0.82rem; font-weight: 600; color: var(--ink-deep); }
+  .testimonial-city { font-size: 0.72rem; color: var(--ink-muted); }
+
+  /* ============ BLOCO 14 — LOJA FÍSICA ============ */
+  .loja-section { padding: 48px 20px; background: var(--bg-cream); }
+  .loja-card {
+    max-width: 580px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: center;
+  }
+  @media (min-width: 600px) { .loja-card { grid-template-columns: 1fr 1.1fr; } }
+  .loja-text { order: 2; }
+  .loja-photo { order: 1; }
+  @media (min-width: 600px) { .loja-text { order: 1; } .loja-photo { order: 2; } }
+  .loja-text h3 { margin-bottom: 14px; }
+  .loja-text p { font-size: 0.95rem; color: var(--ink-muted); line-height: 1.7; }
+
+  /* ============ BLOCO 15 — PRICING ============ */
+  .pricing-section { padding: 56px 20px; background: var(--bg-warm-bone); }
+  .pricing-section .container { max-width: 640px; }
+  .pricing-section h2 { text-align: center; margin-bottom: 10px; }
+  .pricing-section .sub { text-align: center; color: var(--ink-muted); font-style: italic; margin-bottom: 36px; }
+  .plan-card {
+    background: #fff;
+    border: 2px solid var(--divider);
+    border-radius: var(--radius-lg);
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.2s ease;
+  }
+  .plan-card.featured { border-color: var(--green-buy); transform: scale(1.0); box-shadow: 0 12px 32px rgba(30, 148, 79, 0.15); }
+  .plan-card.subscription { border-color: var(--forest); }
+  .plan-badge {
+    text-align: center;
+    padding: 11px 10px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.3;
+  }
+  .plan-badge.soft { background: #A88A87; }
+  .plan-badge.main { background: var(--yellow-attn); color: var(--yellow-attn-text); }
+  .plan-badge.sub { background: var(--forest-hover); }
+  .plan-body { padding: 28px 24px; text-align: center; }
+  .plan-eyebrow { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--ink-muted); margin-bottom: 4px; }
+  .plan-name { font-family: var(--font-display); font-size: 2.2rem; font-weight: 600; color: var(--wine-deep); line-height: 1.1; margin-bottom: 2px; }
+  .plan-days { font-size: 0.82rem; color: var(--ink-muted); margin-bottom: 18px; font-style: italic; }
+  .plan-price-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4px;
+    margin: 14px 0 6px;
+  }
+  .plan-currency { font-size: 1.55rem; font-weight: 700; color: var(--wine-deep); margin-top: 14px; font-family: var(--font-display); }
+  .plan-price {
+    font-size: 4.6rem;
+    font-weight: 700;
+    color: var(--wine-deep);
+    line-height: 0.95;
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+    text-shadow: 0 1px 0 rgba(74, 20, 36, 0.04);
+  }
+  @media (max-width: 480px) {
+    .plan-price { font-size: 4rem; }
+    .plan-currency { font-size: 1.4rem; margin-top: 12px; }
+  }
+  .plan-price.sub-price { color: var(--forest); }
+  .plan-old {
+    font-size: 0.95rem;
+    text-decoration: line-through;
+    color: var(--red-alert-soft);
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+  .plan-daily {
+    font-size: 0.82rem;
+    color: var(--ink-muted);
+    margin-bottom: 8px;
+  }
+  .plan-economy {
+    display: inline-block;
+    background: var(--green-buy);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 999px;
+    letter-spacing: 0.05em;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 6px rgba(30, 148, 79, 0.2);
+  }
+  .plan-checks {
+    list-style: none;
+    text-align: left;
+    margin: 20px 0;
+    padding: 0;
+  }
+  .plan-checks li {
+    display: flex;
+    gap: 10px;
+    padding: 6px 0;
+    font-size: 0.88rem;
+    color: var(--ink-deep);
+    line-height: 1.4;
+  }
+  .plan-checks .check { color: var(--forest); font-weight: 700; flex-shrink: 0; }
+  .plan-bonus {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--divider);
+    text-align: left;
+  }
+  .plan-bonus-title {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--yellow-attn-text);
+    background: var(--yellow-attn-bg);
+    padding: 5px 12px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    border: 1px solid #F2D875;
+  }
+  .plan-bonus ul { list-style: none; }
+  .plan-bonus li { font-size: 0.82rem; padding: 4px 0; color: var(--ink-muted); display: flex; align-items: center; gap: 6px; }
+  .plan-cta {
+    display: block;
+    width: 100%;
+    margin-top: 22px;
+    background: var(--green-buy);
+    color: #fff;
+    padding: 18px 20px;
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+    box-shadow: 0 4px 14px rgba(30, 148, 79, 0.25);
+  }
+  .plan-cta:hover { background: var(--green-buy-hover); transform: translateY(-1px); }
+  .plan-cta.sub-cta { background: var(--forest); }
+  .plan-cta.sub-cta:hover { background: var(--forest-hover); }
+  .plan-cta.soft-cta { background: #8A6A6E; }
+  .plan-cta.soft-cta:hover { background: #6F5254; }
+  .plan-cta small { display: block; font-size: 0.72rem; font-weight: 400; margin-top: 4px; opacity: 0.85; letter-spacing: 0.05em; text-transform: none; }
+  .plan-trust {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 14px;
+    font-size: 0.72rem;
+    color: var(--ink-muted);
+  }
+
+  /* ============ BLOCO 16 — GARANTIA ============ */
+  .guarantee {
+    background: linear-gradient(135deg, var(--wine-deep) 0%, #6B2541 100%);
+    color: #fff;
+    padding: 56px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .guarantee::before {
+    content: "";
+    position: absolute;
+    top: -80px; left: -80px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(176, 141, 87, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .guarantee .container { max-width: 520px; position: relative; z-index: 1; }
+  .guarantee .big-number {
+    font-family: var(--font-display);
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .guarantee .days {
+    font-size: 1rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 4px;
+    font-weight: 600;
+  }
+  .guarantee .divider-line {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 22px auto;
+  }
+  .guarantee h3 {
+    color: #fff;
+    font-style: italic;
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+  .guarantee p { color: rgba(255,255,255,0.9); font-size: 0.98rem; line-height: 1.7; }
+  .guarantee .emphasis {
+    margin-top: 20px;
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--gold);
+    font-size: 1.1rem;
+  }
+
+  /* ============ BLOCO 17 — FAQ ============ */
+  .faq-section { padding: 56px 20px; }
+  .faq-section .container { max-width: 620px; }
+  .faq-section h2 { text-align: center; margin-bottom: 10px; }
+  .faq-section .sub { text-align: center; color: var(--ink-muted); margin-bottom: 28px; font-style: italic; }
+  .faq-item {
+    border-bottom: 1px solid var(--divider);
+    background: transparent;
+  }
+  .faq-q {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 4px;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 600;
+    color: var(--ink-deep);
+    font-size: 0.98rem;
+    font-family: var(--font-body);
+  }
+  .faq-q:hover { color: var(--wine-deep); }
+  .faq-arrow {
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+    color: var(--rose-primary);
+    font-size: 1.2rem;
+    font-family: var(--font-display);
+  }
+  .faq-item.open .faq-arrow { transform: rotate(180deg); }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    color: var(--ink-muted);
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+  .faq-item.open .faq-a { max-height: 600px; padding: 0 4px 20px; }
+
+  /* ============ BLOCO 18 — FOOTER ============ */
+  .footer {
+    background: var(--wine-deep);
+    color: rgba(244, 227, 232, 0.75);
+    padding: 36px 20px;
+    text-align: center;
+  }
+  .footer .container { max-width: 620px; }
+  .footer .logo {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+  .footer .legal {
+    font-size: 0.72rem;
+    line-height: 1.7;
+    color: rgba(244, 227, 232, 0.65);
+  }
+  .footer .legal strong { color: #fff; }
+  .footer .divider-line {
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    margin: 18px auto;
+  }
+
+  /* ============ BOTANICAL DECO ============ */
+  .deco-leaf {
+    display: block;
+    margin: 32px auto;
+    width: 40px;
+    opacity: 0.5;
+  }
+
+  /* =========== NOTA DEV (placeholder notice) ============ */
+  .dev-notice {
+    background: #FFF9E6;
+    border: 1px dashed #C9A34E;
+    padding: 10px 16px;
+    font-size: 0.75rem;
+    color: #6B5A1F;
+    text-align: center;
+    font-family: monospace;
+  }
+  .dev-notice strong { color: #5A4819; }
+
+  body.ready { padding-bottom: 0; }
+</style>
+</head>
+<body class="ready">
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOCO DE AVISO AO DEV/AGÊNCIA — remover no go-live
+     ══════════════════════════════════════════════════════════ -->
+<div class="dev-notice">
+  <strong>⚠ VERSÃO ESQUELETO-PREENCHIDO</strong> · Placeholders marcados em caixas pontilhadas douradas · Revisar com Valéria antes do go-live
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOCO 1 — TOP BANNER
+     ══════════════════════════════════════════════════════════ -->
+<div class="top-banner">
+  <span class="anvisa-seal">✓</span>
+  <strong>FÓRMULA APROVADA PELA ANVISA</strong> · Registro [PENDENTE — Sérgio] · Assinada por farmacêutica
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOCO 3 — HERO
+     ══════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <span class="eyebrow">Biovitally · Elevo Rosa</span>
+  <h1>A farmacêutica que resolveu o que 9 em cada 10 suplementos femininos não resolvem: <em>libido, energia e o corpo inteiro de volta.</em></h1>
+  <p class="sub">Desenvolvido por Valéria Furini, farmacêutica, mestre, há 7 anos à frente da Biovitally. Sem farinha. Com laudo. Com recompra de até 6 anos.</p>
+
+  <div class="hero-product">
+    <div class="asset-placeholder">
+      🎬 AGÊNCIA CHAPECÓ<br>
+      Mockup pote Rosa Intense<br>
+      (fundo neutro ou botânico)
+    </div>
+  </div>
+
+  <div class="trust-row">
+    <span class="trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Compra segura</span>
+    <span class="trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg> Anvisa</span>
+    <span class="trust-item featured"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg> Farmacêutica assina</span>
+    <span class="trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg> Frete grátis Sul/Sudeste</span>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOCO LEAD — IDENTIFICAÇÃO DE PÚBLICO
+     ══════════════════════════════════════════════════════════ -->
+<section class="lead-section">
+  <div class="container-lead">
+    <span class="eyebrow">Um momento antes de você continuar</span>
+    <h2 class="lead-title">Este texto foi escrito para uma mulher específica.</h2>
+    <p class="lead-sub">Se for você, vai reconhecer cada linha abaixo.</p>
+
+    <div class="lead-scenes">
+      <p class="lead-scene">Você acorda cansada mesmo tendo dormido a noite inteira — e o café da manhã já vem com ansiedade.</p>
+      <p class="lead-scene">O espelho deixou de ser aliado. E o "depois" virou resposta automática quando o assunto é intimidade.</p>
+      <p class="lead-scene">A libido, que antes era natural, agora parece uma conta a pagar — e você sente, em silêncio, que isso também te afasta de quem você ama.</p>
+      <p class="lead-scene">Seu humor oscila sem razão clara. Nem você sabe mais se é TPM, se é estresse da rotina, ou se é "idade".</p>
+      <p class="lead-scene">Você sente o corpo ficar mais denso, mais lento, menos seu — como se não fosse mais a mesma pele.</p>
+      <p class="lead-scene">Já tentou chá de amora, isoflavona de farmácia, "isso vai passar" — e nada mudou de verdade.</p>
+    </div>
+
+    <p class="lead-close">
+      Se <strong>3 ou mais</strong> dessas situações formam a sua semana — continua lendo.<br>
+      O Rosa Intense foi pensado exatamente para essa mulher.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOCO 3.5 — LEAD (IDENTIFICAÇÃO DE PÚBLICO)
+     ══════════════════════════════════════════════════════════ -->
+<section class="lead-section">
+  <div class="lead-card">
+    <span class="lead-eyebrow">Este texto é para você</span>
+    <h2 class="lead-headline">Você é a mulher que já <em>se cansou de não ter resposta.</em></h2>
+
+    <ul class="lead-list">
+      <li><span class="lead-icon">✓</span> Tem entre 35 e 55 anos e sente que algo mudou no seu corpo nos últimos 2 ou 3 anos — sem ninguém ter te avisado direito.</li>
+      <li><span class="lead-icon">✓</span> Acorda já cansada. Às 4 da tarde, a energia simplesmente some. E isso virou rotina.</li>
+      <li><span class="lead-icon">✓</span> A libido caiu silenciosamente — e você percebeu que quase ninguém, em lugar nenhum, falou sobre isso com você.</li>
+      <li><span class="lead-icon">✓</span> Candidíase recorrente, ressecamento, incômodo íntimo começaram a aparecer sem explicação aparente.</li>
+      <li><span class="lead-icon">✓</span> O humor oscila mais. Você se irrita mais fácil. Às vezes não se reconhece.</li>
+      <li><span class="lead-icon">✓</span> Já tentou chá de amora, isoflavona genérica, calmante, "isso vai passar" — e não passou.</li>
+      <li><span class="lead-icon">✓</span> Desconfia de suplemento do digital. Cansou de promessa. Quer algo sério, com quem entende do assunto.</li>
+    </ul>
+
+    <p class="lead-close">Se você reconheceu <strong>pelo menos 3 desses pontos</strong>, continue lendo.<br>Foi para essa mulher que o Rosa Intense foi desenvolvido.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOCO 4 — COUNTDOWN (ESCASSEZ)
+     ══════════════════════════════════════════════════════════ -->
+<section class="countdown-section">
+  <div class="container-cd">
+    <div class="countdown-urgent-tag">⏰ Últimas horas da oferta</div>
+    <div class="countdown-title">A oferta desta sessão expira em</div>
+    <div class="countdown-digits" id="countdown">
+      <div class="cd-unit">
+        <span class="cd-number" id="cd-hours">23</span>
+        <span class="cd-label">horas</span>
+      </div>
+      <span class="cd-separator">:</span>
+      <div class="cd-unit">
+        <span class="cd-number" id="cd-minutes">59</span>
+        <span class="cd-label">min</span>
+      </div>
+      <span class="cd-separator">:</span>
+      <div class="cd-unit">
+        <span class="cd-number" id="cd-seconds">59</span>
+        <span class="cd-label">seg</span>
+      </div>
+    </div>
+    <p class="countdown-note">Depois deste prazo, o kit volta a <strong>R$ 299,85</strong> e os bônus podem não estar disponíveis.</p>
+    <p class="countdown-dev-note">🟡 Parâmetro a validar com Sérgio · deve refletir condição real (lote, campanha ou oferta de lançamento)</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOCO 5 — VALIDAÇÃO EMOCIONAL
+     ══════════════════════════════════════════════════════════ -->
+<section class="section-sm">
+  <div class="validation">
+    <strong>O que você sente é real.</strong>
+    <p>Não é frescura. Não é estresse da rotina. Não é "coisa de idade que tem que aceitar".</p>
+    <p>Seu corpo mudou. A química mudou. A libido caiu, a energia sumiu, o espelho ficou estranho — e ninguém te avisou que isso ia acontecer assim.</p>
+    <p style="color: var(--wine-deep); font-weight: 500; margin-bottom: 0;">A boa notícia: tem causa. E tem solução desenvolvida por quem entende do assunto.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOCO 6 — QUEM É VALÉRIA (crítico sem VSL)
+     ══════════════════════════════════════════════════════════ -->
+<section class="valeria-section">
+  <div class="valeria-card">
+    <div class="valeria-photo">
+      <span class="placeholder-label">🎬 Agência Chapecó</span>
+      <span style="font-size:1rem;">Foto Valéria de jaleco<br>(laboratório ou loja física)</span>
+      <span class="placeholder-label" style="margin-top:8px;">Formato retrato · olhar direto</span>
+    </div>
+    <div class="valeria-content">
+      <span class="eyebrow">Conheça quem assina a fórmula</span>
+      <h2>Valéria Furini</h2>
+
+      <p>Valéria é farmacêutica de formação, com mestrado na área. Antes de criar a Biovitally, trabalhou em indústria de suplementação no setor regulatório — o lado técnico onde as fórmulas nascem, e onde se aprende o que é real e o que é farinha.</p>
+
+      <p>Há 7 anos ela tem uma promessa só: suplementação feminina de verdade. Sem atalhos. Sem fórmulas genéricas. Cada produto passa pela mão dela antes de chegar na sua.</p>
+
+      <div class="valeria-signature">
+        Eu sou farmacêutica. Acima de tudo, eu quero que quem compre, compre saúde.
+      </div>
+
+      <div class="valeria-credentials">
+        <span>Farmacêutica · CRF/SC</span>
+        <span>Mestre na área</span>
+        <span>7 anos à frente</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOCO 7 — QUALIFICAÇÃO REVERSA
+     ══════════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="qual-reversa">
+    <h2>O Rosa Intense não é pra todo mundo</h2>
+    <p class="sub">Leia com atenção antes de decidir</p>
+
+    <div class="qual-block">
+      <div class="qual-label no">Não é pra você se:</div>
+      <ul class="qual-list">
+        <li><span class="mark no">✕</span> Você espera resultado em 3 dias. O Rosa Intense é protocolo de 90 dias — resultado real, progressivo.</li>
+        <li><span class="mark no">✕</span> Você vai tomar "quando lembrar". Consistência é o que faz funcionar.</li>
+        <li><span class="mark no">✕</span> Você já decidiu que nada funciona. Nesse caso, realmente não vai.</li>
+        <li><span class="mark no">✕</span> Você mora fora do Sul/Sudeste e o frete inviabiliza a entrega.</li>
+      </ul>
+    </div>
+
+    <div class="qual-block">
+      <div class="qual-label yes">É pra você se:</div>
+      <ul class="qual-list">
+        <li><span class="mark yes">✓</span> Você sente que o cansaço virou rotina — e percebe que ninguém falou sobre isso com você.</li>
+        <li><span class="mark yes">✓</span> A libido caiu e você nem lembra mais quando foi diferente.</li>
+        <li><span class="mark yes">✓</span> Você já tentou chá, calmante, "isso vai passar" — e não passou.</li>
+        <li><span class="mark yes">✓</span> Prefere algo natural, com registro Anvisa, assinado por farmacêutica.</li>
+        <li><span class="mark yes">✓</span> Está disposta a dar 90 dias pro seu corpo se reequilibrar — com garantia completa.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOCO 8 — MECANISMO + AUTORIDADE TÉCNICA
+     ══════════════════════════════════════════════════════════ -->
+<section class="mechanism">
+  <div class="container" style="max-width: 600px; margin: 0 auto;">
+    <span class="eyebrow">A ciência por trás</span>
+    <h2>Por que fenogrego — e não mais uma isoflavona em dose insuficiente</h2>
+
+    <p class="quote-open">
+      Quando desenvolvi o Rosa Intense, não queria mais uma fórmula de isoflavona com dose abaixo do mínimo eficaz. Queria um protocolo real.
+      <span class="quote-author">— Valéria Furini, Farmacêutica</span>
+    </p>
+
+    <p>O ativo principal do Rosa Intense é o <strong>fenogrego padronizado</strong> — uma planta com saponinas esteroidais que atuam onde a maioria dos suplementos femininos falha: nos receptores hormonais que ficam "vazios" com a queda natural do estrogênio.</p>
+
+    <p>A maca peruana foi amplamente usada até a Anvisa restringir o uso em suplementos. O fenogrego padronizado, além de seguro e notificado, tem estudo clínico duplo-cego publicado em revista internacional mostrando eficácia em sintomas femininos.</p>
+
+    <p style="color: var(--gold); font-family: var(--font-display); font-style: italic; font-size: 1.15rem; margin-top: 24px;">
+      Resultado: libido e energia voltam, humor estabiliza, o corpo se reequilibra. Sem hormônio sintético.
+    </p>
+
+    <div class="study-ref">
+      📄 Referência científica: Khanna A. et al. (2020). <em>Journal of Food Biochemistry</em>.
+      <a href="https://doi.org/10.1111/jfbc.13507" target="_blank" rel="noopener">Acessar estudo →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOCO 9 — O QUE É O ROSA INTENSE + COMPARATIVO
+     ══════════════════════════════════════════════════════════ -->
+<section class="product-section">
+  <div class="container">
+    <span class="eyebrow" style="text-align:center; display:block;">Entenda o protocolo</span>
+    <h2>O que é o Rosa Intense</h2>
+
+    <p class="intro">Suplemento feminino em cápsulas desenvolvido pela farmacêutica Valéria Furini. Fórmula com fenogrego padronizado + ativos complementares que apoiam libido, energia, humor e equilíbrio feminino.</p>
+
+    <p style="text-align:center; font-size:0.82rem; color:var(--ink-muted); margin-bottom:12px; text-transform:uppercase; letter-spacing:0.1em; font-weight:600;">As dores que o Rosa Intense endereça</p>
+
+    <div class="dores-tags">
+      <span class="tag">Libido em baixa</span>
+      <span class="tag">Cansaço feminino</span>
+      <span class="tag">Candidíase recorrente</span>
+      <span class="tag">Ressecamento íntimo</span>
+      <span class="tag">Oscilações de humor</span>
+      <span class="tag">Pré-menopausa</span>
+    </div>
+
+    <p style="text-align:center; font-size:0.82rem; color:var(--ink-muted); margin-bottom:14px; text-transform:uppercase; letter-spacing:0.1em; font-weight:600; margin-top:8px;">Por que é diferente do que você já tentou</p>
+
+    <div class="comp-table">
+      <div class="comp-head">
+        <div></div>
+        <div>Concorrentes</div>
+        <div>Rosa Intense</div>
+      </div>
+      <div class="comp-row">
+        <div>Ativo principal</div>
+        <div>Isoflavona em dose subterapêutica</div>
+        <div>Fenogrego padronizado</div>
+      </div>
+      <div class="comp-row">
+        <div>Quem assina</div>
+        <div>Fórmula de prateleira</div>
+        <div>Farmacêutica com mestrado</div>
+      </div>
+      <div class="comp-row">
+        <div>Recompra real</div>
+        <div>Campanha de 1 ciclo</div>
+        <div>12 mulheres usam há até 6 anos</div>
+      </div>
+      <div class="comp-row">
+        <div>Composição</div>
+        <div>"Tá no rótulo"</div>
+        <div>Laudo verificável</div>
+      </div>
+    </div>
+
+    <p class="closing-line">Não tem farinha. Tem laudo. Tem assinatura.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOCO 10 — PAREDE DE INFLUENCIADORAS
+     ══════════════════════════════════════════════════════════ -->
+<section class="influencer-wall">
+  <div class="container">
+    <span class="eyebrow" style="text-align:center; display:block;">Prova social de longevidade</span>
+    <h2>As mulheres que testaram antes de recomendar</h2>
+    <p class="sub">Há até 6 anos — e nunca pararam</p>
+
+    <div class="influencer-grid">
+      <div class="influencer">
+        <div class="avatar-wrap">
+          <div class="asset-placeholder avatar">Influ<br>#1</div>
+          <span class="years-badge featured">6 anos</span>
+        </div>
+        <div class="influencer-name">[Nome]</div>
+        <div class="influencer-handle">@handle</div>
+      </div>
+      <div class="influencer">
+        <div class="avatar-wrap">
+          <div class="asset-placeholder avatar">Influ<br>#2</div>
+          <span class="years-badge featured">5 anos</span>
+        </div>
+        <div class="influencer-name">[Nome]</div>
+        <div class="influencer-handle">@handle</div>
+      </div>
+      <div class="influencer">
+        <div class="avatar-wrap">
+          <div class="asset-placeholder avatar">Influ<br>#3</div>
+          <span class="years-badge featured">4 anos</span>
+        </div>
+        <div class="influencer-name">[Nome]</div>
+        <div class="influencer-handle">@handle</div>
+      </div>
+      <div class="influencer">
+        <div class="avatar-wrap">
+          <div class="asset-placeholder avatar">Influ<br>#4</div>
+          <span class="years-badge">3 anos</span>
+        </div>
+        <div class="influencer-name">[Nome]</div>
+        <div class="influencer-handle">@handle</div>
+      </div>
+      <div class="influencer">
+        <div class="avatar-wrap">
+          <div class="asset-placeholder avatar">Influ<br>#5</div>
+          <span class="years-badge">3 anos</span>
+        </div>
+        <div class="influencer-name">[Nome]</div>
+        <div class="influencer-handle">@handle</div>
+      </div>
+      <div class="influencer">
+        <div class="avatar-wrap">
+          <div class="asset-placeholder avatar">Influ<br>#6</div>
+          <span class="years-badge">2 anos</span>
+        </div>
+        <div class="influencer-name">[Nome]</div>
+        <div class="influencer-handle">@handle</div>
+      </div>
+      <div class="influencer">
+        <div class="avatar-wrap">
+          <div class="asset-placeholder avatar">Influ<br>#7</div>
+          <span class="years-badge">2 anos</span>
+        </div>
+        <div class="influencer-name">[Nome]</div>
+        <div class="influencer-handle">@handle</div>
+      </div>
+      <div class="influencer">
+        <div class="avatar-wrap">
+          <div class="asset-placeholder avatar">Influ<br>#8</div>
+          <span class="years-badge">2 anos</span>
+        </div>
+        <div class="influencer-name">[Nome]</div>
+        <div class="influencer-handle">@handle</div>
+      </div>
+      <div class="influencer">
+        <div class="avatar-wrap">
+          <div class="asset-placeholder avatar">Influ<br>#9</div>
+          <span class="years-badge">1 ano</span>
+        </div>
+        <div class="influencer-name">[Nome]</div>
+        <div class="influencer-handle">@handle</div>
+      </div>
+      <div class="influencer">
+        <div class="avatar-wrap">
+          <div class="asset-placeholder avatar">Influ<br>#10</div>
+          <span class="years-badge">1 ano</span>
+        </div>
+        <div class="influencer-name">[Nome]</div>
+        <div class="influencer-handle">@handle</div>
+      </div>
+      <div class="influencer">
+        <div class="avatar-wrap">
+          <div class="asset-placeholder avatar">Influ<br>#11</div>
+          <span class="years-badge">1 ano</span>
+        </div>
+        <div class="influencer-name">[Nome]</div>
+        <div class="influencer-handle">@handle</div>
+      </div>
+      <div class="influencer">
+        <div class="avatar-wrap">
+          <div class="asset-placeholder avatar">Influ<br>#12</div>
+          <span class="years-badge">1 ano</span>
+        </div>
+        <div class="influencer-name">[Nome]</div>
+        <div class="influencer-handle">@handle</div>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin-top:32px; color:var(--ink-muted); font-size:0.88rem; font-style:italic;">
+      12 parceiras ativas. Nenhuma campanha-relâmpago. Parcerias de verdade, construídas no tempo.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOCO 11 — STACK / BUNDLE
+     ══════════════════════════════════════════════════════════ -->
+<section class="bundle-section">
+  <div class="container">
+    <h2>Veja tudo que vem com o protocolo</h2>
+    <p class="sub">Kit completo — 3 potes / 90 dias</p>
+
+    <div class="bundle-list">
+      <div class="bundle-item">
+        <div class="bundle-icon">💊</div>
+        <div class="bundle-main">
+          <div class="bundle-title">Rosa Intense — 3 potes (90 dias)</div>
+          <div class="bundle-desc">Fenogrego padronizado · Registro Anvisa · Fórmula assinada</div>
+        </div>
+        <div class="bundle-value">
+          <span class="bundle-old">R$ 299,85</span>
+        </div>
+      </div>
+      <div class="bundle-item">
+        <div class="bundle-icon">📗</div>
+        <div class="bundle-main">
+          <div class="bundle-title">E-book "Cardápio pró-libido feminina"</div>
+          <div class="bundle-desc">Receitas que potencializam o Rosa Intense</div>
+        </div>
+        <div class="bundle-value">
+          <span class="bundle-old">R$ 97</span>
+          <span class="bundle-free">Grátis</span>
+        </div>
+      </div>
+      <div class="bundle-item">
+        <div class="bundle-icon">📖</div>
+        <div class="bundle-main">
+          <div class="bundle-title">Guia "Protocolo 90 dias, semana a semana"</div>
+          <div class="bundle-desc">O que esperar em cada fase do tratamento</div>
+        </div>
+        <div class="bundle-value">
+          <span class="bundle-old">R$ 97</span>
+          <span class="bundle-free">Grátis</span>
+        </div>
+      </div>
+      <div class="bundle-item">
+        <div class="bundle-icon">💬</div>
+        <div class="bundle-main">
+          <div class="bundle-title">Canal exclusivo com a farmacêutica</div>
+          <div class="bundle-desc">Tire dúvidas sobre o seu uso</div>
+        </div>
+        <div class="bundle-value">
+          <span class="bundle-old">R$ 197</span>
+          <span class="bundle-free">Grátis</span>
+        </div>
+      </div>
+      <div class="bundle-item">
+        <div class="bundle-icon">🌿</div>
+        <div class="bundle-main">
+          <div class="bundle-title">Cupom de assinatura trimestral</div>
+          <div class="bundle-desc">Nunca mais ficar sem · preço especial da leitora</div>
+        </div>
+        <div class="bundle-value">
+          <span class="bundle-free">Grátis</span>
+        </div>
+      </div>
+      <div class="bundle-item">
+        <div class="bundle-icon">🚚</div>
+        <div class="bundle-main">
+          <div class="bundle-title">Frete grátis</div>
+          <div class="bundle-desc">Sul + Sudeste · rastreado · 3–7 dias úteis</div>
+        </div>
+        <div class="bundle-value">
+          <span class="bundle-old">R$ 29</span>
+          <span class="bundle-free">Grátis</span>
+        </div>
+      </div>
+      <div class="bundle-item highlight">
+        <div class="bundle-icon">🛡️</div>
+        <div class="bundle-main">
+          <div class="bundle-title" style="color:var(--wine-deep);">Garantia Rosa Intense — 90 dias</div>
+          <div class="bundle-desc">Devolvemos 100% do valor. Você fica com todos os bônus.</div>
+        </div>
+        <div class="bundle-value">
+          <span class="bundle-incluso">Inclusa</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOCO 12 — ANTES/DEPOIS
+     ══════════════════════════════════════════════════════════ -->
+<section class="transform-section">
+  <div class="container">
+    <h2>90 dias podem ser assim</h2>
+    <div class="transform-grid">
+      <div class="transform-card now">
+        <span class="label">Você hoje</span>
+        <p>Cansada às 4 da tarde. Sem vontade de quase nada. Evitando o espelho e evitando o olhar. Achando que "é só uma fase" — mas a fase já dura anos.</p>
+      </div>
+      <div class="transform-card future">
+        <span class="label">Você em 90 dias</span>
+        <p>Acordando com energia que você tinha esquecido. A libido voltando sem você forçar. O espelho voltando a ser aliado.</p>
+        <em>"O que mudou em você?"</em>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOCO 13 — DEPOIMENTOS DE RECOMPRA LONGA
+     ══════════════════════════════════════════════════════════ -->
+<section class="testimonials-long">
+  <div class="container">
+    <span class="eyebrow" style="text-align:center; display:block;">O que as clientes falam</span>
+    <h2>"A que eu não posso ficar sem."</h2>
+    <p class="sub">Depois de anos usando — não de uma semana</p>
+
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <span class="time-badge">Usa há 4 anos</span>
+        <p class="quote">"Comecei antes da pandemia e nunca mais parei. Quando tentei ficar sem, em uma semana eu já sentia a diferença. É meu não-negociável."</p>
+        <div class="testimonial-meta">
+          <div class="testimonial-avatar">M</div>
+          <div>
+            <div class="testimonial-name">[Nome da cliente]</div>
+            <div class="testimonial-city">[Cidade/SC]</div>
+          </div>
+        </div>
+        <div style="font-size:0.68rem; color:var(--gold); margin-top:10px; letter-spacing:0.1em; text-transform:uppercase;">🟣 Aprovação Valéria · Depoimento real</div>
+      </div>
+
+      <div class="testimonial-card">
+        <span class="time-badge">Usa há 5 anos</span>
+        <p class="quote">"Meu marido percebeu antes de mim. Não soube explicar — só disse: 'você tá diferente'. Eu chorei. Fazia tempo que ninguém dizia isso."</p>
+        <div class="testimonial-meta">
+          <div class="testimonial-avatar">S</div>
+          <div>
+            <div class="testimonial-name">[Nome da cliente]</div>
+            <div class="testimonial-city">[Cidade/RS]</div>
+          </div>
+        </div>
+        <div style="font-size:0.68rem; color:var(--gold); margin-top:10px; letter-spacing:0.1em; text-transform:uppercase;">🟣 Aprovação Valéria · Depoimento real</div>
+      </div>
+
+      <div class="testimonial-card">
+        <span class="time-badge">Usa há 3 anos</span>
+        <p class="quote">"Já tentei muita coisa do digital. Rosa Intense é a única que ficou comigo. Não é milagre — é consistência. E o corpo responde."</p>
+        <div class="testimonial-meta">
+          <div class="testimonial-avatar">L</div>
+          <div>
+            <div class="testimonial-name">[Nome da cliente]</div>
+            <div class="testimonial-city">[Cidade/SP]</div>
+          </div>
+        </div>
+        <div style="font-size:0.68rem; color:var(--gold); margin-top:10px; letter-spacing:0.1em; text-transform:uppercase;">🟣 Aprovação Valéria · Depoimento real</div>
+      </div>
+
+      <div class="testimonial-card">
+        <span class="time-badge">Usa há 6 anos</span>
+        <p class="quote">"Sou farmacêutica também. Analisei a fórmula antes de comprar. Compro porque entendo — e porque funciona. 6 anos sem parar."</p>
+        <div class="testimonial-meta">
+          <div class="testimonial-avatar">A</div>
+          <div>
+            <div class="testimonial-name">[Nome da cliente]</div>
+            <div class="testimonial-city">[Cidade/PR]</div>
+          </div>
+        </div>
+        <div style="font-size:0.68rem; color:var(--gold); margin-top:10px; letter-spacing:0.1em; text-transform:uppercase;">🟣 Aprovação Valéria · Depoimento real</div>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin-top:28px; font-style:italic; color:var(--ink-muted); font-size:0.9rem;">
+      Prints reais de WhatsApp · autorização obtida · identidade preservada quando solicitado
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOCO 14 — LOJA FÍSICA
+     ══════════════════════════════════════════════════════════ -->
+<section class="loja-section">
+  <div class="loja-card">
+    <div class="loja-text">
+      <span class="eyebrow">Marca sólida</span>
+      <h3>Não somos uma marca só do digital.</h3>
+      <p>Loja física aberta em outubro de 2024, em Chapecó (SC). Atendimento presencial, CNPJ ativo desde 2019, fábrica parceira homologada.</p>
+      <p style="font-style:italic; color:var(--wine-deep);">A Biovitally é sólida porque foi construída com calma — não com pressa.</p>
+    </div>
+    <div class="loja-photo">
+      <div class="asset-placeholder wide">
+        🎬 AGÊNCIA CHAPECÓ<br>
+        Foto loja física<br>
+        (interior ou fachada)
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOCO 15 — PRICING (3 TIERS)
+     ══════════════════════════════════════════════════════════ -->
+<section class="pricing-section" id="ofertas">
+  <div class="container">
+    <span class="eyebrow" style="text-align:center; display:block;">Escolha sua condição</span>
+    <h2>Como quer começar?</h2>
+    <p class="sub">Combo de 3 potes é o que a Valéria recomenda — é o tempo do protocolo inteiro.</p>
+
+    <!-- TIER 2 — MAIS VENDIDO (destaque visual no topo) -->
+    <div class="plan-card featured">
+      <div class="plan-badge main">⭐ Mais vendido · Protocolo completo</div>
+      <div class="plan-body">
+        <div class="plan-eyebrow">Kit tratamento</div>
+        <div class="plan-name">3 POTES</div>
+        <div class="plan-days">90 dias — mesmo prazo da garantia</div>
+
+        <div class="plan-old">De R$ 299,85</div>
+        <div class="plan-price-row">
+          <span class="plan-currency">R$</span>
+          <span class="plan-price">249</span>
+        </div>
+        <div class="plan-daily">ou 12x de R$ 24,83 · <strong>R$ 2,77 por dia</strong></div>
+        <span class="plan-economy">Economia de R$ 50</span>
+
+        <ul class="plan-checks">
+          <li><span class="check">✓</span> Garantia Rosa Intense — 90 dias ou dinheiro de volta</li>
+          <li><span class="check">✓</span> Frete grátis Sul + Sudeste</li>
+          <li><span class="check">✓</span> Todos os bônus inclusos</li>
+          <li><span class="check">✓</span> Cupom de assinatura da leitora</li>
+        </ul>
+
+        <div class="plan-bonus">
+          <div class="plan-bonus-title">🎁 Bônus neste kit</div>
+          <ul>
+            <li>📗 E-book "Cardápio pró-libido"</li>
+            <li>📖 Guia "Protocolo 90 dias"</li>
+            <li>💬 Canal com a farmacêutica</li>
+            <li>🌿 Cupom assinatura trimestral</li>
+          </ul>
+        </div>
+
+        <button class="plan-cta">
+          Quero o protocolo completo →
+          <small>🔒 Compra 100% segura</small>
+        </button>
+
+        <div class="plan-trust">
+          <span>🔒 Seguro</span>
+          <span>🏥 Anvisa</span>
+          <span>💳 Cartão / Pix</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 3 — ASSINATURA (estratégico) -->
+    <div class="plan-card subscription">
+      <div class="plan-badge sub">🌿 Nunca mais ficar sem · Assinatura trimestral</div>
+      <div class="plan-body">
+        <div class="plan-eyebrow">Receita recorrente</div>
+        <div class="plan-name">ASSINATURA</div>
+        <div class="plan-days">1 pote por mês · enviado sem você lembrar</div>
+
+        <div class="plan-price-row">
+          <span class="plan-currency" style="color:var(--forest);">R$</span>
+          <span class="plan-price sub-price">133</span>
+          <span style="color:var(--ink-muted); font-size:1.05rem; margin-top:48px; font-weight:600;">/ mês</span>
+        </div>
+        <div class="plan-daily">R$ 4,43 por dia · <strong>preço congelado</strong></div>
+
+        <ul class="plan-checks">
+          <li><span class="check">✓</span> Pote chega antes do seu acabar</li>
+          <li><span class="check">✓</span> Preço fixo — sem reajuste surpresa</li>
+          <li><span class="check">✓</span> Cancele quando quiser, sem multa</li>
+          <li><span class="check">✓</span> Bônus permanentes enquanto for assinante</li>
+        </ul>
+
+        <button class="plan-cta sub-cta">
+          Quero entrar pra assinatura →
+          <small>🔒 Sem fidelidade · cancela a hora que quiser</small>
+        </button>
+
+        <div class="plan-trust">
+          <span>🔒 Seguro</span>
+          <span>🏥 Anvisa</span>
+          <span>💳 Cartão recorrente</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 1 — EXPERIMENTAR (sem destaque) -->
+    <div class="plan-card">
+      <div class="plan-badge soft">Primeiro contato</div>
+      <div class="plan-body">
+        <div class="plan-eyebrow">Experimentar</div>
+        <div class="plan-name">1 POTE</div>
+        <div class="plan-days">30 dias de tratamento</div>
+
+        <div class="plan-price-row">
+          <span class="plan-currency">R$</span>
+          <span class="plan-price" style="font-size:3.8rem;">99,95</span>
+        </div>
+        <div class="plan-daily">R$ 3,33 por dia</div>
+
+        <ul class="plan-checks">
+          <li><span class="check">✓</span> Garantia 90 dias</li>
+          <li><span class="check">✓</span> Frete grátis Sul + Sudeste</li>
+        </ul>
+
+        <button class="plan-cta soft-cta">
+          Quero experimentar →
+          <small>Recomendação: protocolo completo tem resultado consistente</small>
+        </button>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin-top:20px; color:var(--ink-muted); font-size:0.82rem;">
+      🟡 <em>Preços a validar com Sérgio · estrutura financeira</em>
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOCO 16 — GARANTIA
+     ══════════════════════════════════════════════════════════ -->
+<section class="guarantee">
+  <div class="container">
+    <div class="big-number">90</div>
+    <div class="days">DIAS</div>
+    <div class="divider-line"></div>
+    <h3>Garantia Rosa Intense</h3>
+    <p>Você tem 90 dias pra sentir o protocolo inteiro. Se em qualquer momento achar que não fez diferença, basta entrar em contato. Devolvemos 100% do valor investido.</p>
+    <p style="margin-top:16px;">Sem pergunta difícil. Sem letra miúda.<br>Você fica com todos os bônus.</p>
+    <p class="emphasis">O risco é nosso, não seu.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOCO 17 — FAQ
+     ══════════════════════════════════════════════════════════ -->
+<section class="faq-section">
+  <div class="container">
+    <span class="eyebrow" style="text-align:center; display:block;">Antes de decidir</span>
+    <h2>Perguntas frequentes</h2>
+    <p class="sub">As respostas técnicas foram revisadas pela farmacêutica Valéria</p>
+
+    <div class="faq-item">
+      <div class="faq-q">Rosa Intense precisa de receita médica? <span class="faq-arrow">∨</span></div>
+      <div class="faq-a"><p>Não. É suplemento alimentar, não medicamento. Tem registro Anvisa e pode ser adquirido sem prescrição. Mesmo assim, se você faz acompanhamento com ginecologista ou tem condição clínica, vale conversar com ela antes de iniciar.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Em quanto tempo vou sentir diferença? <span class="faq-arrow">∨</span></div>
+      <div class="faq-a"><p>A maioria das mulheres percebe mudança nas primeiras 2 a 4 semanas — geralmente em sono e energia. Libido e equilíbrio hormonal pedem um pouco mais: o protocolo completo é de 90 dias. A garantia é exatamente do tamanho do protocolo.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Posso tomar junto com outros medicamentos? <span class="faq-arrow">∨</span></div>
+      <div class="faq-a"><p>Na maioria dos casos, sim — mas cada corpo é único. Se você faz uso contínuo de remédio controlado, anticoagulante ou está em tratamento hormonal, leve a composição do Rosa Intense ao seu médico antes de começar. 🟣 <em>Resposta técnica a ser revisada pela Valéria.</em></p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">E se não funcionar pra mim? <span class="faq-arrow">∨</span></div>
+      <div class="faq-a"><p>Você tem 90 dias de garantia. Se em qualquer momento nesse período achar que não teve retorno, basta entrar em contato — devolvemos 100%. Os bônus são seus de qualquer forma.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Quanto tempo demora pra chegar? <span class="faq-arrow">∨</span></div>
+      <div class="faq-a"><p>Envio em até 48h úteis após confirmação. Entrega em 3 a 7 dias úteis para Sul e Sudeste. No momento, só atendemos essas regiões — o frete para outras regiões do país inviabiliza o preço.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Qual a diferença pra isoflavona, maca ou chá de amora? <span class="faq-arrow">∨</span></div>
+      <div class="faq-a"><p>Isoflavona genérica costuma ter dose abaixo do mínimo eficaz. Maca peruana teve seu uso restrito pela Anvisa. Chá de amora não tem estudo clínico robusto. O fenogrego padronizado do Rosa Intense tem evidência científica publicada em revista internacional e dose calibrada por farmacêutica.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Posso tomar se estou na pré-menopausa? <span class="faq-arrow">∨</span></div>
+      <div class="faq-a"><p>Sim — e é um dos momentos em que o Rosa Intense foi mais pensado para atuar. Muitas mulheres começam na pré-menopausa justamente porque os sintomas já estão lá (cansaço, libido, humor) mas a medicina convencional ainda não "autoriza" hormônio.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Tem diferença em combinar com Urilés ou Colágeno? <span class="faq-arrow">∨</span></div>
+      <div class="faq-a"><p>Os três produtos da Biovitally foram pensados para atuar em frentes diferentes e podem ser combinados com segurança. Muitas clientes usam Rosa Intense + Colágeno juntos há anos. 🟣 <em>Resposta técnica a ser revisada pela Valéria.</em></p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Como tomar? <span class="faq-arrow">∨</span></div>
+      <div class="faq-a"><p>[Dosagem e modo de uso a serem confirmados pela Valéria — exemplo: 2 cápsulas ao dia, uma de manhã e uma à noite, com água, preferencialmente junto das refeições. Consistência é o que faz funcionar.]</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOCO 18 — FOOTER
+     ══════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="logo">Biovitally · Elevo Rosa</div>
+    <div class="divider-line"></div>
+    <p class="legal">
+      <strong>Aviso legal:</strong> Rosa Intense é suplemento alimentar, não medicamento. Não substitui orientação médica. Resultados variam de pessoa para pessoa. Depoimentos representam experiências individuais e foram publicados com autorização expressa.
+      <br><br>
+      Registro Anvisa: [PENDENTE] · CNPJ: [PENDENTE · Sérgio] · Loja física: Chapecó/SC
+      <br>
+      Atendimento: [WhatsApp/Email a definir]
+      <br><br>
+      <em>🟡 Texto jurídico a validar com Sérgio antes do go-live.</em>
+    </p>
+  </div>
+</footer>
+
+<script>
+  // FAQ toggle
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    q.addEventListener('click', () => item.classList.toggle('open'));
+  });
+
+  // Countdown — reset a cada carregamento da sessão
+  // 🟡 Para usar data fixa (ex: encerramento de campanha), trocar endTime por um Date.parse('2026-05-01T23:59:59')
+  (function() {
+    const endTime = Date.now() + (23 * 3600 + 59 * 60 + 59) * 1000;
+    const hoursEl = document.getElementById('cd-hours');
+    const minutesEl = document.getElementById('cd-minutes');
+    const secondsEl = document.getElementById('cd-seconds');
+    if (!hoursEl) return;
+
+    function update() {
+      const remaining = Math.max(0, endTime - Date.now());
+      const h = Math.floor(remaining / 3600000);
+      const m = Math.floor((remaining % 3600000) / 60000);
+      const s = Math.floor((remaining % 60000) / 1000);
+      hoursEl.textContent = String(h).padStart(2, '0');
+      minutesEl.textContent = String(m).padStart(2, '0');
+      secondsEl.textContent = String(s).padStart(2, '0');
+    }
+    update();
+    setInterval(update, 1000);
+  })();
+</script>
+
+</body>
+</html>
