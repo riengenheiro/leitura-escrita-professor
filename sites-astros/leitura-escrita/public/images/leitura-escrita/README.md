@@ -13,6 +13,8 @@ Adicione os arquivos abaixo antes de publicar para manter hero, compartilhamento
 
 Enquanto a imagem de compartilhamento própria não existir, o layout usa a imagem pública da Fábrica Mágica como fallback. As fotos principais da Dra. Guaciara também usam a foto pública já existente em produção para evitar imagem quebrada.
 
+Atualizado em 2026-04-28 para forcar nova revisao de deploy.
+
 ## Direção visual
 
 - Priorize fotos profissionais, acolhedoras e com boa luz.
