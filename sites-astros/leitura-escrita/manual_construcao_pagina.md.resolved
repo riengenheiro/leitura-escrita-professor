@@ -1,0 +1,465 @@
+# Manual de Construção — Página de Vendas: Avaliação de Leitura e Escrita
+
+> Manual operacional para construção das 2 páginas de vendas da Dra. Guaciara (@doutoraescola).
+> Não é a copy final — é o guia para escrevê-la.
+
+---
+
+## Paleta de Cores
+
+### RGB (Digital)
+
+| Cor | Hex | RGB | Uso |
+|---|---|---|---|
+| 🟢 Verde floresta | `#2C5B4B` | 44, 91, 75 | **Fundo principal** |
+| ⬛ Preto | `#000000` | 0, 0, 0 | Gradiente (extremos) |
+| ⬜ Branco | `#FFFFFF` | 255, 255, 255 | **Texto principal** + gradiente (centro) |
+
+### CMYK (Impressão)
+
+| Cor | Hex | CMYK | Uso |
+|---|---|---|---|
+| Acento terroso | `#835734` | 36, 67, 100, 32 | Destaques, botões, acentos |
+| Quase preto | `#282829` | 75, 68, 65, 90 | Fundos escuros, contraste |
+| Branco | `#FFFFFF` | 0, 0, 0, 0 | Texto, espaço limpo |
+
+### Gradiente Principal
+```
+#000000 → #FFFFFF → #000000 (preto → branco → preto)
+```
+
+### Diretrizes de aplicação
+- **Fundo das páginas:** Verde floresta `#2C5B4B` — tom sóbrio, profissional, conectado à saúde
+- **Texto sobre fundo verde:** Sempre branco `#FFFFFF`
+- **Botões de CTA:** Acento terroso `#835734` com texto `#FFFFFF`
+- **Seções alternadas:** Alternar entre `#2C5B4B` e `#282829` para criar ritmo visual
+- **Gradiente:** Usar nas transições entre seções para sofisticação
+
+---
+
+## Parte 1: Diagnóstico do Material de Origem
+
+### O que o post do Instagram faz bem
+- Identifica dores reais com linguagem direta
+- Posiciona autoridade (21 anos, múltiplas formações)
+- Preço acessível com ancoragem ("menos de 2 reais por dia")
+
+### O que o post NÃO faz (e a página precisa fazer)
+- Contar a história de origem (pandemia → instituto → 6 anos → 5.0)
+- Explorar o fato inédito: **nunca ensinou terapeutas antes**
+- Apresentar depoimentos (53 avaliações nota 5.0)
+- Detalhar o conteúdo da aula
+- Oferecer garantia
+- Diferenciar ao vivo vs. gravação
+- Responder objeções (FAQ)
+
+---
+
+## Parte 2: Arquitetura das 2 Páginas
+
+### Página 1 — Story Page (A História)
+**Objetivo:** Criar conexão emocional e curiosidade. Levar para a Página 2.
+**Tom:** Narrativo, íntimo, revelador.
+**Analogia:** O trailer do filme.
+
+### Página 2 — Offer Page (A Venda)
+**Objetivo:** Converter. Apresentar oferta clara, eliminar objeções, fechar.
+**Tom:** Consultivo, seguro, direto.
+**Analogia:** A bilheteria.
+
+### Fluxo
+```
+Instagram/Tráfego → Página 1 (Story) → Página 2 (Venda) → Checkout
+```
+
+---
+
+## Parte 3: Manual da Página 1 — Story Page
+
+### Bloco 1: Hero (Abertura)
+
+**Função:** Parar o scroll. Gerar identificação imediata.
+
+**Diretrizes:**
+- Headline curta de dor/identificação (não venda ainda)
+- Subheadline que amplie a dor com empatia
+- Foto da Dra. Guaciara (profissional, acolhedora)
+- SEM botão de compra neste bloco — só história
+
+**Exemplo de direção (não copy final):**
+> Headline: Algo no formato "Você avalia, mas não sabe o que fazer depois?"
+> Sub: Empatia + promessa de que há uma saída
+
+**Validação:** Teste do Café na Sala dos Professores — soaria natural dito olho no olho?
+
+---
+
+### Bloco 2: A Origem (História do Instituto)
+
+**Função:** Construir admiração e conexão emocional.
+
+**Narrativa a seguir:**
+1. Março de 2020: o mundo para (pandemia declarada)
+2. Enquanto tudo fechava, Guaciara ABRIU seu Instituto de Fonoaudiologia
+3. Decisão de coragem — não de circunstância
+4. 6 anos depois: 5.0 de nota, 53 avaliações, todas positivas
+
+**Diretrizes:**
+- Conte como uma história, não como currículo
+- Use a estrutura: adversidade → decisão → resultado
+- Mantenha o tom da Guaciara: firme, acolhedor, sem arrogância
+- Incluir foto do instituto ou da Guaciara atendendo
+
+**Registro gramatical:** "para", nunca "pra". "em uma", nunca "numa". Imperativo formal.
+
+---
+
+### Bloco 3: O Porquê (Reason Why)
+
+**Função:** Explicar por que ela decidiu ensinar agora.
+
+**Narrativa a seguir:**
+1. Em 21 anos, ela NUNCA fez curso para terapeutas
+2. Ela sempre conversou com professores
+3. Mas começou a receber crianças vindas de outros profissionais...
+4. Crianças com ANOS de terapia, e as prioridades nunca foram vistas
+5. Isso a incomodou profundamente
+6. Ela decidiu abrir o conhecimento pela PRIMEIRA VEZ
+
+**Diretrizes:**
+- Este é o momento mais emocional da página
+- A motivação deve parecer genuína (Reason Why do copy clássico)
+- Não atacar outros profissionais — mostrar que o SISTEMA falha
+- Usar a voz dela: "O que eu mais tenho visto e acompanhado..."
+- A revelação de que é a PRIMEIRA VEZ cria exclusividade real
+
+**Gatilho principal:** Exclusividade + Reason Why
+
+---
+
+### Bloco 4: Prova Social Rápida
+
+**Função:** Validar a história com evidência concreta.
+
+**Elementos:**
+- Badge visual: ⭐ 5.0 — 53 avaliações
+- 3 a 5 depoimentos curtos (selecionar dos 53)
+- Priorizar depoimentos que mencionem: resultado na criança, mudança de olhar, clareza
+
+**Diretrizes:**
+- Depoimentos reais, com nome (ou iniciais) e profissão
+- Formatar como cards visuais
+- Não exagerar na quantidade — 3 a 5 são suficientes aqui
+
+---
+
+### Bloco 5: Transição para a Oferta
+
+**Função:** Criar ponte emocional da história para a venda.
+
+**Direção do texto:**
+> "E é exatamente esse conhecimento que eu vou compartilhar em uma aula especial..."
+
+**CTA:** Botão que leva para a Página 2.
+- Texto do botão: algo como "Quero saber mais sobre a aula" (consultivo, não agressivo)
+- Estilo: cor #835734, texto #FFFFFF
+
+---
+
+## Parte 4: Manual da Página 2 — Offer Page
+
+### Bloco 1: Hero da Oferta
+
+**Função:** Relembrar o interesse e apresentar a promessa clara.
+
+**Elementos:**
+- Headline de promessa/transformação
+- Data e horário da aula (06/05 às 19h)
+- Foto da Guaciara ou visual da aula
+
+**Direção da headline:**
+> Formato: "Aprenda a [resultado desejado] em uma aula ao vivo com quem [prova de autoridade]"
+
+**Diretrizes:**
+- Quem chega aqui já leu a história (Página 1) — não repetir tudo
+- Ir direto ao ponto: o que é, quando é, o que vai aprender
+
+---
+
+### Bloco 2: Para Quem É
+
+**Função:** Qualificar o público. A leitora precisa se ver na lista.
+
+**Bullets de identificação (direção):**
+- Você aplica protocolos mas não sabe interpretar os resultados
+- Você sente insegurança para definir prioridades no plano terapêutico
+- Você já viu crianças com anos de terapia sem evolução real
+- Você quer raciocinar com autonomia, não depender de receitas prontas
+- Você é fono, psicopedagoga, pedagoga ou neuropsicopedagoga
+
+**Diretrizes:**
+- Usar "você" (intimidade 1-para-1)
+- Cada bullet = uma dor que ela sente + a validação de que está no lugar certo
+- Registro formal, tom acolhedor
+
+---
+
+### Bloco 3: O Que Você Vai Aprender
+
+**Função:** Tangibilizar o conteúdo da aula.
+
+**Diretrizes:**
+- 5 a 7 bullets com verbos concretos
+- Cada bullet: o que + o resultado prático
+- Não revelar tudo — lembrar que é "experiência do conteúdo"
+- Usar linguagem da Guaciara: "entender o fio da meada", "raciocinar além dos protocolos"
+
+**Estrutura de cada bullet:**
+> ✓ [Verbo de ação] + [o que] + [para que/resultado]
+> Ex: "Identificar o que é prioridade na avaliação — para não perder tempo com o que não vai resolver nada"
+
+---
+
+### Bloco 4: O Diferencial (Mecanismo Único)
+
+**Função:** Explicar POR QUE esta aula é diferente de tudo que já viram.
+
+**Mensagem central:**
+> "Antes de abrir qualquer protocolo, você precisa saber o que está procurando."
+
+**3 pilares do diferencial:**
+1. Raciocínio antes do protocolo (não é receita pronta)
+2. 21 anos de prática clínica real (não é teoria acadêmica)
+3. Primeira vez que ensina para terapeutas (exclusividade)
+
+**Diretrizes:**
+- Posicionar como ANTI-método genérico
+- Tom: "Eu não vou te dar mais um protocolo. Vou te ensinar a PENSAR."
+- Usar a voz da Guaciara: direta, segura, sem arrogância
+
+---
+
+### Bloco 5: Quem é a Dra. Guaciara (Mini Bio)
+
+**Função:** Reforçar autoridade para quem pulou a Página 1.
+
+**Dados obrigatórios:**
+- 21 anos de experiência em alfabetização, leitura, escrita e transtornos
+- Fonoaudióloga + Educadora Especial + ex-professora
+- Fundou o Instituto de Fonoaudiologia em 2020 (pandemia)
+- 5.0 de nota com 53 avaliações
+- @doutoraescola
+
+**Diretrizes:**
+- Foto profissional e acolhedora
+- Tom: "professora para professora" (adaptado: "profissional para profissional")
+- Curto — 1 parágrafo + lista de credenciais
+- Nunca soar como guru de marketing
+
+---
+
+### Bloco 6: Prova Social (Depoimentos)
+
+**Função:** Eliminar dúvidas restantes.
+
+**Diretrizes:**
+- 5 a 8 depoimentos dos 53
+- Priorizar variedade: fonos, psicopedagogas, pedagogas
+- Formato: card com nome, profissão, texto, estrelas
+- Se possível: 1 depoimento em vídeo
+
+**Critério de seleção dos depoimentos:**
+- Mencionam resultado concreto na criança?
+- Mencionam mudança de perspectiva profissional?
+- Têm tom emocional genuíno?
+- São de profissionais diferentes (diversidade de perfis)?
+
+---
+
+### Bloco 7: A Oferta
+
+**Função:** Apresentar os dois planos com clareza total.
+
+**Estrutura visual sugerida:**
+```
+┌────────────────────────────┐  ┌────────────────────────────┐
+│  AULA AO VIVO              │  │  ⭐ GRAVAÇÃO               │
+│  R$ 57                     │  │  R$ 99                     │
+│                            │  │                            │
+│  ✓ Aula ao vivo 06/05 19h  │  │  ✓ Gravação completa       │
+│  ✓ Interação em tempo real │  │  ✓ Assista quando quiser   │
+│  ✓ Grupo de WhatsApp       │  │  ✓ Reveja quantas vezes    │
+│  ✓ Garantia                │  │    precisar                │
+│                            │  │  ✓ Grupo de WhatsApp       │
+│  [PARTICIPAR AO VIVO]      │  │  ✓ Garantia                │
+│                            │  │                            │
+└────────────────────────────┘  │  [QUERO A GRAVAÇÃO]        │
+                                └────────────────────────────┘
+```
+
+**Diretrizes:**
+- Botão do ao vivo: #835734 fundo, #FFFFFF texto
+- Botão da gravação: pode ter destaque sutil (borda dourada ou tag "mais escolhido")
+- Ancoragem: "menos de 2 reais por dia" (para o ao vivo)
+- Deixar claro: quem compra ao vivo NÃO recebe replay
+- Quem compra gravação recebe TUDO
+
+**Estratégia de ancoragem:**
+> Gravação a R$ 99 faz o ao vivo a R$ 57 parecer muito acessível.
+> Quem quer "o pacote completo" vai para R$ 99.
+
+---
+
+### Bloco 8: Garantia
+
+**Função:** Remover risco. Eliminar última objeção.
+
+**Diretrizes:**
+- Selo visual de garantia
+- Texto curto e direto
+- Tom: "Se você não sentir que valeu cada centavo, devolvemos o valor."
+- Especificar prazo (7 dias? até a data da aula?)
+- Cor do selo: #835734
+
+---
+
+### Bloco 9: FAQ
+
+**Função:** Matar objeções silenciosas.
+
+**Perguntas obrigatórias:**
+1. "A aula é ao vivo ou gravada?" → Temos as duas opções...
+2. "E se eu não puder assistir no dia?" → Opção gravação por R$ 99...
+3. "Quem compra ao vivo recebe a gravação?" → Não. A gravação é exclusiva...
+4. "Para quem é essa aula?" → Fonoaudiólogas, psicopedagogas, pedagogas...
+5. "É a aula completa sobre avaliação?" → É uma experiência do conteúdo...
+6. "Como funciona a garantia?" → [responder conforme definido]
+7. "Como recebo o acesso?" → Via grupo de WhatsApp...
+8. "Preciso ter experiência prévia?" → [definir com a Dra.]
+
+**Diretrizes:**
+- Respostas curtas (2-3 linhas)
+- Tom consultivo, nunca defensivo
+- Formato acordeão (expandir/colapsar)
+
+---
+
+### Bloco 10: CTA Final
+
+**Função:** Último empurrão para quem desceu a página toda.
+
+**Diretrizes:**
+- Repetir os dois botões de oferta
+- Adicionar elemento de urgência real: "Aula ao vivo dia 06/05 — vagas limitadas"
+- Frase de fechamento no tom da Guaciara
+- Direção: "Não vou guardar nada. Vou detalhar o passo a passo para te ajudar de uma vez por todas."
+
+---
+
+## Parte 5: Regras de Voz e Tom (Adaptação do Manual Clássico)
+
+### O desafio: de professoras para terapeutas
+
+> [!IMPORTANT]
+> O manual clássico foi escrito para professoras. Agora estamos falando com **terapeutas** (fonoaudiólogas, psicopedagogas). A adaptação exige ajustes:
+
+| Aspecto | Para Professoras (manual) | Para Terapeutas (esta página) |
+|---|---|---|
+| Dor central | Sobrecarga e falta de tempo | Insegurança no raciocínio clínico |
+| Desejo | Alívio na rotina escolar | Autonomia para pensar e decidir |
+| Vocabulário | Planejamento, coordenação, HTPC | Protocolo, avaliação, intervenção, prioridades |
+| Ceticismo | "Já vi promessa demais" | "Já fiz curso demais sem resultado" |
+| Status | Ser vista como competente pela coordenação | Ser vista como competente pelos pais e colegas |
+| Tom | Colega veterana da escola | Colega clínica experiente |
+
+### O que se MANTÉM do manual clássico
+
+1. **Intimidade 1-para-1** — "você", "sua prática", "seu raciocínio"
+2. **Tangibilidade** — resultado concreto, não abstração
+3. **Especificidade de trincheira** — termos que só quem atende criança conhece
+4. **Reason Why** — explicar a motivação genuína
+5. **Takeaway Selling** — "veja se faz sentido para você" (NUNCA "compre agora!!!")
+6. **Registro gramatical impecável** — "para", não "pra"; imperativo formal
+7. **Urgência saudável** — baseada no calendário real, não em contagem regressiva falsa
+
+### O que se ADAPTA
+
+1. **Vocabulário de trincheira muda** — sai "sala dos professores", entra "sala de atendimento"
+2. **A dor muda** — não é "falta de tempo", é "falta de clareza clínica"
+3. **O status muda** — não é "coordenação avaliando", é "a criança não evolui e a família questiona"
+4. **O arquétipo se mantém** — Mentora Cuidadora + Especialista Prática
+
+### Palavras que combinam com esta campanha
+- raciocínio clínico, prioridades, autonomia, clareza
+- avaliação, protocolo, intervenção, evolução
+- criança, família, resultado real, prática
+- passo a passo, experiência, segurança, confiança
+
+### Palavras e tons PROIBIDOS
+- "fórmula secreta", "hack", "método milagroso"
+- "última chance!!!", "vagas esgotando!!!", CAPS LOCK excessivo
+- "pra", "pro", "num", "numa"
+- tom de guru de marketing
+- promessas absolutas ("100% garantido")
+
+---
+
+## Parte 6: Checklist de Validação (antes de publicar)
+
+Aplicar em CADA bloco da página:
+
+- [ ] **Teste do Consultório:** Eu diria isso para uma colega fono durante um café, olhando nos olhos, sem parecer artificial?
+- [ ] **Teste da Tangibilidade:** O texto descreve resultado concreto (criança evoluindo, raciocínio claro, prioridade definida) ou ficou abstrato?
+- [ ] **Teste do Status Profissional:** A copy reforça competência e segurança da terapeuta?
+- [ ] **Teste da Empatia Real:** Há compreensão genuína da dor antes de apresentar a oferta?
+- [ ] **Teste do Takeaway:** O tom convida com segurança ou implora pela compra?
+- [ ] **Teste Gramatical:** Zero "pra", "pro", "num", "numa"? Imperativo formal nos CTAs?
+
+---
+
+## Parte 7: Análise — O Manual Clássico para Terapeutas
+
+> [!NOTE]
+> **Avaliação solicitada:** "Nunca falamos diretamente com terapeutas, mas professoras gostam desse formato."
+
+### O que funciona perfeitamente para terapeutas
+
+O manual clássico é **excelente como base** porque os princípios são universais:
+- Intimidade 1-para-1 funciona com qualquer profissional da saúde/educação
+- Takeaway Selling é IDEAL para terapeutas (elas têm o mesmo ceticismo que professoras)
+- Reason Why é perfeito porque a história da Guaciara é genuína
+- Registro gramatical impecável é igualmente valorizado por fonoaudiólogas
+
+### O que precisa de ajuste
+
+1. **O avatar muda de "professora sobrecarregada" para "terapeuta insegura no raciocínio clínico"**
+   - Professora: dor = tempo, burocracia, coordenação
+   - Terapeuta: dor = "apliquei o protocolo e não sei o que fazer agora"
+
+2. **O vocabulário de trincheira muda completamente**
+   - Sai: HTPC, relatório da coordenação, planejamento letivo
+   - Entra: protocolo de avaliação, plano terapêutico, evolução da criança, devolutiva para a família
+
+3. **O tom "professora para professora" vira "clínica para clínica"**
+   - A Guaciara tem as DUAS vivências (foi professora E é fono) — isso é uma vantagem brutal
+   - Ela pode falar "de dentro" dos dois mundos
+
+4. **A urgência saudável muda de "calendário escolar" para "a criança não pode esperar"**
+   - Professora: "antes que o fechamento de notas chegue"
+   - Terapeuta: "cada mês de terapia sem foco é um mês perdido para a criança"
+
+### Veredicto
+> O formato do manual clássico **funciona para terapeutas** com as adaptações acima. A essência (copy humano, consultivo, de baixa pressão) é perfeita para esse público. O que muda é o vocabulário, as dores específicas e o cenário de trincheira.
+
+---
+
+## Parte 8: Próximos Passos
+
+1. [ ] **Selecionar depoimentos** — escolher 5-8 dos 53 (priorizando fonoaudiólogas e psicopedagogas)
+2. [ ] **Definir prazo da garantia** — 7 dias? até a aula?
+3. [ ] **Definir duração da aula** — quanto tempo dura?
+4. [ ] **Obter fotos** — Dra. Guaciara + instituto
+5. [ ] **Definir plataforma de checkout** — Hotmart? Kiwify?
+6. [ ] **Escrever a copy** — seguindo este manual, bloco por bloco
+7. [ ] **Desenvolver o design** — aplicando a paleta #835734 / #282829 / #FFFFFF
+8. [ ] **Validar com o checklist** — cada bloco passa nos 6 testes

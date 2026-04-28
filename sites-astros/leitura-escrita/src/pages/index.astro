@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { WHATSAPP_URL } from '../config/site';
+
+const pageTitle = 'Você avalia leitura e escrita, mas sente que falta clareza para decidir o próximo passo?';
+const pageDescription = 'A história por trás da primeira aula da Dra. Guaciara para terapeutas sobre avaliação de leitura e escrita.';
+---
+<Layout title={pageTitle} description={pageDescription}>
+  <main>
+    <section class="section section-gradient">
+      <div class="container grid-2">
+        <div>
+          <span class="eyebrow">Avaliação de Leitura e Escrita</span>
+          <h1>Você avalia, mas ainda sente que falta clareza para decidir o que fazer depois?</h1>
+          <p class="lead" style="margin-top:22px;">
+            Se você atende crianças com dificuldades de leitura e escrita, talvez já tenha aplicado protocolos, observado sinais importantes e mesmo assim ficado com a sensação de que o plano terapêutico ainda não estava nítido.
+          </p>
+          <p style="margin-top:18px; opacity:0.82;">
+            Esta não é uma página sobre mais um protocolo. É sobre a história que fez a Dra. Guaciara abrir, pela primeira vez, uma aula especial para terapeutas.
+          </p>
+        </div>
+        <div class="photo-frame">
+          <img src="https://fabricamagica.doutoraescola.com.br/images/fabrica-magica/guaciara.webp" alt="Dra. Guaciara Fornaciari em foto profissional" width="520" height="650" loading="eager" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container grid-2">
+        <div class="photo-frame">
+          <div class="image-placeholder">Adicionar foto real do instituto ou atendimento em `/public/images/leitura-escrita/instituto.webp`</div>
+        </div>
+        <div>
+          <span class="eyebrow" style="color:var(--forest);">A origem</span>
+          <h2>Em março de 2020, enquanto tudo fechava, ela abriu o próprio instituto.</h2>
+          <p style="margin-top:20px;">
+            A pandemia tinha acabado de ser declarada. A maioria das pessoas estava tentando entender como sobreviver ao que viria. E foi nesse cenário que a Dra. Guaciara tomou uma decisão de coragem: abrir seu Instituto de Fonoaudiologia.
+          </p>
+          <p style="margin-top:16px;">
+            Não foi uma escolha de conveniência. Foi uma escolha de propósito. Seis anos depois, o resultado aparece no que as famílias contam: nota 5.0, 53 avaliações e uma reputação construída atendimento por atendimento.
+          </p>
+          <div class="grid-auto" style="margin-top:28px;">
+            <div class="card">
+              <strong style="font-size:2.2rem; color:var(--forest); display:block; line-height:1;">5.0</strong>
+              <span>Avaliação média das famílias</span>
+            </div>
+            <div class="card">
+              <strong style="font-size:2.2rem; color:var(--forest); display:block; line-height:1;">53</strong>
+              <span>Avaliações positivas do instituto</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-forest">
+      <div class="narrow">
+        <span class="eyebrow">Por que agora?</span>
+        <h2>Em 21 anos, ela nunca tinha feito uma aula para terapeutas.</h2>
+        <p class="lead" style="margin-top:22px;">
+          A Dra. Guaciara sempre ensinou professoras. Sempre conversou com escolas. Sempre traduziu a aprendizagem para quem está no chão da educação.
+        </p>
+        <p style="margin-top:18px;">
+          Mas começou a receber crianças vindas de outros profissionais. Crianças que estavam há anos em terapia, com esforço da família, investimento de tempo e dedicação clínica, mas sem que as prioridades centrais tivessem sido vistas com clareza.
+        </p>
+        <div class="card" style="margin-top:34px;">
+          <p class="quote">
+            “O que eu mais tenho visto e acompanhado são crianças que chegam com anos de intervenção, mas sem um raciocínio claro sobre o que realmente precisa ser priorizado.”
+          </p>
+        </div>
+        <p style="margin-top:24px;">
+          Isso não é uma crítica a profissionais. É uma resposta a um sistema que ensina a aplicar instrumentos, mas nem sempre ensina a pensar antes de abrir qualquer protocolo.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container">
+        <div class="grid-2" style="align-items:end;">
+          <div>
+            <span class="eyebrow">Prova social</span>
+            <h2>Famílias percebem quando existe clareza no cuidado.</h2>
+          </div>
+          <p class="lead">
+            Depoimentos reais publicados no Google sobre o Instituto Guaciara.
+          </p>
+        </div>
+
+        <div class="grid-auto" style="margin-top:42px;">
+          <article class="card">
+            <div class="stars">★★★★★</div>
+            <p style="margin-top:14px;">“Guaciara é simplesmente maravilhosa! Muito atenciosa e dedicada no trabalho que realiza com muita excelência. Tivemos resultados super rápidos com a minha filha de 6 anos.”</p>
+            <strong style="display:block; margin-top:20px;">Renata Madeira</strong>
+          </article>
+          <article class="card">
+            <div class="stars">★★★★★</div>
+            <p style="margin-top:14px;">“Escolhemos este consultório pelas boas avaliações e hoje, ao levarmos nossa filha Malu de 21 dias, confirmamos cada uma delas. Fomos recebidos com acolhimento e um atendimento verdadeiramente humanizado.”</p>
+            <strong style="display:block; margin-top:20px;">Danillo Oliveira</strong>
+          </article>
+          <article class="card">
+            <div class="stars">★★★★★</div>
+            <p style="margin-top:14px;">“Super recomendo! A Maria chegou na clínica com um atraso de fala significativo e saímos com ela uma tagarelinha.”</p>
+            <strong style="display:block; margin-top:20px;">Thais Belli</strong>
+          </article>
+        </div>
+        <p style="margin-top:28px;"><a class="btn btn-secondary" href="https://www.google.com/search?q=guaciara+instituto" target="_blank" rel="noopener noreferrer">Ver avaliações completas no Google</a></p>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container grid-2">
+        <div>
+          <span class="eyebrow" style="color:var(--forest);">A ponte</span>
+          <h2>É exatamente esse conhecimento que ela vai compartilhar em uma aula especial.</h2>
+          <p class="lead" style="margin-top:20px;">
+            Uma aula ao vivo para profissionais que querem avaliar leitura e escrita com mais segurança, enxergar prioridades e raciocinar além dos protocolos.
+          </p>
+          <div class="cta-row" style="margin-top:30px;">
+            <a class="btn" href="/oferta/">Quero saber mais sobre a aula</a>
+            <a class="btn btn-secondary" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">Falar com a equipe</a>
+          </div>
+        </div>
+        <div class="card">
+          <span class="eyebrow" style="color:var(--forest);">Primeira vez</span>
+          <h3>Uma aula para terapeutas, não para professoras.</h3>
+          <ul class="checks" style="margin-top:22px;">
+            <li>Para fonoaudiólogas, psicopedagogas, pedagogas e neuropsicopedagogas.</li>
+            <li>Com foco em raciocínio clínico, prioridades e plano terapêutico.</li>
+            <li>Com a experiência de quem atende crianças, conversa com famílias e conhece a escola por dentro.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong style="font-size:1.35rem;">DOUTORA ESCOLA</strong>
+        <p style="margin-top:10px;">Avaliação de Leitura e Escrita com Dra. Guaciara Fornaciari.</p>
+        <p style="margin-top:18px;">TODOS OS DIREITOS RESERVADOS - DOUTORA ESCOLA © 2026</p>
+        <p style="font-size:0.9rem; margin-top:12px;">Este site não faz parte do Facebook ou Facebook Inc. FACEBOOK é uma marca registrada da Meta Platforms, Inc.</p>
+      </div>
+      <div>
+        <p><a href="https://doutoraescola.com.br/privacidade/privacidade.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a></p>
+        <p style="margin-top:10px;"><a href="https://doutoraescola.com.br/privacidade/termo.html" target="_blank" rel="noopener noreferrer">Termos de Uso</a></p>
+        <p style="margin-top:10px;"><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">Contato via WhatsApp</a></p>
+        <p style="font-size:0.85rem; margin-top:18px;">Developed by dvzDesing</p>
+      </div>
+    </div>
+  </footer>
+</Layout>
