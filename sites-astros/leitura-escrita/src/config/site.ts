@@ -1,7 +1,7 @@
 export const SITE_URL = 'https://leitura-escrita.doutoraescola.com.br';
 export const SITE_NAME = 'Avaliação de Leitura e Escrita';
 export const BRAND_NAME = 'Doutora Escola';
-export const FACEBOOK_PIXEL_ID = '903214411087074';
+export const FACEBOOK_PIXEL_ID = '1471500153716455';
 
 export const WHATSAPP_URL = 'https://api.whatsapp.com/send?phone=5519989863544';
 
