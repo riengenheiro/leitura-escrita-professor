@@ -7,5 +7,5 @@ export const WHATSAPP_URL = 'https://api.whatsapp.com/send?phone=5519989863544';
 
 export const CHECKOUT_URL = 'https://fm.doutoraescola.com.br/checkout/?s=5LPV5';
 
-export const SHARE_IMAGE = 'https://fabricamagica.doutoraescola.com.br/images/fabrica-magica/og-image.webp';
+export const SHARE_IMAGE = `${SITE_URL}/images/leitura-escrita/og-leitura-escrita.webp`;
 export const GUARANTEE_DAYS = 7;
