@@ -75,6 +75,7 @@ const canonical = new URL(path, SITE_URL).href;
       :root {
         --forest: #2C5B4B;
         --earth: #835734;
+        --cta: #E8832A;
         --ink: #282829;
         --black: #000000;
         --white: #ffffff;
@@ -135,10 +136,10 @@ const canonical = new URL(path, SITE_URL).href;
       .cta-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
       .btn {
         align-items: center;
-        background: var(--earth);
-        border: 2px solid var(--earth);
+        background: var(--cta);
+        border: 2px solid var(--cta);
         border-radius: 6px;
-        box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+        box-shadow: 0 12px 28px rgba(232,131,42,0.35);
         color: var(--white);
         display: inline-flex;
         font-family: 'IBM Plex Serif', Georgia, serif;
@@ -150,7 +151,7 @@ const canonical = new URL(path, SITE_URL).href;
         text-decoration: none;
         transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
       }
-      .btn:hover { transform: translateY(-2px); box-shadow: 0 22px 44px rgba(0,0,0,0.24); }
+      .btn:hover { background: #D4741E; border-color: #D4741E; transform: translateY(-2px); box-shadow: 0 22px 44px rgba(232,131,42,0.45); }
       .btn-secondary { background: transparent; border-color: rgba(255,255,255,0.48); }
       .section-soft .btn-secondary { border-color: rgba(44,91,75,0.28); color: var(--forest); }
       .card {
