@@ -6,201 +6,48 @@ import {
   WHATSAPP_URL,
 } from '../config/site';
 
-const pageTitle = 'Leitura e Escrita para Professoras | Aula + 40 Modelos Bônus';
-const pageDescription = 'Leitura e Escrita para Professoras: uma formação prática com modelos prontos para organizar sondagem, observação, encaminhamentos, adaptações e planos educacionais.';
-
-const documentos = [
-  {
-    sigla: 'FO',
-    nome: 'Ficha de Observação Individual',
-    desc: 'Registre leitura, escrita, comportamento diante das tarefas e hipóteses pedagógicas com clareza.',
-  },
-  {
-    sigla: 'SI',
-    nome: 'Questionário de Sondagem Inicial',
-    desc: 'Organize a primeira conversa com família e escola antes de definir prioridades de atendimento.',
-  },
-  {
-    sigla: 'AE',
-    nome: 'PAEE - Anexo III da Resolução SEDUC Nº 129/2025',
-    desc: 'Estruture o Plano de Atendimento Educacional Especializado com linguagem profissional.',
-  },
-  {
-    sigla: 'AC',
-    nome: 'Guia de Adaptações Curriculares',
-    desc: 'Transforme necessidades observadas em adaptações possíveis para rotina, atividades e avaliação.',
-  },
-  {
-    sigla: 'EC',
-    nome: 'Estudo de Caso - Anexo II da Resolução SEDUC 129/2025',
-    desc: 'Monte um panorama organizado sobre história, queixas, observações e encaminhamentos.',
-  },
-  {
-    sigla: 'RI',
-    nome: 'Relatório de Desenvolvimento Individual - Educação Infantil',
-    desc: 'Descreva avanços, necessidades e próximos passos com linguagem cuidadosa e objetiva.',
-  },
-  {
-    sigla: 'RE',
-    nome: 'Relatório de Encaminhamento para Especialista',
-    desc: 'Comunique sinais observados e motivos do encaminhamento sem ultrapassar limites profissionais.',
-  },
-  {
-    sigla: 'API',
-    nome: 'Avaliação Pedagógica Inicial - API',
-    desc: 'Defina um ponto de partida pedagógico para leitura, escrita, atenção e aprendizagem.',
-  },
-];
-
-const passos = [
-  {
-    titulo: 'Assista à aula com método',
-    desc: 'Você entende o que observar, como registrar informações e como transformar sinais em decisões pedagógicas.',
-  },
-  {
-    titulo: 'Use os modelos prontos',
-    desc: 'Cada material guia a escrita e evita que você comece do zero na sondagem, no relatório ou no encaminhamento.',
-  },
-  {
-    titulo: 'Organize seu atendimento',
-    desc: 'Saia com um caminho mais claro para conversar com a família, priorizar demandas e conduzir devolutivas.',
-  },
-];
-
-const bonusModelos = [
-  'Ficha de Observação Individual',
-  'Questionário de Sondagem Inicial',
-  'PLANO DE ATENDIMENTO EDUCACIONAL ESPECIALIZADO - PAEE ANEXO III - RESOLUÇÃO SEDUC Nº 129/2025',
-  'Guia de Adaptações Curriculares',
-  'ESTUDO DE CASO ANEXO II - RESOLUÇÃO SEDUC 129/2025',
-  'Relatório de Desenvolvimento Individual - Educação Infantil',
-  'Relatório de Encaminhamento para Especialista',
-  'AVALIAÇÃO PEDAGÓGICA INICIAL - API',
-];
+const pageTitle = 'Você sente que pode ir além da sala de aula?';
+const pageDescription = 'A história por trás da aula da Dra. Guaciara Fornaciari para professoras, psicopedagogas e neuropsicopedagogas que querem atuar com leitura e escrita em atendimentos particulares.';
 ---
 <Layout title={pageTitle} description={pageDescription}>
   <main>
     <section class="section section-gradient">
       <div class="container grid-2">
         <div>
-          <span class="hero-badge">Leitura e Escrita para Professoras</span>
-          <h1 style="margin-top:18px;">Transforme seu olhar sobre leitura e escrita em atendimentos mais seguros.</h1>
+          <span class="eyebrow">Leitura e Escrita para Professoras</span>
+          <h1>Você sente que pode ir além da sala de aula?</h1>
           <p class="lead" style="margin-top:22px;">
-            Uma aula prática com a Dra. Guaciara Fornaciari para professoras, psicopedagogas e neuropsicopedagogas que querem saber o que observar, como registrar e como orientar famílias com mais clareza.
+            Talvez você já enxergue sinais que passam despercebidos, perceba quando a criança está travando na leitura ou na escrita e queira fazer mais do que adaptar uma atividade.
           </p>
           <p style="margin-top:18px; opacity:0.85;">
-            Você aprende o caminho e ainda recebe um pacote de modelos para sondagem, observação, adaptações, relatórios e encaminhamentos.
+            Mas quando pensa em transformar esse olhar em atendimentos particulares, vem a dúvida: "Por onde eu começo? O que eu preciso saber para atender com segurança?"
+          </p>
+          <p style="margin-top:18px; opacity:0.85;">
+            Foi para responder a essa virada de chave que a Dra. Guaciara preparou uma aula especial para professoras, psicopedagogas e neuropsicopedagogas que querem atuar com mais profundidade.
           </p>
           <div class="cta-row" style="margin-top:30px;">
-            <a class="btn" href={CHECKOUT_URL}>Garantir acesso · R$ 57</a>
-            <a class="btn btn-secondary" href="#bonus">Ver bônus inclusos</a>
+            <a class="btn" href={CHECKOUT_URL}>Garantir minha vaga · R$ 57</a>
           </div>
-          <ul class="pill-list">
-            <li>Aula online</li>
-            <li>40 modelos bônus</li>
-            <li>Garantia de {GUARANTEE_DAYS} dias</li>
-          </ul>
+          <p style="font-size:0.95rem; opacity:0.82; margin-top:18px; font-style:italic;">Aula ao vivo em 06 de maio, às 19h. Vagas limitadas.</p>
         </div>
-        <div class="hero-panel">
-          <span class="mini-label">Como a Fábrica Mágica, só que para leitura e escrita</span>
-          <h2 style="margin-top:12px;">Você não recebe só teoria. Recebe um caminho de aplicação.</h2>
-          <ul class="checks" style="margin-top:24px;">
-            <li>Aprenda a observar sinais de dificuldade sem reduzir tudo a falta de treino.</li>
-            <li>Organize a conversa inicial com família e escola.</li>
-            <li>Use modelos para registrar, adaptar, encaminhar e planejar.</li>
-            <li>Tenha mais segurança para iniciar ou qualificar seus atendimentos particulares.</li>
-          </ul>
-          <div style="margin-top:26px; border-top:1px solid rgba(44,91,75,0.16); padding-top:20px;">
-            <strong style="color:var(--forest); font-size:1.15rem;">Bônus especial:</strong>
-            <p style="color:var(--muted); margin-top:6px;">8 categorias de documentos, com 5 modelos em cada uma.</p>
-          </div>
-        </div>
-      </div>
-      <div class="section-divider" style="margin-top:36px;"></div>
-    </section>
-
-    <section id="documentos" class="section section-cream">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">O que você aprende a organizar</span>
-          <h2>Da dificuldade percebida ao documento bem escrito.</h2>
-          <p class="lead" style="margin-top:16px;">
-            O foco é tirar a professora do improviso: observar com critério, levantar hipóteses pedagógicas, registrar evidências e comunicar próximos passos.
-          </p>
-        </div>
-        <div class="document-grid">
-          {documentos.map((doc) => (
-            <article class="document-card">
-              <span class="icon-badge">{doc.sigla}</span>
-              <div>
-                <h3>{doc.nome}</h3>
-                <p>{doc.desc}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-        <div class="card" style="margin:34px auto 0; max-width:760px; text-align:center; border:2px solid rgba(44,91,75,0.18);">
-          <strong style="color:var(--forest);">Funciona para quem quer sair da dúvida.</strong>
-          <p style="color:var(--muted); margin-top:8px;">Você não precisa decorar termos técnicos para começar. A proposta é ter método, responsabilidade e modelos para apoiar sua escrita.</p>
+        <div class="photo-frame">
+          <img src="https://fabricamagica.doutoraescola.com.br/images/fabrica-magica/guaciara.webp" alt="Dra. Guaciara Fornaciari, educadora especial e especialista em leitura e escrita" width="520" height="650" loading="eager" />
         </div>
       </div>
     </section>
 
     <section class="section section-forest">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Como funciona</span>
-          <h2>Três passos para transformar observação em atendimento organizado.</h2>
-        </div>
-        <div class="step-grid">
-          {passos.map((passo, index) => (
-            <article class="step-card">
-              <span class="step-number">{index + 1}</span>
-              <h3>{passo.titulo}</h3>
-              <p>{passo.desc}</p>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <section id="bonus" class="section section-soft">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Bônus incluso</span>
-          <h2>Você recebe 5 modelos de cada documento.</h2>
-          <p class="lead" style="margin-top:16px;">
-            São 40 modelos para apoiar sua rotina de avaliação, registro, adaptação curricular, encaminhamento e planejamento.
+      <div class="narrow">
+        <span class="eyebrow">Por que agora?</span>
+        <h2>Porque existe um espaço enorme entre "perceber a dificuldade" e saber conduzir um atendimento.</h2>
+        <p style="margin-top:18px;">
+          A professora costuma ser a primeira a notar que a criança não está avançando — mas atender fora da sala de aula exige outra organização: saber observar, levantar hipóteses, conversar com a família e definir prioridades.
+        </p>
+        <div class="card" style="margin-top:28px;">
+          <p class="quote">
+            "Não basta amar alfabetização. Para atender uma criança, você precisa aprender a olhar para o processo de leitura e escrita com método, responsabilidade e profundidade."
           </p>
         </div>
-        <div class="bonus-grid">
-          {bonusModelos.map((modelo) => (
-            <article class="bonus-card">
-              <span class="bonus-count">5</span>
-              <h3>{modelo}</h3>
-              <p>Modelos prontos para consultar, adaptar e usar como ponto de partida na escrita profissional.</p>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-cream">
-      <div class="container grid-2">
-        <div>
-          <span class="eyebrow">Para quem é</span>
-          <h2>Para professoras que já percebem os sinais, mas querem conduzir com mais método.</h2>
-          <p class="lead" style="margin-top:18px;">
-            A aula é para quem atua ou quer atuar com leitura e escrita em atendimentos particulares, apoio pedagógico, psicopedagogia ou neuropsicopedagogia.
-          </p>
-        </div>
-        <ul class="checks">
-          <li>Professoras, pedagogas, psicopedagogas e neuropsicopedagogas.</li>
-          <li>Quem quer entender o que observar em leitura, escrita e comportamento diante das tarefas.</li>
-          <li>Quem precisa conversar melhor com famílias e escolas.</li>
-          <li>Quem quer reconhecer quando encaminhar para outros especialistas.</li>
-          <li>Quem quer atender com responsabilidade, sem transformar tudo em reforço escolar.</li>
-        </ul>
       </div>
     </section>
 
@@ -209,10 +56,10 @@ const bonusModelos = [
         <div class="grid-2" style="align-items:end;">
           <div>
             <span class="eyebrow">Reconhecimento público</span>
-            <h2>A mesma clínica que orienta famílias todos os dias agora abre esse caminho para professoras.</h2>
+            <h2>A mesma clínica que orienta essas famílias agora abre o conhecimento para professoras.</h2>
           </div>
           <p class="lead">
-            Nota 5,0 e 53 avaliações públicas no Google, construídas atendimento por atendimento ao longo de 6 anos.
+            Nota 5,0 e 53 avaliações públicas no Google — construídas atendimento por atendimento ao longo de 6 anos.
           </p>
         </div>
 
@@ -224,7 +71,7 @@ const bonusModelos = [
           </article>
           <article class="card">
             <div class="stars">★★★★★</div>
-            <p style="margin-top:14px;">"Escolhemos este consultório pelas boas avaliações e hoje confirmamos cada uma delas. Fomos recebidos com acolhimento e um atendimento verdadeiramente humanizado."</p>
+            <p style="margin-top:14px;">"Escolhemos este consultório pelas boas avaliações e hoje, ao levarmos nossa filha Malu de 21 dias, confirmamos cada uma delas. Fomos recebidos com acolhimento e um atendimento verdadeiramente humanizado."</p>
             <strong style="display:block; margin-top:20px;">Danillo Oliveira</strong>
           </article>
           <article class="card">
@@ -232,6 +79,48 @@ const bonusModelos = [
             <p style="margin-top:14px;">"Super recomendo! A Maria chegou na clínica com um atraso de fala significativo e saímos com ela uma tagarelinha."</p>
             <strong style="display:block; margin-top:20px;">Thais Belli</strong>
           </article>
+        </div>
+        <p style="margin-top:28px;"><a class="btn btn-secondary" href="https://www.google.com/search?q=guaciara+instituto" target="_blank" rel="noopener noreferrer">Ler avaliações completas no Google</a></p>
+      </div>
+    </section>
+
+    <section id="conteudo" class="section section-forest">
+      <div class="container grid-2">
+        <div>
+          <span class="eyebrow">Conteúdo da aula</span>
+          <h2>Da dificuldade percebida ao atendimento organizado.</h2>
+          <p class="lead" style="margin-top:20px;">
+            A aula percorre o caminho que a professora precisa dominar quando decide atender: o que observar, como organizar as informações, como conversar com a família e como definir um ponto de partida.
+          </p>
+        </div>
+        <ul class="checks">
+          <li>Identificar sinais importantes nas dificuldades de leitura e escrita sem reduzir tudo a "falta de treino".</li>
+          <li>Organizar a primeira conversa com a família para entender histórico, rotina, escola e queixas principais.</li>
+          <li>Observar leitura, escrita e comportamento diante das tarefas com mais critério e menos improviso.</li>
+          <li>Diferenciar atendimento particular de reforço escolar, respeitando limites éticos e profissionais.</li>
+          <li>Definir prioridades de trabalho para não tentar resolver tudo ao mesmo tempo.</li>
+          <li>Conduzir uma devolutiva clara para a família e reconhecer quando é necessário encaminhar para outros profissionais.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="narrow" style="text-align:center;">
+          <span class="eyebrow">Para quem é</span>
+          <h2>Esta aula faz sentido se você quer transformar experiência em uma atuação mais profunda.</h2>
+        </div>
+        <div class="narrow" style="margin-top:36px;">
+          <ul class="checks">
+            <li>Professoras, psicopedagogas, neuropsicopedagogas e pedagogas que desejam ampliar sua atuação.</li>
+            <li>Quem percebe sinais de dificuldade em leitura e escrita e quer saber o que fazer com essa observação.</li>
+            <li>Quem pensa em começar atendimentos particulares, mas ainda não sabe como organizar o primeiro passo.</li>
+            <li>Quem quer aprender a conversar com famílias explicando o que observou e quando encaminhar.</li>
+            <li>Quem quer atender com responsabilidade — sem improvisar e sem transformar atendimento em reforço escolar.</li>
+          </ul>
+        </div>
+        <div style="text-align:center; margin-top:36px;">
+          <a class="btn" href={CHECKOUT_URL}>Garantir minha vaga · R$ 57</a>
         </div>
       </div>
     </section>
@@ -251,41 +140,39 @@ const bonusModelos = [
             <li>Fundadora do Instituto Guaciara, nota 5,0 com 53 avaliações públicas no Google.</li>
             <li>Vivência em sala de aula, atendimentos individualizados e diálogo direto com famílias e escolas.</li>
             <li>Criadora do perfil educacional @doutoraescola.</li>
-            <li>Conhece a escola por dentro e sabe o que muda quando você passa para o atendimento particular.</li>
+            <li>Conhece a escola por dentro — e sabe o que muda quando você passa para o atendimento particular.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section id="oferta" class="section section-cream">
+    <section id="oferta" class="section section-soft">
       <div class="container">
-        <div class="section-heading">
+        <div class="narrow" style="text-align:center;">
           <span class="eyebrow">Inscrição</span>
-          <h2>Entre agora na aula Leitura e Escrita para Professoras.</h2>
+          <h2>Reserve a sua vaga na aula ao vivo.</h2>
           <p class="lead" style="margin-top:16px;">
-            Uma formação direta para organizar o primeiro passo de quem quer atender crianças com dificuldades de leitura e escrita de forma mais segura.
+            Uma aula para organizar o primeiro passo de quem quer atender crianças com dificuldades de leitura e escrita de forma mais segura.
           </p>
         </div>
-        <div class="offer-wrap">
-          <article class="offer-card featured">
-            <span class="eyebrow">Aula + bônus</span>
-            <h3>Leitura e Escrita para Professoras</h3>
-            <div class="price">R$ 57</div>
-            <span style="font-size:1rem; color:var(--muted);">pagamento único</span>
+        <div style="display:flex; justify-content:center; margin-top:44px; gap:24px; flex-wrap:wrap; align-items:flex-start;">
+          <article class="card" style="display:flex; flex-direction:column; max-width:480px; width:100%; border:2px solid var(--earth);">
+            <span class="eyebrow">Aula ao vivo</span>
+            <h3>06 de maio · 19h · online</h3>
+            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:5.5rem; font-weight:700; color:var(--forest); line-height:1; margin-top:18px;">R$ 57</div>
+            <span style="font-size:1rem; color:var(--muted);">à vista</span>
             <ul class="checks" style="margin-top:24px; margin-bottom:28px;">
-              <li>Aula online com a Dra. Guaciara Fornaciari.</li>
-              <li>Orientação prática para observação, sondagem, devolutiva e encaminhamento.</li>
-              <li>40 modelos bônus: 8 documentos com 5 modelos em cada categoria.</li>
-              <li>Aplicação para professoras, psicopedagogas, neuropsicopedagogas e pedagogas.</li>
+              <li>Aula ao vivo, em 06/05 às 19h, com a Dra. Guaciara Fornaciari.</li>
+              <li>Espaço para perguntas e orientação em tempo real.</li>
+              <li>Grupo no WhatsApp para envio do link de acesso e avisos.</li>
             </ul>
-            <a class="btn" href={CHECKOUT_URL} style="margin-top:auto;">Quero garantir meu acesso</a>
-            <p class="guarantee-note">Acesso imediato · Garantia de {GUARANTEE_DAYS} dias · Pagamento seguro</p>
+            <a class="btn" href={CHECKOUT_URL} style="margin-top:auto;">Quero participar da aula</a>
+            <p style="text-align:center; font-size:0.88rem; color:var(--muted); margin-top:14px;">Acesso imediato · Garantia de {GUARANTEE_DAYS} dias · Pagamento seguro</p>
           </article>
-          <div class="offer-card" style="max-width:340px; text-align:center;">
+          <div class="card" style="max-width:320px; width:100%; text-align:center;">
             <span class="eyebrow">Garantia</span>
             <h3 style="margin-top:12px;">{GUARANTEE_DAYS} dias para avaliar com calma.</h3>
             <p style="margin-top:14px; color:var(--muted);">Se entender que o conteúdo não conversa com o momento da sua atuação, basta solicitar o reembolso dentro do prazo. Sem desconforto.</p>
-            <a class="btn btn-secondary" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" style="margin-top:22px;">Falar com a equipe</a>
           </div>
         </div>
       </div>
@@ -293,42 +180,26 @@ const bonusModelos = [
 
     <section class="section section-soft">
       <div class="container">
-        <div class="section-heading">
+        <div class="narrow" style="text-align:center;">
           <span class="eyebrow">Dúvidas frequentes</span>
           <h2>Respostas diretas antes da inscrição.</h2>
         </div>
-        <div class="narrow">
-          <details class="card" open>
-            <summary>A aula é para professora ou para clínica?</summary>
-            <p style="margin-top:12px; color:var(--muted);">É para professoras, pedagogas, psicopedagogas e neuropsicopedagogas que querem organizar melhor a atuação com leitura e escrita, especialmente em atendimentos particulares ou acompanhamentos individualizados.</p>
-          </details>
-          <details class="card">
-            <summary>Os bônus são documentos prontos?</summary>
-            <p style="margin-top:12px; color:var(--muted);">São modelos de referência para você adaptar à realidade de cada criança. Eles ajudam a começar a escrita com estrutura, linguagem e critérios mais claros.</p>
-          </details>
-          <details class="card">
-            <summary>Quantos modelos estão inclusos?</summary>
-            <p style="margin-top:12px; color:var(--muted);">São 8 categorias de documentos, com 5 modelos em cada uma, totalizando 40 modelos bônus.</p>
-          </details>
-          <details class="card">
-            <summary>Como recebo o acesso?</summary>
-            <p style="margin-top:12px; color:var(--muted);">Após a confirmação do pagamento, você recebe as orientações de acesso pelo fluxo de compra e pode falar com a equipe pelo WhatsApp se precisar de ajuda.</p>
-          </details>
-          <details class="card">
-            <summary>Como funciona a garantia?</summary>
-            <p style="margin-top:12px; color:var(--muted);">Você tem {GUARANTEE_DAYS} dias após a inscrição para solicitar reembolso, sem questionamentos. É só escrever para a equipe.</p>
-          </details>
+        <div class="narrow" style="margin-top:36px;">
+          <details class="card" open><summary>A aula é ao vivo ou gravada?</summary><p style="margin-top:12px;">É uma aula ao vivo, em 06 de maio às 19h, com interação em tempo real entre a Dra. Guaciara e as participantes inscritas.</p></details>
+          <details class="card" style="margin-top:14px;"><summary>Para quem é essa aula?</summary><p style="margin-top:12px;">Para professoras, psicopedagogas, neuropsicopedagogas e pedagogas que querem aprofundar o olhar sobre leitura e escrita e estruturar atendimentos particulares com responsabilidade.</p></details>
+          <details class="card" style="margin-top:14px;"><summary>Como recebo o acesso?</summary><p style="margin-top:12px;">Após a confirmação do pagamento, você é direcionada para o grupo no WhatsApp, onde recebe o link de acesso e as orientações da aula.</p></details>
+          <details class="card" style="margin-top:14px;"><summary>Como funciona a garantia?</summary><p style="margin-top:12px;">Você tem {GUARANTEE_DAYS} dias após a inscrição para solicitar reembolso, sem questionamentos. É só escrever para a equipe.</p></details>
         </div>
       </div>
     </section>
 
     <section class="section section-gradient">
       <div class="narrow" style="text-align:center;">
-        <span class="hero-badge">Aula + 40 modelos bônus</span>
-        <h2 style="margin-top:18px;">Você pode começar a atender leitura e escrita com mais método, clareza e responsabilidade.</h2>
-        <p class="lead" style="margin-top:18px;">Garanta seu acesso e use os modelos para organizar observações, sondagens, relatórios, adaptações e encaminhamentos.</p>
+        <span class="eyebrow">Aula ao vivo · 06 de maio · 19h</span>
+        <h2>Você não precisa esperar estar "pronta" para começar a estudar o próximo passo com seriedade.</h2>
+        <p class="lead" style="margin-top:18px;">Reserve a sua vaga e venha aprender a olhar para leitura e escrita com a profundidade que um atendimento responsável exige.</p>
         <div class="cta-row" style="justify-content:center; margin-top:30px;">
-          <a class="btn" href={CHECKOUT_URL}>Quero garantir acesso · R$ 57</a>
+          <a class="btn" href={CHECKOUT_URL}>Quero participar da aula · R$ 57</a>
           <a class="btn btn-secondary" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">Falar com a equipe</a>
         </div>
       </div>
