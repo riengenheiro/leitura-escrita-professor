@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://relatorios.doutoraescola.com.br/sitemap.xml

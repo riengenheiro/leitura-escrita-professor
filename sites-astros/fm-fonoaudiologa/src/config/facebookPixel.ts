@@ -1,1 +1,0 @@
-export const FACEBOOK_PIXEL_ID = 'PIXEL_ID_AQUI';
