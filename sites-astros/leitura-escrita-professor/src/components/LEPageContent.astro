@@ -1,0 +1,37 @@
+---
+import { LEHero } from './LEHero';
+import { LEUrgencyBar } from './LEUrgencyBar';
+import { LEExitIntent } from './LEExitIntent';
+import LEProblema from './le/LEProblema.astro';
+import LEDiferente from './le/LEDiferente.astro';
+import { LETestimonials } from './LETestimonials';
+import { LEPricing } from './LEPricing';
+import LEGuarantee from './le/LEGuarantee.astro';
+import { LEFAQ } from './LEFAQ';
+import LEAbout from './le/LEAbout.astro';
+import LEFinalCTA from './le/LEFinalCTA.astro';
+import LEFooter from './le/LEFooter.astro';
+import LEWhatsAppButton from './le/LEWhatsAppButton.astro';
+
+interface Props {
+  price?: number;
+}
+
+const { price } = Astro.props;
+---
+
+<main class="min-h-screen w-full bg-white text-black font-sans antialiased">
+  <LEUrgencyBar client:load price={price} />
+  <LEExitIntent client:load price={price} />
+  <LEWhatsAppButton />
+  <LEHero client:load price={price} />
+  <LEProblema price={price} />
+  <LEDiferente />
+  <LETestimonials client:visible />
+  <LEPricing client:visible price={price} />
+  <LEGuarantee />
+  <LEFAQ client:visible />
+  <LEAbout />
+  <LEFinalCTA price={price} />
+  <LEFooter />
+</main>

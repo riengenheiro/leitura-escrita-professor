@@ -1,0 +1,39 @@
+---
+import Check from '../icons/Check.astro';
+const itens = [
+  'Aula prática com método para observar leitura, escrita e comportamento',
+  '40 modelos prontos: fichas, sondagens, relatórios, adaptações e planos',
+  'Documentos alinhados à legislação atual, incluindo a Resolução SEDUC Nº 129/2025',
+  'Resultados visíveis na sua prática desde os primeiros usos',
+];
+---
+<section class="text-black">
+  <div class="py-14 md:py-16 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-6">
+      <span class="inline-block w-full text-center px-4 py-2 rounded-full text-sm font-bold mb-8 text-white bg-blue-500">O que torna este material único</span>
+      <h2 class="text-2xl md:text-3xl font-extrabold text-center text-gray-900 mb-10">Por que este material é diferente de tudo que você já viu?</h2>
+      <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-yellow-200 space-y-5">
+        <p class="text-lg text-gray-700">Você já percebeu como, na internet, todo mundo fala de leitura e escrita de forma genérica... Mas, na prática, nada serve direto para a sua turma?</p>
+        <p class="text-lg text-gray-700">Este material foi criado para resolver, de verdade, o seu dia a dia: a aula ensina o método e os 40 modelos bônus já foram testados por professoras reais para registrar, adaptar, encaminhar e planejar com segurança.</p>
+      </div>
+    </div>
+  </div>
+  <div class="py-14 md:py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-center text-gray-900 mb-12">Ao garantir agora, você recebe:</h2>
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <ul class="space-y-6">
+          {itens.map((item) => (
+            <li class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1 text-white bg-green-600 shadow-md"><Check class="w-5 h-5" /></span>
+              <span class="text-lg text-gray-800">{item}</span>
+            </li>
+          ))}
+        </ul>
+        <div class="flex justify-center">
+          <img src="https://fabricamagica.doutoraescola.com.br/images/fabrica-magica/guaciara.webp" alt="Dra. Guaciara Fornaciari - Leitura e Escrita para Professoras" class="max-w-sm w-full h-auto rounded-2xl shadow-xl border-4 border-yellow-400 object-cover" width="637" height="856" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

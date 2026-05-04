@@ -1,0 +1,27 @@
+---
+import Check from '../icons/Check.astro';
+const items = ['Fichas de observação e sondagem', 'Relatórios de encaminhamento', 'PAEE e Estudo de Caso', 'Adaptações Curriculares', 'TEA, TDAH, dificuldades de leitura e muito mais'];
+---
+<section class="bg-gray-100 text-black py-16 md:py-20">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-14">Quem sou eu?</h2>
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">Fonoaudióloga, professora, ex-coordenadora e especialista em inclusão e aprendizagem. Meu foco é simplificar a vida de professoras na hora de observar, registrar e encaminhar crianças com dificuldades de leitura e escrita.</p>
+        <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">São mais de <strong>21 anos de experiência</strong>, transformando linguagem técnica em algo acessível. Já auxiliei mais de <strong>3.300 professoras</strong> com materiais práticos para:</p>
+        <ul class="space-y-4 mb-8">
+          {items.map((item) => (
+            <li class="flex items-center gap-4">
+              <Check class="w-6 h-6 text-green-600 flex-shrink-0" />
+              <span class="text-lg md:text-xl font-medium">{item}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">Meu objetivo é capacitar professoras para registrar observações de forma clara, objetiva e profissional.</p>
+      </div>
+      <div class="flex justify-center lg:justify-end">
+        <img src="https://fabricamagica.doutoraescola.com.br/images/fabrica-magica/guaciara.webp" alt="Dra. Guaciara Fornaciari" class="max-w-md w-full h-auto rounded-3xl object-cover shadow-2xl border-4 border-white" width="637" height="856" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
