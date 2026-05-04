@@ -1,17 +1,22 @@
 import { useState, useEffect, useCallback } from 'react'
 import { appendLandingParamsToUrl } from '../lib/affiliateCheckoutUrl'
-import { PRICE, getCheckoutUrl } from '../config/pricing'
+import { usePagePrice } from '../hooks/usePagePrice'
+import { getCheckoutUrl } from '../config/pricing'
 
 const STORAGE_KEY = 'le_exit_intent_shown'
 
-export function LEExitIntent() {
-  const pagePrice = PRICE
+interface LEExitIntentProps {
+  price?: number
+}
+
+export function LEExitIntent({ price }: LEExitIntentProps) {
+  const pagePrice = usePagePrice(price)
   const [isVisible, setIsVisible] = useState(false)
-  const [checkoutUrl, setCheckoutUrl] = useState(() => getCheckoutUrl())
+  const [checkoutUrl, setCheckoutUrl] = useState(() => getCheckoutUrl(pagePrice, 'basic'))
 
   useEffect(() => {
-    setCheckoutUrl(appendLandingParamsToUrl(getCheckoutUrl()))
-  }, [])
+    setCheckoutUrl(appendLandingParamsToUrl(getCheckoutUrl(pagePrice, 'basic')))
+  }, [pagePrice])
 
   const showPopup = useCallback(() => {
     if (sessionStorage.getItem(STORAGE_KEY)) return
@@ -48,7 +53,7 @@ export function LEExitIntent() {
           rel="noopener noreferrer"
           className="block w-full py-4 bg-btn-primary hover:opacity-90 text-white text-center font-bold text-lg rounded-xl transition-colors"
         >
-          Quero garantir meus 40 modelos por R$ 57
+          Quero garantir por R$ {pagePrice}
         </a>
         <button onClick={() => setIsVisible(false)} className="mt-4 w-full py-2 text-gray-500 hover:text-gray-700 text-sm">
           Continuar navegando

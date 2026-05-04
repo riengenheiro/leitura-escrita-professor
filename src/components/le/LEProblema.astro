@@ -1,8 +1,14 @@
 ---
 import Check from '../icons/Check.astro';
-import { PRICE, PRICE_ANCHOR, formatPrice } from '../../config/pricing';
+import { PRICE_BASIC, PRICE_ANCHOR, formatPrice } from '../../config/pricing';
 
-const priceLabel = `De <span class="line-through text-gray-500">R$ ${formatPrice(PRICE_ANCHOR, true)}</span> por apenas <span class="font-bold text-2xl text-green-600">R$ ${formatPrice(PRICE, true)}</span>`;
+interface Props { price?: number }
+const { price } = Astro.props;
+const pagePrice = price ?? PRICE_BASIC;
+const showAnchor = pagePrice < PRICE_ANCHOR;
+const priceLabel = showAnchor
+  ? `De <span class="line-through text-gray-500">R$ ${formatPrice(PRICE_ANCHOR, true)}</span> por apenas <span class="font-bold text-2xl text-green-600">R$ ${formatPrice(pagePrice, true)}</span>`
+  : `Por apenas <span class="font-bold text-2xl text-green-600">R$ ${formatPrice(pagePrice, true)}</span>`;
 ---
 <section class="text-black py-16 md:py-20 bg-white">
   <div class="max-w-4xl mx-auto px-6">

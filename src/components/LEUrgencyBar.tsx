@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react'
 import { X, Flame, Users, TrendingUp, Clock } from 'lucide-react'
-import { PRICE } from '../config/pricing'
+import { usePagePrice } from '../hooks/usePagePrice'
+
+interface LEUrgencyBarProps {
+  price?: number
+}
 
 const FIFTEEN_MINUTES = 15 * 60
 
@@ -106,8 +110,8 @@ function PurchaseNotification() {
 
 const DEFAULT_ACTIVITY = { viewingNow: 5, purchasesToday: 15 }
 
-export function LEUrgencyBar() {
-  const pagePrice = PRICE
+export function LEUrgencyBar({ price }: LEUrgencyBarProps) {
+  const pagePrice = usePagePrice(price)
   const [isVisible, setIsVisible] = useState(true)
   const [isScrolled, setIsScrolled] = useState(false)
   const [activity, setActivity] = useState(DEFAULT_ACTIVITY)
