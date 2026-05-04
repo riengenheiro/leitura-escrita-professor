@@ -12,26 +12,20 @@ import LEAbout from './le/LEAbout.astro';
 import LEFinalCTA from './le/LEFinalCTA.astro';
 import LEFooter from './le/LEFooter.astro';
 import LEWhatsAppButton from './le/LEWhatsAppButton.astro';
-
-interface Props {
-  price?: number;
-}
-
-const { price } = Astro.props;
 ---
 
 <main class="min-h-screen w-full bg-white text-black font-sans antialiased">
-  <LEUrgencyBar client:load price={price} />
-  <LEExitIntent client:load price={price} />
+  <LEUrgencyBar client:load />
+  <LEExitIntent client:load />
   <LEWhatsAppButton />
-  <LEHero client:load price={price} />
-  <LEProblema price={price} />
+  <LEHero client:load />
+  <LEProblema />
   <LEDiferente />
   <LETestimonials client:visible />
-  <LEPricing client:visible price={price} />
+  <LEPricing client:visible />
   <LEGuarantee />
   <LEFAQ client:visible />
   <LEAbout />
-  <LEFinalCTA price={price} />
+  <LEFinalCTA />
   <LEFooter />
 </main>

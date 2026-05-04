@@ -1,11 +1,6 @@
 import { useState, useEffect } from 'react'
 import { FileText, Clock } from 'lucide-react'
-import { PRICE_ANCHOR, formatPrice } from '../config/pricing'
-import { usePagePrice } from '../hooks/usePagePrice'
-
-interface LEHeroProps {
-  price?: number
-}
+import { PRICE, PRICE_ANCHOR, formatPrice } from '../config/pricing'
 
 const FIFTEEN_MINUTES = 15 * 60
 
@@ -94,8 +89,8 @@ function Countdown() {
   )
 }
 
-export function LEHero({ price }: LEHeroProps) {
-  const pagePrice = usePagePrice(price)
+export function LEHero() {
+  const pagePrice = PRICE
   return (
     <>
       <header
@@ -173,12 +168,8 @@ export function LEHero({ price }: LEHeroProps) {
         </div>
         <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
           <p className="text-2xl md:text-3xl font-bold mb-3 text-gray-900">
-            {pagePrice < PRICE_ANCHOR ? (
-              <>Aula + 40 Modelos de <span className="line-through text-gray-500">R$ {formatPrice(PRICE_ANCHOR, true)}</span>{' '}
-              por apenas <span className="text-3xl md:text-4xl" style={{ color: '#1C8C4D' }}>R$ {formatPrice(pagePrice, true)}</span></>
-            ) : (
-              <>Aula + 40 Modelos por apenas <span className="text-3xl md:text-4xl" style={{ color: '#1C8C4D' }}>R$ {formatPrice(pagePrice, true)}</span></>
-            )}
+            Aula + 40 Modelos de <span className="line-through text-gray-500">R$ {formatPrice(PRICE_ANCHOR, true)}</span>{' '}
+            por apenas <span className="text-3xl md:text-4xl" style={{ color: '#1C8C4D' }}>R$ {formatPrice(PRICE, true)}</span>
           </p>
           <p className="text-lg md:text-xl text-gray-700 mb-8">Só para as <strong>100 primeiras</strong> professoras.</p>
           <a
